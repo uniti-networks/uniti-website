@@ -24,13 +24,13 @@ const ActivitiesSection = () => (
       {/* Activity 1 */}
       <div className="mb-20">
         <h3 className="font-heading text-2xl font-bold text-heading mb-3">National Deployment: MTN Ghana &amp; Esoko</h3>
-        <p className="text-foreground text-lg mb-4 max-w-3xl">
+        <p className="font-body text-foreground text-lg mb-4 max-w-3xl leading-relaxed">
           Uniti is working with MTN Ghana and Esoko on a phased deployment that establishes the behavioral infrastructure required to activate one million users from MTN's subscriber base.
         </p>
-        <ul className="list-disc list-inside text-foreground space-y-2 mb-8 max-w-3xl">
-          <li><strong>Scalable Framework:</strong> Our deployment model is designed to activate users across any high-utility sector—from financial services and healthcare to specialized commerce.</li>
-          <li><strong>Digital Transition:</strong> This initiative enables users to transition from feature phones to smartphones, establishing the high-utility digital habits required for long-term retention.</li>
-          <li><strong>Systemic Impact:</strong> We are turning connectivity into a measurable economic tool for rural and peri-urban populations at a national scale.</li>
+        <ul className="font-body list-disc list-inside text-foreground space-y-3 mb-8 max-w-3xl leading-relaxed">
+          <li><strong className="font-heading font-semibold">Scalable Framework:</strong> Our deployment model is designed to activate users across any high-utility sector—from financial services and healthcare to specialized commerce.</li>
+          <li><strong className="font-heading font-semibold">Digital Transition:</strong> This initiative enables users to transition from feature phones to smartphones, establishing the high-utility digital habits required for long-term retention.</li>
+          <li><strong className="font-heading font-semibold">Systemic Impact:</strong> We are turning connectivity into a measurable economic tool for rural and peri-urban populations at a national scale.</li>
         </ul>
         <div className="grid grid-cols-3 gap-6 max-w-lg">
           {logos.map((src, i) => (

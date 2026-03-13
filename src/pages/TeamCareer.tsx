@@ -34,13 +34,13 @@ interface JobOpening {
 
 const jobOpenings: JobOpening[] = [
   {
-    title: "Senior Software Engineer",
+    title: "Behavioral Science Advisor",
     location: "Remote",
     type: "Full-time",
-    description: "We're looking for a senior engineer to help build and scale the Uniti platform. You'll work on our behavioral intervention engine and help shape the technical architecture."
+    description: "Uniti Networks is solving the digital activation gap in Africa. We've built an AI-driven coaching platform that helps first-time smartphone users successfully adopt apps in finance, health, education, and agriculture. Our engagement rates are 5-10x industry standard, and we've proven the model works with real users in Ghana.\n\nNow we need to make it systematically better."
   },
   {
-    title: "Partnership Manager — East Africa",
+    title: "",
     location: "Nairobi, Kenya",
     type: "Full-time",
     description: "Drive partnership development with MNOs and device financiers across East Africa. Build and maintain strategic relationships that expand Uniti's reach."

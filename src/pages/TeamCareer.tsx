@@ -18,7 +18,7 @@ const teamMembers: TeamMember[] = [
     role: "CEO & Founder", 
     bio: "Kami leads Uniti’s strategic vision, partner alignment and growth mapping. He has 25+ years experience at the intersection of technology and social impact, as Co-founder of Devex, the global development sector's media platform, and advisor to various organizations engaged in large-scale system change.", 
     linkedin: "#", 
-    image: null 
+    image: "/placeholder.svg"
   },
   { 
     name: "Anna Montanes", 

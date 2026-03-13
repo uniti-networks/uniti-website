@@ -20,6 +20,7 @@ const Navbar = () => {
         <Link to="/" className="flex items-center">
           <img src={logoUniti} alt="Uniti" className="h-14 w-auto" />
         </Link>
+        <img src="/placeholder.svg" alt="Navbar image" className="h-10 w-auto object-contain" />
 
         {/* Desktop */}
         <div className="hidden md:flex items-center gap-8">

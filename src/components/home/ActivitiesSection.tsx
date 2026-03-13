@@ -60,14 +60,14 @@ const ActivitiesSection = () => (
             </div>
           </div>
 
-          <div className="flex justify-center lg:justify-end items-center">
-            <div className="flex items-center gap-8">
+          <div className="flex justify-center lg:justify-end items-start">
+            <div className="flex flex-col gap-6 w-full max-w-xs">
               {logos.map((src, i) => (
                 <img
                   key={i}
                   src={src}
                   alt={`Partner logo ${i + 1}`}
-                  className="h-20 w-20 rounded-xl object-contain bg-background p-3 border border-border"
+                  className="w-full rounded-xl object-contain bg-background p-4 border border-border"
                 />
               ))}
             </div>

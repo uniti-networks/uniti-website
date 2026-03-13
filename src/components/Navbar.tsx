@@ -18,7 +18,7 @@ const Navbar = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-md border-b border-border">
       <div className="container-wide flex items-center justify-between h-16 px-6 lg:px-20">
         <Link to="/" className="flex items-center">
-          <img src={logoUniti} alt="Uniti" className="h-8 w-auto" />
+          <img src={logoUniti} alt="Uniti" className="h-24 w-auto" />
         </Link>
 
         {/* Desktop */}

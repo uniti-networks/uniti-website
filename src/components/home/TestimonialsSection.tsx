@@ -1,9 +1,9 @@
-import testimonial1 from "@/assets/testimonial-1.jpg";
-import testimonial2 from "@/assets/testimonial-2.jpg";
-import testimonial3 from "@/assets/testimonial-3.jpg";
-import testimonial4 from "@/assets/testimonial-4.jpg";
-
-const testimonials = [testimonial1, testimonial2, testimonial3, testimonial4];
+const testimonials = [
+  "/lovable-uploads/13a1681e-dba9-4379-8d18-59379e8c19ea.png",
+  "/lovable-uploads/03ece08a-432b-4ac5-9c08-240217161a2c.png",
+  "/lovable-uploads/441ac2da-9258-433c-ba66-34782e7c2890.png",
+  "/lovable-uploads/b3dd4cfc-ee54-4560-b5f8-7ad640b810cb.png"
+];
 
 const TestimonialsSection = () => (
   <section className="section-padding">

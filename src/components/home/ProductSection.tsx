@@ -2,14 +2,14 @@ import productPortrait from "@/assets/product-portrait.jpg";
 import { Target, ShieldCheck, Brain, Volume2 } from "lucide-react";
 
 const features = [
-  { icon: Target, title: "Goal-Centric Onboarding", desc: "Users define priorities across health, savings, education, and work, establishing their own pathway to relevance." },
-  { icon: ShieldCheck, title: "Validated Identity", desc: "A secure, privacy-first KYC process establishes a formal foundation for digital participation." },
-  { icon: Brain, title: "Contextual Intelligence", desc: "The engine identifies the precise moments and tones that move a user from passive ownership to active participation." },
-  { icon: Volume2, title: "Adaptive Audio", desc: "Voice guidance in local languages to ensure that comprehension never limits utility." },
-];
+{ icon: Target, title: "Goal-Centric Onboarding", desc: "Users define priorities across health, savings, education, and work, establishing their own pathway to relevance." },
+{ icon: ShieldCheck, title: "Validated Identity", desc: "A secure, privacy-first KYC process establishes a formal foundation for digital participation." },
+{ icon: Brain, title: "Contextual Intelligence", desc: "The engine identifies the precise moments and tones that move a user from passive ownership to active participation." },
+{ icon: Volume2, title: "Adaptive Audio", desc: "Voice guidance in local languages to ensure that comprehension never limits utility." }];
 
-const ProductSection = () => (
-  <section className="section-padding section-alt">
+
+const ProductSection = () =>
+<section className="section-padding section-alt">
     <div className="container-wide">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start">
         <div>
@@ -19,8 +19,8 @@ const ProductSection = () => (
           </p>
 
           <div className="space-y-8">
-            {features.map((f) => (
-              <div key={f.title} className="flex gap-4">
+            {features.map((f) =>
+          <div key={f.title} className="flex gap-4">
                 <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center">
                   <f.icon className="w-5 h-5 text-accent" />
                 </div>
@@ -29,16 +29,16 @@ const ProductSection = () => (
                   <p className="text-sm text-foreground leading-relaxed">{f.desc}</p>
                 </div>
               </div>
-            ))}
+          )}
           </div>
         </div>
 
         <div className="flex justify-center lg:justify-end">
           <img
-            src={productPortrait}
-            alt="Uniti product in use"
-            className="rounded-2xl w-full max-w-md object-cover aspect-[3/4]"
-          />
+
+          alt="Uniti product in use"
+          className="rounded-2xl w-full max-w-md object-cover aspect-[3/4]" src="/lovable-uploads/7b856caf-3729-4da1-be3f-dd507c67ab9d.png" />
+        
         </div>
       </div>
 
@@ -50,7 +50,7 @@ const ProductSection = () => (
         </p>
       </div>
     </div>
-  </section>
-);
+  </section>;
+
 
 export default ProductSection;

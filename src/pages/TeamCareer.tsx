@@ -39,12 +39,6 @@ const jobOpenings: JobOpening[] = [
     type: "Full-time",
     description: "Uniti Networks is solving the digital activation gap in Africa. We've built an AI-driven coaching platform that helps first-time smartphone users successfully adopt apps in finance, health, education, and agriculture. Our engagement rates are 5-10x industry standard, and we've proven the model works with real users in Ghana.\n\nNow we need to make it systematically better."
   },
-  {
-    title: "Content & Curriculum Designer",
-    location: "Remote",
-    type: "Contract",
-    description: "Design and develop educational content for digital onboarding programs. Create culturally relevant materials in multiple languages."
-  },
 ];
 
 const PersonCard = ({ person }: { person: TeamMember }) => (

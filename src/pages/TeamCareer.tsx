@@ -25,7 +25,7 @@ const teamMembers: TeamMember[] = [
     role: "Product Lead", 
     bio: "Architecting the Uniti App and platform infrastructure.", 
     linkedin: "#", 
-    image: null 
+    image: "/placeholder.svg"
   },
   { 
     name: "Samuel Alomenu", 

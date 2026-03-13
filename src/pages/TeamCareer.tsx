@@ -32,7 +32,7 @@ const teamMembers: TeamMember[] = [
     role: "Business Operations Lead", 
     bio: "With an MBA from Esade, Barcelona, Samuel heads Uniti’s business and sales operations. He has experience leading programs and applying disruptive technology to drive impact. ", 
     linkedin: "#", 
-    image: null 
+    image: "/placeholder.svg"
   },
   { 
     name: "Rita Quansah", 

@@ -1,14 +1,15 @@
-import logo1 from "@/assets/partner-logo-1.png";
-import logo2 from "@/assets/partner-logo-2.png";
-import logo3 from "@/assets/partner-logo-3.png";
-import activity1 from "@/assets/activity-1.jpg";
-import activity2 from "@/assets/activity-2.jpg";
-import activity3 from "@/assets/activity-3.jpg";
-import activity4 from "@/assets/activity-4.jpg";
-import activity5 from "@/assets/activity-5.jpg";
-
-const logos = [logo1, logo2, logo3];
-const activities = [activity1, activity2, activity3, activity4, activity5];
+const logos = [
+  "/lovable-uploads/919fd4a7-a972-4582-89b6-f902ebfcb424.png",
+  "/lovable-uploads/5a5739ca-f8e1-4a87-8f83-a682fdb01db5.png",
+  "/lovable-uploads/60a27205-1102-411c-8e6e-a5a2c755b727.png"
+];
+const activities = [
+  "/lovable-uploads/2e392a58-d64a-4bf3-a0f3-c1dc276a55d5.png",
+  "/lovable-uploads/6ff3e2cd-7d41-435f-89fa-4ea124582d2f.png",
+  "/lovable-uploads/f28b5cd3-e547-4bcc-99f8-d40a59675c5d.png",
+  "/lovable-uploads/6e7c6ded-8826-4971-bacf-a58e2e198c4f.png",
+  "/lovable-uploads/5ef9e408-9b5e-44d8-b036-546d90882035.jpg"
+];
 
 const ActivitiesSection = () => (
   <section className="section-padding section-alt">

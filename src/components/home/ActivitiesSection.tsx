@@ -61,7 +61,7 @@ const ActivitiesSection = () => (
           </div>
 
           <div className="flex justify-center lg:justify-end items-start">
-            <div className="flex flex-col gap-6 w-full max-w-xs">
+            <div className="flex flex-col gap-4 w-full max-w-[10rem]">
               {logos.map((src, i) => (
                 <img
                   key={i}

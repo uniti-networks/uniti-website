@@ -148,7 +148,7 @@ const TeamCareer = () => {
         <section className="section-padding section-alt">
           <div className="container-wide">
             <h2 className="text-3xl md:text-4xl font-extrabold text-center mb-12">Board of Advisors</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 max-w-3xl mx-auto">
+            <div className="flex flex-wrap justify-center gap-12">
               {advisors.map((a) => (
                 <PersonCard key={a.name} person={a} />
               ))}

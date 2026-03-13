@@ -18,41 +18,41 @@ const teamMembers: TeamMember[] = [
     role: "CEO & Founder", 
     bio: "Kami leads Uniti’s strategic vision, partner alignment and growth mapping. He has 25+ years experience at the intersection of technology and social impact, as Co-founder of Devex, the global development sector's media platform, and advisor to various organizations engaged in large-scale system change.", 
     linkedin: "#", 
-    image: null 
+    image: "/placeholder.svg"
   },
   { 
     name: "Anna Montanes", 
     role: "Product Lead", 
     bio: "Architecting the Uniti App and platform infrastructure.", 
     linkedin: "#", 
-    image: null 
+    image: "/placeholder.svg"
   },
   { 
     name: "Samuel Alomenu", 
     role: "Business Operations Lead", 
     bio: "With an MBA from Esade, Barcelona, Samuel heads Uniti’s business and sales operations. He has experience leading programs and applying disruptive technology to drive impact. ", 
     linkedin: "#", 
-    image: null 
+    image: "/placeholder.svg"
   },
   { 
     name: "Rita Quansah", 
     role: "Country Lead, Ghana", 
     bio: "Based out of Accra, Rita leads our operations in Ghana and service delivery, and supports the Uniti all Centre. Her background is managing maternal health and education programs in Ghana with Jhpiego and similar organizations.", 
     linkedin: "#", 
-    image: null 
+    image: "/placeholder.svg"
   },
   { 
     name: "Karan Vir Arya", 
     role: "Engagement Lead", 
     bio: "A former corporate lawyer, Karan leads the development of Uniti Beat, translating complex digital workflows into intuitive experiences for first-time smartphone users and active participants in the digital economy. His previous experiences include Google and Deutsche Bank.", 
     linkedin: "#", 
-    image: null 
+    image: "/placeholder.svg"
   },
 ];
 
 const advisors: TeamMember[] = [
-  { name: "Advisor 1", role: "Board Advisor", bio: "Bringing decades of experience in telecommunications and emerging markets.", linkedin: "#", image: null },
-  { name: "Advisor 2", role: "Board Advisor", bio: "Expert in fintech and financial inclusion across Africa.", linkedin: "#", image: null },
+  { name: "Advisor 1", role: "Board Advisor", bio: "Bringing decades of experience in telecommunications and emerging markets.", linkedin: "#", image: "/placeholder.svg" },
+  { name: "Advisor 2", role: "Board Advisor", bio: "Expert in fintech and financial inclusion across Africa.", linkedin: "#", image: "/placeholder.svg" },
 ];
 
 interface JobOpening {

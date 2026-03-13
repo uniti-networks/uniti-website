@@ -79,7 +79,7 @@ const ActivitiesSection = () => (
       <div>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start">
           <div>
-            <h3 className="font-heading text-2xl md:text-3xl font-bold text-heading mb-3">The WeGrowProject</h3>
+            <h3 className="font-heading text-2xl md:text-3xl font-bold text-heading mb-3">The WeGrow Project</h3>
             <p className="font-body text-foreground text-lg mb-10 leading-relaxed">
               Our infrastructure is built on validated behavioral data. In our foundational deployment in partnership with CARE International and DANIDA, we successfully moved users from silent device ownership to active digital participation.
             </p>

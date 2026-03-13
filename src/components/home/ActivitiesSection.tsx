@@ -1,3 +1,15 @@
+import logo1 from "@/assets/partner-logo-1.png";
+import logo2 from "@/assets/partner-logo-2.png";
+import logo3 from "@/assets/partner-logo-3.png";
+import activity1 from "@/assets/activity-1.jpg";
+import activity2 from "@/assets/activity-2.jpg";
+import activity3 from "@/assets/activity-3.jpg";
+import activity4 from "@/assets/activity-4.jpg";
+import activity5 from "@/assets/activity-5.jpg";
+
+const logos = [logo1, logo2, logo3];
+const activities = [activity1, activity2, activity3, activity4, activity5];
+
 const ActivitiesSection = () => (
   <section className="section-padding section-alt">
     <div className="container-wide">
@@ -17,10 +29,13 @@ const ActivitiesSection = () => (
           <li>Measurable impact on digital literacy and financial inclusion</li>
         </ul>
         <div className="grid grid-cols-3 gap-6 max-w-lg">
-          {[1, 2, 3].map((i) => (
-            <div key={i} className="aspect-square rounded-xl bg-background border-2 border-dashed border-border flex items-center justify-center">
-              <span className="text-xs text-muted-foreground">Logo {i}</span>
-            </div>
+          {logos.map((src, i) => (
+            <img
+              key={i}
+              src={src}
+              alt={`Partner logo ${i + 1}`}
+              className="aspect-square rounded-xl object-contain bg-background p-2"
+            />
           ))}
         </div>
       </div>
@@ -37,10 +52,13 @@ const ActivitiesSection = () => (
           <li>Partnership launches with local ecosystem players</li>
         </ul>
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
-          {[1, 2, 3, 4, 5].map((i) => (
-            <div key={i} className="aspect-[4/3] rounded-xl bg-background border-2 border-dashed border-border flex items-center justify-center">
-              <span className="text-xs text-muted-foreground">Image {i}</span>
-            </div>
+          {activities.map((src, i) => (
+            <img
+              key={i}
+              src={src}
+              alt={`Field activation ${i + 1}`}
+              className="aspect-[4/3] rounded-xl object-cover w-full"
+            />
           ))}
         </div>
       </div>

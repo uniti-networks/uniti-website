@@ -16,7 +16,7 @@ const TestimonialsSection = () => (
             key={i}
             src={src}
             alt={`Testimonial ${i + 1}`}
-            className="rounded-xl aspect-[3/4] w-full object-cover"
+            className="rounded-xl aspect-[4/3] w-full object-cover"
           />
         ))}
       </div>

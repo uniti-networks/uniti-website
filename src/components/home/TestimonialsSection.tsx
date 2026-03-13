@@ -1,7 +1,8 @@
-import testimonial1 from "@/assets/testimonial-1.jpg";
 import testimonial2 from "@/assets/testimonial-2.jpg";
 import testimonial3 from "@/assets/testimonial-3.jpg";
 import testimonial4 from "@/assets/testimonial-4.jpg";
+
+const testimonial1 = "/lovable-uploads/30e61650-41b1-4250-8f63-53397d4a4fef.png";
 
 const testimonials = [testimonial1, testimonial2, testimonial3, testimonial4];
 

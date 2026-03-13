@@ -1,11 +1,11 @@
-import logo1 from "@/assets/partner-logo-1.png";
-import logo2 from "@/assets/partner-logo-2.png";
-import logo3 from "@/assets/partner-logo-3.png";
-import activity1 from "@/assets/activity-1.jpg";
-import activity2 from "@/assets/activity-2.jpg";
-import activity3 from "@/assets/activity-3.jpg";
-import activity4 from "@/assets/activity-4.jpg";
-import activity5 from "@/assets/activity-5.jpg";
+const logo1 = "/lovable-uploads/e121113d-da4f-4e9f-8bf3-5a4fb73d672e.png";
+const logo2 = "/lovable-uploads/629bc479-6a20-4303-903b-c75a3fdc757a.png";
+const logo3 = "/lovable-uploads/02bb66d5-bb84-47b7-bc5f-f24dbafbae1d.png";
+const activity1 = "/lovable-uploads/fe94be95-4aa7-4917-9842-0b61897552d8.png";
+const activity2 = "/lovable-uploads/c0521f8f-76e6-4111-8ec2-a57cb33fe574.png";
+const activity3 = "/lovable-uploads/bb1c1fcc-e834-486d-a25f-69ae1462be18.png";
+const activity4 = "/lovable-uploads/bea90de2-2780-4dcf-983a-b26994616b6e.png";
+const activity5 = "/lovable-uploads/4883bee3-b510-460c-918c-f608a91a86b3.jpg";
 
 const logos = [logo1, logo2, logo3];
 const activities = [activity1, activity2, activity3, activity4, activity5];

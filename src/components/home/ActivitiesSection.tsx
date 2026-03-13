@@ -15,19 +15,22 @@ const ActivitiesSection = () => (
   <section className="section-padding section-alt">
     <div className="container-wide">
       <div className="text-center mb-16">
-        <h2 className="text-3xl md:text-4xl font-extrabold mb-4">Our Activities</h2>
+        <h2 className="text-3xl md:text-4xl font-extrabold mb-4">The Path to Scale</h2>
+        <p className="text-foreground text-lg max-w-3xl mx-auto">
+          We are bridging the gap between basic connectivity and full digital participation through a series of targeted roll-outs.
+        </p>
       </div>
 
       {/* Activity 1 */}
       <div className="mb-20">
-        <h3 className="font-heading text-2xl font-bold text-heading mb-3">Current Partnerships</h3>
+        <h3 className="font-heading text-2xl font-bold text-heading mb-3">National Deployment: MTN Ghana &amp; Esoko</h3>
         <p className="text-foreground text-lg mb-4 max-w-3xl">
-          Working with leading operators and organizations to bridge the digital divide across emerging markets.
+          Uniti is working with MTN Ghana and Esoko on a phased deployment that establishes the behavioral infrastructure required to activate one million users from MTN's subscriber base.
         </p>
         <ul className="list-disc list-inside text-foreground space-y-2 mb-8 max-w-3xl">
-          <li>Multi-country deployment across Sub-Saharan Africa</li>
-          <li>Integration with leading MNOs and device financiers</li>
-          <li>Measurable impact on digital literacy and financial inclusion</li>
+          <li><strong>Scalable Framework:</strong> Our deployment model is designed to activate users across any high-utility sector—from financial services and healthcare to specialized commerce.</li>
+          <li><strong>Digital Transition:</strong> This initiative enables users to transition from feature phones to smartphones, establishing the high-utility digital habits required for long-term retention.</li>
+          <li><strong>Systemic Impact:</strong> We are turning connectivity into a measurable economic tool for rural and peri-urban populations at a national scale.</li>
         </ul>
         <div className="grid grid-cols-3 gap-6 max-w-lg">
           {logos.map((src, i) => (
@@ -43,14 +46,14 @@ const ActivitiesSection = () => (
 
       {/* Activity 2 */}
       <div>
-        <h3 className="font-heading text-2xl font-bold text-heading mb-3">Field Activations</h3>
+        <h3 className="font-heading text-2xl font-bold text-heading mb-3">The WeGrowProject</h3>
         <p className="text-foreground text-lg mb-4 max-w-3xl">
-          On-the-ground activations demonstrating the power of behavioral digital onboarding.
+          Our infrastructure is built on validated behavioral data. In our foundational deployment in partnership with CARE International and DANIDA, we successfully moved users from silent device ownership to active digital participation.
         </p>
         <ul className="list-disc list-inside text-foreground space-y-2 mb-8 max-w-3xl">
-          <li>Community-led digital skills workshops</li>
-          <li>User onboarding events at scale</li>
-          <li>Partnership launches with local ecosystem players</li>
+          <li><strong>High-Fidelity Adoption:</strong> Uniti achieved 6–8x higher engagement rates through our contextual induction layer vs the industry standard of 2-5%</li>
+          <li><strong>Overcoming the Skills Gap:</strong> We solve the barriers of perceived exclusion and technical friction that often cause new users to abandon digital services.</li>
+          <li><strong>Extrinsic to Intrinsic:</strong> By leveraging extrinsic rewards to spark initial interest, we transition users toward intrinsic utility, proving that personal relevance is the ultimate driver of retention</li>
         </ul>
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
           {activities.map((src, i) => (

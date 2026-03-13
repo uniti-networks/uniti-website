@@ -16,7 +16,7 @@ const ActivitiesSection = () => (
     <div className="container-wide">
       <div className="text-center mb-16">
         <h2 className="text-3xl md:text-4xl font-extrabold mb-4">The Path to Scale</h2>
-        <p className="text-foreground text-lg max-w-3xl mx-auto">
+        <p className="font-body text-foreground text-lg max-w-3xl mx-auto leading-relaxed">
           We are bridging the gap between basic connectivity and full digital participation through a series of targeted roll-outs.
         </p>
       </div>

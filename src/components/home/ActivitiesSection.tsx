@@ -47,13 +47,13 @@ const ActivitiesSection = () => (
       {/* Activity 2 */}
       <div>
         <h3 className="font-heading text-2xl font-bold text-heading mb-3">The WeGrowProject</h3>
-        <p className="text-foreground text-lg mb-4 max-w-3xl">
+        <p className="font-body text-foreground text-lg mb-4 max-w-3xl leading-relaxed">
           Our infrastructure is built on validated behavioral data. In our foundational deployment in partnership with CARE International and DANIDA, we successfully moved users from silent device ownership to active digital participation.
         </p>
-        <ul className="list-disc list-inside text-foreground space-y-2 mb-8 max-w-3xl">
-          <li><strong>High-Fidelity Adoption:</strong> Uniti achieved 6–8x higher engagement rates through our contextual induction layer vs the industry standard of 2-5%</li>
-          <li><strong>Overcoming the Skills Gap:</strong> We solve the barriers of perceived exclusion and technical friction that often cause new users to abandon digital services.</li>
-          <li><strong>Extrinsic to Intrinsic:</strong> By leveraging extrinsic rewards to spark initial interest, we transition users toward intrinsic utility, proving that personal relevance is the ultimate driver of retention</li>
+        <ul className="font-body list-disc list-inside text-foreground space-y-3 mb-8 max-w-3xl leading-relaxed">
+          <li><strong className="font-heading font-semibold">High-Fidelity Adoption:</strong> Uniti achieved 6–8x higher engagement rates through our contextual induction layer vs the industry standard of 2-5%</li>
+          <li><strong className="font-heading font-semibold">Overcoming the Skills Gap:</strong> We solve the barriers of perceived exclusion and technical friction that often cause new users to abandon digital services.</li>
+          <li><strong className="font-heading font-semibold">Extrinsic to Intrinsic:</strong> By leveraging extrinsic rewards to spark initial interest, we transition users toward intrinsic utility, proving that personal relevance is the ultimate driver of retention</li>
         </ul>
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
           {activities.map((src, i) => (

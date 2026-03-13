@@ -79,7 +79,7 @@ const ActivitiesSection = () => (
       <div>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start">
           <div>
-            <h3 className="font-heading text-2xl md:text-3xl font-bold text-heading mb-3">The WeGrowProject</h3>
+            <h3 className="font-heading text-2xl md:text-3xl font-bold text-heading mb-3">The WeGrow Project</h3>
             <p className="font-body text-foreground text-lg mb-10 leading-relaxed">
               Our infrastructure is built on validated behavioral data. In our foundational deployment in partnership with CARE International and DANIDA, we successfully moved users from silent device ownership to active digital participation.
             </p>
@@ -100,12 +100,12 @@ const ActivitiesSection = () => (
           </div>
 
           <div className="flex justify-center lg:justify-end items-start">
-            <div className="grid grid-cols-2 gap-3 max-w-lg">
-              <img src={activities[0]} alt="Field activation 1" className="rounded-xl object-cover w-full aspect-[4/3]" />
-              <img src={activities[1]} alt="Field activation 2" className="rounded-xl object-cover w-full aspect-[4/3]" />
-              <img src={activities[2]} alt="Field activation 3" className="rounded-xl object-cover w-full col-span-2 aspect-[16/9]" />
-              <img src={activities[3]} alt="Field activation 4" className="rounded-xl object-cover w-full aspect-[4/3]" />
-              <img src={activities[4]} alt="Field activation 5" className="rounded-xl object-cover w-full aspect-[4/3]" />
+            <div className="grid grid-cols-3 gap-2 max-w-sm">
+              <img src={activities[0]} alt="Field activation 1" className="rounded-lg object-cover w-full aspect-[4/3]" />
+              <img src={activities[1]} alt="Field activation 2" className="rounded-lg object-cover w-full aspect-[4/3]" />
+              <img src={activities[2]} alt="Field activation 3" className="rounded-lg object-cover w-full aspect-[4/3]" />
+              <img src={activities[3]} alt="Field activation 4" className="rounded-lg object-cover w-full aspect-[4/3] col-span-1" />
+              <img src={activities[4]} alt="Field activation 5" className="rounded-lg object-cover w-full aspect-[4/3] col-span-2" />
             </div>
           </div>
         </div>

@@ -100,15 +100,12 @@ const ActivitiesSection = () => (
           </div>
 
           <div className="flex justify-center lg:justify-end items-start">
-            <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 max-w-md">
-              {activities.map((src, i) => (
-                <img
-                  key={i}
-                  src={src}
-                  alt={`Field activation ${i + 1}`}
-                  className="aspect-[4/3] rounded-xl object-cover w-full"
-                />
-              ))}
+            <div className="grid grid-cols-2 gap-3 max-w-lg">
+              <img src={activities[0]} alt="Field activation 1" className="rounded-xl object-cover w-full aspect-[4/3]" />
+              <img src={activities[1]} alt="Field activation 2" className="rounded-xl object-cover w-full aspect-[4/3]" />
+              <img src={activities[2]} alt="Field activation 3" className="rounded-xl object-cover w-full col-span-2 aspect-[16/9]" />
+              <img src={activities[3]} alt="Field activation 4" className="rounded-xl object-cover w-full aspect-[4/3]" />
+              <img src={activities[4]} alt="Field activation 5" className="rounded-xl object-cover w-full aspect-[4/3]" />
             </div>
           </div>
         </div>

@@ -13,11 +13,11 @@ interface TeamMember {
 }
 
 const teamMembers: TeamMember[] = [
-{ name: "Team Member 1", role: "CEO & Founder", bio: "Leading Uniti's mission to bridge the digital activation gap across emerging markets.", linkedin: "#", image: null },
-{ name: "Team Member 2", role: "CTO", bio: "Architecting the Uniti Beat engine and platform infrastructure.", linkedin: "#", image: null },
-{ name: "Team Member 3", role: "COO", bio: "Driving operational excellence and partnership development.", linkedin: "#", image: null },
-{ name: "Team Member 4", role: "Head of Product", bio: "Shaping the user experience and product roadmap.", linkedin: "#", image: null },
-{ name: "Team Member 5", role: "Head of Partnerships", bio: "Building relationships with MNOs, financiers, and NGOs.", linkedin: "#", image: null },
+{ name: "Kami Dar", role: "CEO & FOUNDER", bio: "Kami leads Uniti’s strategic vision, partner alignment and growth mapping. He has 25+ years experience at the intersection of technology and social impact, as Co-founder of Devex, the global development sector's media platform, and advisor to various organizations engaged in large-scale system change.", linkedin: "#", image: null },
+{ name: "Anna Montanes", role: "PRODUCT STRATEGY", bio: "Architecting the Uniti Beat engine and platform infrastructure.", linkedin: "#", image: null },
+{ name: "Samuel Alomenu", role: "BUSINESS OPERATIONS LEAD", bio: "With an MBA from Esade, Barcelona, Samuel heads Uniti’s business and sales operations. He has experience leading programs and applying disruptive technology to drive impact. ", linkedin: "#", image: null },
+{ name: "Rita Quansah", role: "COUNTRY LEAD, GHANA", bio: "Based out of Accra, Rita leads our operations in Ghana and service delivery, and supports the Uniti all Centre. Her background is managing maternal health and education programs in Ghana with Jhpiego and similar organizations.", linkedin: "#", image: null },
+{ name: "Karan Vir Arya", role: "ENGAGEMENT LEAD", bio: "A former corporate lawyer, Karan leads the development of Uniti Beat, translating complex digital workflows into intuitive experiences for first-time smartphone users and active participants in the digital economy. His previous experiences include Google and Deutsche Bank.", linkedin: "#", image: null },
 { name: "Team Member 6", role: "Head of Content", bio: "Creating educational content for digital onboarding.", linkedin: "#", image: null }];
 
 

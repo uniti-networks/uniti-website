@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
+import logoUniti from "@/assets/logo-uniti.png";
 
 const navLinks = [
   { label: "Home", path: "/" },

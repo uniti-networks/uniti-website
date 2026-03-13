@@ -51,8 +51,8 @@ const teamMembers: TeamMember[] = [
 ];
 
 const advisors: TeamMember[] = [
-  { name: "Advisor 1", role: "Board Advisor", bio: "Bringing decades of experience in telecommunications and emerging markets.", linkedin: "#", image: null },
-  { name: "Advisor 2", role: "Board Advisor", bio: "Expert in fintech and financial inclusion across Africa.", linkedin: "#", image: null },
+  { name: "Advisor 1", role: "Board Advisor", bio: "Bringing decades of experience in telecommunications and emerging markets.", linkedin: "#", image: "/placeholder.svg" },
+  { name: "Advisor 2", role: "Board Advisor", bio: "Expert in fintech and financial inclusion across Africa.", linkedin: "#", image: "/placeholder.svg" },
 ];
 
 interface JobOpening {

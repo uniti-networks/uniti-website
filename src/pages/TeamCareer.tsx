@@ -85,13 +85,11 @@ const jobOpenings: JobOpening[] = [
 
 const PersonCard = ({ person }: { person: TeamMember }) => (
   <div className="text-center">
-    <div className="w-32 h-32 mx-auto rounded-full bg-section-alt border-2 border-dashed border-border mb-4 flex items-center justify-center overflow-hidden">
-      {person.image ? (
-        <img src={person.image} alt={person.name} className="w-full h-full object-cover" />
-      ) : (
-        <span className="text-xs text-muted-foreground">Photo</span>
-      )}
-    </div>
+    <img
+      src={person.image || "/placeholder.svg"}
+      alt={person.name}
+      className="w-32 h-32 mx-auto rounded-full object-cover mb-4 bg-section-alt border-2 border-border"
+    />
     <h3 className="font-heading text-base font-bold text-heading">{person.name}</h3>
     <p className="text-sm text-accent font-medium mb-2">{person.role}</p>
     <p className="text-sm text-foreground mb-3 max-w-xs mx-auto">{person.bio}</p>

@@ -46,7 +46,7 @@ const teamMembers: TeamMember[] = [
     role: "Engagement Lead", 
     bio: "A former corporate lawyer, Karan leads the development of Uniti Beat, translating complex digital workflows into intuitive experiences for first-time smartphone users and active participants in the digital economy. His previous experiences include Google and Deutsche Bank.", 
     linkedin: "#", 
-    image: null 
+    image: "/placeholder.svg"
   },
 ];
 

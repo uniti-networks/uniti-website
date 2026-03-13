@@ -63,7 +63,9 @@ const LearnWithUniti = () => {
         <section className="section-padding">
           <div className="container-wide">
             <h1 className="text-4xl md:text-5xl font-extrabold text-center mb-4">Learn with Uniti</h1>
-            <p className="text-center text-foreground text-lg mb-10">Video tutorials to help you get the most out of your digital journey.</p>
+            <p className="text-center text-foreground text-lg mb-6">Video tutorials to help you get the most out of your digital journey.</p>
+
+            <p className="text-center text-5xl md:text-6xl lg:text-7xl font-extrabold text-heading mb-10">Coming Soon</p>
 
             {/* Playlist pills */}
             <div className="flex flex-wrap justify-center gap-2 mb-6">

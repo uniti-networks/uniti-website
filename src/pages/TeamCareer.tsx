@@ -22,8 +22,8 @@ const teamMembers: TeamMember[] = [
 
 
 const advisors: TeamMember[] = [
-{ name: "Advisor 1", role: "Board Advisor", bio: "Bringing decades of experience in telecommunications and emerging markets.", linkedin: "#", image: null },
-{ name: "Advisor 2", role: "Board Advisor", bio: "Expert in fintech and financial inclusion across Africa.", linkedin: "#", image: null }];
+{ name: "Max Giacomelli", role: "Advisor", bio: "Bringing decades of experience in telecommunications and emerging markets.", linkedin: "#", image: null },
+{ name: "Rosa Wang", role: "Advisor", bio: "An author, strategist, and public communicator on transformative technologies. Her experience as Global Director for Digital Financial Services with Opportunity International and long-term commitment to spreading digital and mobile technologies to those excluded from the digital revolution are an incredible asset to the Uniti team.", linkedin: "#", image: null }];
 
 
 interface JobOpening {

@@ -39,7 +39,7 @@ const teamMembers: TeamMember[] = [
     role: "Country Lead, Ghana", 
     bio: "Based out of Accra, Rita leads our operations in Ghana and service delivery, and supports the Uniti all Centre. Her background is managing maternal health and education programs in Ghana with Jhpiego and similar organizations.", 
     linkedin: "#", 
-    image: null 
+    image: "/placeholder.svg"
   },
   { 
     name: "Karan Vir Arya", 

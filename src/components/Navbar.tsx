@@ -15,7 +15,7 @@ const Navbar = () => {
   const location = useLocation();
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-md border-b border-border">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-background border-b border-border">
       <div className="container-wide flex items-center justify-between h-16 px-6 lg:px-20">
         <Link to="/" className="flex items-center">
           <img src={logoUniti} alt="Uniti" className="h-14 w-auto" />

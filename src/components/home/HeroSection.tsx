@@ -180,11 +180,10 @@ const HeroSection = () => {
             style={{
               fontFamily: "'Euclid Circular A', 'Plus Jakarta Sans', sans-serif",
               letterSpacing: "-0.02em"
-            }}>Digital Activation That Pays
-
-
+            }}>
+            Digital Activation That Pays
             <br />
-            The Uniti Beat Engine
+            <span className="text-white/90">The Uniti Beat Engine</span>
           </h1>
 
           <p

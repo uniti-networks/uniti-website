@@ -183,7 +183,7 @@ const HeroSection = () => {
             }}>
             Digital Activation That Pays
             <br />
-            <span className="text-white/90">The Uniti Beat Engine</span>
+            <span className="text-white/90"></span>
           </h1>
 
           <p

@@ -54,7 +54,7 @@ const ProductArchitectureSection = () => (
         </h2>
 
         {/* ── Hero Visual ── */}
-        <div className="relative flex items-center justify-center mb-10 md:mb-14">
+        <div className="relative flex items-center justify-center mb-4 md:mb-6">
           {/* Spotlight glow */}
           <div
             className="absolute w-[400px] h-[400px] md:w-[600px] md:h-[600px] rounded-full"

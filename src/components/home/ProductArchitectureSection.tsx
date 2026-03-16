@@ -1,19 +1,23 @@
 import unitiSymbol from "@/assets/uniti-symbol-white.svg";
-import unitiSymbolParis from "@/assets/uniti-symbol-paris.svg";
+import unitiTricolor from "@/assets/uniti-symbol-tricolor.svg";
+import unitiNavyOutline from "@/assets/uniti-symbol-navy-outline.svg";
 
 const cards = [
   {
-    label: "Intent",
+    icon: unitiTricolor,
+    label: "INTENT",
     title: "Goal-Centric Onboarding",
     text: "Users define priorities across health, savings, education, and work to build their own pathway to relevance.",
   },
   {
-    label: "Access",
+    icon: unitiTricolor,
+    label: "ACCESS",
     title: "Adaptive Audio",
     text: "Voice guidance in local languages ensures that literacy and comprehension never limit utility.",
   },
   {
-    label: "Foundation",
+    icon: unitiNavyOutline,
+    label: "FOUNDATION",
     title: "Validated Identity",
     text: "A secure, privacy-first KYC process establishes a formal foundation for digital participation.",
   },
@@ -28,14 +32,14 @@ const ProductArchitectureSection = () => (
         style={{ backgroundColor: "#22235b" }}
       >
         {/* Animated pulse behind logo */}
-        <div className="absolute inset-0 flex items-start justify-center pt-16 md:pt-20 pointer-events-none">
+        <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
           <div
             className="w-48 h-48 md:w-64 md:h-64 rounded-full animate-beat-pulse"
             style={{ backgroundColor: "rgba(82, 90, 166, 0.15)" }}
           />
         </div>
 
-        {/* Logo symbol — 20% larger */}
+        {/* Logo symbol */}
         <div className="relative flex justify-center mb-12">
           <img
             src={unitiSymbol}
@@ -66,27 +70,21 @@ const ProductArchitectureSection = () => (
         {cards.map((c) => (
           <div
             key={c.label}
-            className="relative rounded-[12px] border border-border bg-card p-8 md:p-10 flex flex-col overflow-hidden shadow-sm"
+            className="rounded-[12px] border border-border bg-card p-8 md:p-10 flex flex-col shadow-sm"
           >
-            {/* Watermark */}
-            <img
-              src={unitiSymbolParis}
-              alt=""
-              aria-hidden="true"
-              className="pointer-events-none absolute bottom-[-10px] right-[-10px] w-28 h-28 opacity-[0.05]"
-            />
-
-            {/* Category label */}
-            <span
-              className="text-xs font-bold uppercase tracking-[0.2em] mb-4 pb-2 self-start"
-              style={{
-                fontFamily: "'Europa', 'Inter', sans-serif",
-                color: "#22235b",
-                borderBottom: "1px solid #525aa6",
-              }}
-            >
-              {c.label}
-            </span>
+            {/* Label + icon row with underline */}
+            <div className="flex items-center gap-2 mb-4 pb-3" style={{ borderBottom: "1px solid #525aa6" }}>
+              <img src={c.icon} alt="" aria-hidden="true" className="h-6 w-auto" />
+              <span
+                className="text-xs font-bold tracking-[0.2em]"
+                style={{
+                  fontFamily: "'Europa', 'Inter', sans-serif",
+                  color: "#22235b",
+                }}
+              >
+                {c.label}
+              </span>
+            </div>
 
             <h3
               className="text-lg md:text-xl font-bold mb-3"

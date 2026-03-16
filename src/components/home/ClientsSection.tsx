@@ -34,8 +34,22 @@ const clients = [
 ];
 
 const ClientsSection = () => (
-  <section className="section-padding bg-background">
-    <div className="container-wide">
+  <section
+    className="section-padding relative overflow-hidden"
+    style={{
+      background: "linear-gradient(180deg, #ffffff 0%, #F8FAFC 100%)",
+    }}
+  >
+    {/* Dotted grid background */}
+    <div
+      className="absolute inset-0 pointer-events-none"
+      style={{
+        backgroundImage: "radial-gradient(circle, rgba(34,35,91,0.06) 1px, transparent 1px)",
+        backgroundSize: "24px 24px",
+      }}
+    />
+
+    <div className="container-wide relative z-10">
       {/* Header */}
       <div className="text-center mb-16">
         <h2
@@ -54,13 +68,15 @@ const ClientsSection = () => (
         </p>
       </div>
 
-      {/* Grid: 3 top, 2 centered bottom */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+      {/* Top row: 3 */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
         {clients.slice(0, 3).map((c) => (
           <EcoCard key={c.title} {...c} />
         ))}
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6 max-w-[calc(66.666%+0.75rem)] mx-auto">
+
+      {/* Bottom row: 2 centered */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:max-w-[calc(66.666%+0.75rem)] mx-auto">
         {clients.slice(3).map((c) => (
           <EcoCard key={c.title} {...c} />
         ))}
@@ -77,21 +93,20 @@ interface EcoCardProps {
 }
 
 const EcoCard = ({ icon: Icon, tag, title, desc }: EcoCardProps) => (
-  <div
-    className="rounded-[12px] bg-card p-8 md:p-10 flex flex-col transition-all duration-200 hover:-translate-y-1 hover:shadow-md"
-    style={{ border: "1px solid rgba(82, 90, 166, 0.2)" }}
-  >
-    {/* Icon */}
-    <div
-      className="w-11 h-11 rounded-full flex items-center justify-center mb-5"
-      style={{ backgroundColor: "rgba(34, 35, 91, 0.08)" }}
-    >
-      <Icon className="w-5 h-5" style={{ color: "#22235b" }} />
+  <div className="group relative rounded-[12px] bg-white/70 backdrop-blur-sm p-8 md:p-10 flex flex-col transition-all duration-300 hover:shadow-[0_0_30px_-5px_rgba(82,90,166,0.2)] border border-[rgba(34,35,91,0.1)] hover:border-[#525aa6]">
+    {/* Icon top-right */}
+    <div className="absolute top-8 right-8 md:top-10 md:right-10">
+      <div
+        className="w-11 h-11 rounded-full flex items-center justify-center transition-colors duration-300"
+        style={{ backgroundColor: "rgba(34, 35, 91, 0.06)" }}
+      >
+        <Icon className="w-5 h-5 transition-colors duration-300 text-[#22235b] group-hover:text-[#525aa6]" />
+      </div>
     </div>
 
-    {/* Category label */}
+    {/* Label */}
     <span
-      className="text-[10px] font-bold uppercase tracking-[0.2em] mb-2"
+      className="text-[10px] font-bold uppercase tracking-[0.2em] mb-3 block"
       style={{
         fontFamily: "'Europa', 'Inter', sans-serif",
         color: "#22235b",
@@ -102,7 +117,7 @@ const EcoCard = ({ icon: Icon, tag, title, desc }: EcoCardProps) => (
 
     {/* Headline */}
     <h3
-      className="text-lg md:text-xl font-bold mb-3"
+      className="text-lg md:text-xl font-bold mb-3 pr-14"
       style={{
         color: "#525aa6",
         fontFamily: "'Euclid Circular A', 'Plus Jakarta Sans', sans-serif",

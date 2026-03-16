@@ -145,7 +145,7 @@ const HeroSection = () => {
         alt="Young woman engaging with smartphone technology"
         className="absolute inset-0 w-full h-full object-cover"
         style={{
-          objectPosition: "70% center",
+          objectPosition: "80% center",
           transform: `translateY(${offset}px)`,
           willChange: "transform"
         }} />
@@ -164,7 +164,7 @@ const HeroSection = () => {
       <NodeCanvas />
 
       {/* Content */}
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-8 md:px-16 lg:px-20 py-24">
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-8 md:px-16 lg:px-20 py-24" style={{ maxWidth: "40%" }}>
         <div
           className="max-w-xl animate-[fadeInUp_0.8s_ease-out_both]">
           

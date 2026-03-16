@@ -37,11 +37,11 @@ const ProductArchitectureSection = () => (
       margin: 0,
     }}
   >
-    <div className="relative z-10 section-padding">
+    <div className="relative z-10 px-6 pt-16 pb-8 md:px-12 md:pt-24 md:pb-10 lg:px-20 lg:pt-32 lg:pb-12">
       <div className="max-w-7xl mx-auto">
         {/* ── Typographic header ── */}
         <h2
-          className="text-[28px] md:text-[36px] lg:text-[44px] font-medium leading-[1.1] max-w-[1200px] mb-16 md:mb-24"
+          className="text-[28px] md:text-[36px] lg:text-[44px] font-medium leading-[1.1] max-w-[1200px] mb-8 md:mb-12"
           style={{
             fontFamily: "'Euclid Circular A', 'Plus Jakarta Sans', sans-serif",
             letterSpacing: "-0.02em",
@@ -54,7 +54,7 @@ const ProductArchitectureSection = () => (
         </h2>
 
         {/* ── Hero Visual ── */}
-        <div className="relative flex items-center justify-center mb-20 md:mb-28">
+        <div className="relative flex items-center justify-center mb-10 md:mb-14">
           {/* Spotlight glow */}
           <div
             className="absolute w-[400px] h-[400px] md:w-[600px] md:h-[600px] rounded-full"
@@ -65,7 +65,7 @@ const ProductArchitectureSection = () => (
           <img
             src={phoneStack}
             alt="Uniti app phone stack"
-            className="relative w-[260px] md:w-[380px] lg:w-[480px] animate-float select-none"
+            className="relative w-[312px] md:w-[532px] lg:w-[672px] animate-float select-none"
           />
         </div>
 

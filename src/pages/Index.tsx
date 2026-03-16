@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import HeroSection from "@/components/home/HeroSection";
 import StatementCallout from "@/components/home/StatementCallout";
 import ProductSection from "@/components/home/ProductSection";
+import ProductArchitectureSection from "@/components/home/ProductArchitectureSection";
 import ClientsSection from "@/components/home/ClientsSection";
 import ActivitiesSection from "@/components/home/ActivitiesSection";
 import TestimonialsSection from "@/components/home/TestimonialsSection";

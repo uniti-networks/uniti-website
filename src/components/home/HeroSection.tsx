@@ -145,7 +145,7 @@ const HeroSection = () => {
         alt="Young woman engaging with smartphone technology"
         className="absolute inset-0 w-full h-full object-cover"
         style={{
-          objectPosition: "80% center",
+          objectPosition: "47% center",
           transform: `translateY(${offset}px)`,
           willChange: "transform"
         }} />

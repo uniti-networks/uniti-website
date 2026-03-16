@@ -1,22 +1,21 @@
+import { Target, Volume2, ShieldCheck } from "lucide-react";
 import unitiSymbol from "@/assets/uniti-symbol-white.svg";
-import unitiTricolor from "@/assets/uniti-symbol-tricolor.svg";
-import unitiNavyOutline from "@/assets/uniti-symbol-navy-outline.svg";
 
 const cards = [
   {
-    icon: unitiTricolor,
+    icon: Target,
     label: "INTENT",
     title: "Goal-Centric Onboarding",
     text: "Users define priorities across health, savings, education, and work to build their own pathway to relevance.",
   },
   {
-    icon: unitiTricolor,
+    icon: Volume2,
     label: "ACCESS",
     title: "Adaptive Audio",
     text: "Voice guidance in local languages ensures that literacy and comprehension never limit utility.",
   },
   {
-    icon: unitiNavyOutline,
+    icon: ShieldCheck,
     label: "FOUNDATION",
     title: "Validated Identity",
     text: "A secure, privacy-first KYC process establishes a formal foundation for digital participation.",
@@ -39,7 +38,6 @@ const ProductArchitectureSection = () => (
           />
         </div>
 
-        {/* Logo symbol */}
         <div className="relative flex justify-center mb-12">
           <img
             src={unitiSymbol}
@@ -72,9 +70,14 @@ const ProductArchitectureSection = () => (
             key={c.label}
             className="rounded-[12px] border border-border bg-card p-8 md:p-10 flex flex-col shadow-sm"
           >
-            {/* Label + icon row with underline */}
-            <div className="flex items-center gap-2 mb-4 pb-3" style={{ borderBottom: "1px solid #525aa6" }}>
-              <img src={c.icon} alt="" aria-hidden="true" className="h-6 w-auto" />
+            {/* Icon + label row */}
+            <div className="flex items-center gap-3 mb-6">
+              <div
+                className="w-10 h-10 rounded-full flex items-center justify-center shrink-0"
+                style={{ backgroundColor: "hsl(232 50% 49% / 0.1)" }}
+              >
+                <c.icon className="w-5 h-5" style={{ color: "#525aa6" }} />
+              </div>
               <span
                 className="text-xs font-bold tracking-[0.2em]"
                 style={{

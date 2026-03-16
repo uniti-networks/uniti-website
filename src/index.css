@@ -55,6 +55,11 @@
     --section-alt: 230 20% 97%;
     --heading: 238 62% 35%;
 
+    /* Hero-specific tokens */
+    --paris-deep: 239 46% 24%;
+    --blush-btn: 234 34% 49%;
+    --paris-glass: 239 46% 40%;
+
     /* Secondary brand colors */
     --brand-teal: 186 66% 43%;
     --brand-orange: 25 82% 59%;

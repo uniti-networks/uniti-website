@@ -59,6 +59,13 @@ export default {
           cream: "hsl(var(--brand-cream))",
           royal: "hsl(var(--brand-royal))",
         },
+        paris: {
+          deep: "hsl(var(--paris-deep))",
+          glass: "hsl(var(--paris-glass))",
+        },
+        blush: {
+          btn: "hsl(var(--blush-btn))",
+        },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",

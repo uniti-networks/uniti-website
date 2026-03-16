@@ -9,7 +9,7 @@ const features = [
 
 
 const ProductSection = () =>
-<section className="section-padding section-alt">
+<section id="product-section" className="section-padding section-alt">
     <div className="container-wide">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start">
         <div>

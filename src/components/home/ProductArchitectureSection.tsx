@@ -6,25 +6,25 @@ const pillars = [
     icon: Target,
     label: "INTENT",
     title: "Goal-Centric Onboarding",
-    text: "Users define priorities across health, savings, education, and work, establishing their own pathway to relevance.",
+    text: "Users define priorities across health, savings, education, and work.",
   },
   {
     icon: ShieldCheck,
     label: "FOUNDATION",
     title: "Validated Identity",
-    text: "A secure, privacy-first KYC process establishes a formal foundation for digital participation.",
+    text: "A secure, privacy-first KYC process establishes a formal foundation.",
   },
   {
     icon: Brain,
     label: "INTELLIGENCE",
     title: "Contextual Intelligence",
-    text: "The engine identifies the precise moments and tones that move a user from passive ownership to active participation.",
+    text: "Identifying the precise moments that move users to active participation.",
   },
   {
     icon: Volume2,
     label: "ACCESS",
     title: "Adaptive Audio",
-    text: "Voice guidance in local languages to ensure that comprehension never limits utility.",
+    text: "Voice guidance in local languages ensures comprehension never limits utility.",
   },
 ];
 
@@ -32,29 +32,20 @@ const ProductArchitectureSection = () => (
   <section
     id="product-section"
     className="relative w-full overflow-hidden"
-    style={{ backgroundColor: "#22235b" }}
+    style={{
+      background: "radial-gradient(ellipse at center, #1e204a 0%, #0b0c1f 70%)",
+      margin: 0,
+    }}
   >
-    {/* ── Floating phone-stack watermark ── */}
-    <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-      {/* Breathing blush pulse behind image */}
-      <div
-        className="absolute w-[340px] h-[340px] md:w-[500px] md:h-[500px] rounded-full animate-beat-pulse"
-        style={{ background: "radial-gradient(circle, rgba(82,90,166,0.15) 0%, transparent 70%)" }}
-      />
-      <img
-        src={phoneStack}
-        alt=""
-        className="relative w-[280px] md:w-[420px] lg:w-[520px] animate-float select-none"
-        style={{ opacity: 0.25, filter: "blur(12px)" }}
-      />
-    </div>
-
     <div className="relative z-10 section-padding">
-      <div className="container-wide">
+      <div className="max-w-7xl mx-auto">
         {/* ── Typographic header ── */}
         <h2
-          className="text-[30px] md:text-[40px] lg:text-[48px] font-extrabold leading-[1.15] max-w-3xl mb-20 md:mb-28"
-          style={{ fontFamily: "'Euclid Circular A', 'Plus Jakarta Sans', sans-serif" }}
+          className="text-[28px] md:text-[36px] lg:text-[44px] font-medium leading-[1.1] max-w-[1200px] mb-16 md:mb-24"
+          style={{
+            fontFamily: "'Euclid Circular A', 'Plus Jakarta Sans', sans-serif",
+            letterSpacing: "-0.02em",
+          }}
         >
           <span className="text-white">The Uniti app is powered by Uniti Beat</span>
           <span style={{ color: "#94A3B8" }}>
@@ -62,58 +53,62 @@ const ProductArchitectureSection = () => (
           </span>
         </h2>
 
-        {/* ── 4-pillar crosshair grid ── */}
-        <div className="relative grid grid-cols-2 lg:grid-cols-4">
-          {/* Crosshair lines — vertical */}
-          <div className="absolute inset-0 pointer-events-none hidden lg:flex justify-between px-0">
-            {[1, 2, 3].map((i) => (
-              <div
-                key={`v-${i}`}
-                className="h-full"
-                style={{
-                  width: "0.5px",
-                  marginLeft: `${i * 25}%`,
-                  position: "absolute",
-                  background: "linear-gradient(to bottom, transparent 0%, rgba(255,255,255,0.12) 30%, rgba(255,255,255,0.12) 70%, transparent 100%)",
-                }}
-              />
-            ))}
-          </div>
+        {/* ── Hero Visual ── */}
+        <div className="relative flex items-center justify-center mb-20 md:mb-28">
+          {/* Spotlight glow */}
+          <div
+            className="absolute w-[400px] h-[400px] md:w-[600px] md:h-[600px] rounded-full"
+            style={{
+              background: "radial-gradient(circle, rgba(82,90,166,0.15) 0%, transparent 70%)",
+            }}
+          />
+          <img
+            src={phoneStack}
+            alt="Uniti app phone stack"
+            className="relative w-[260px] md:w-[380px] lg:w-[480px] animate-float select-none"
+          />
+        </div>
 
-          {/* Mobile crosshair — vertical center */}
+        {/* ── Technical Crosshair Grid ── */}
+        <div className="relative grid grid-cols-2 lg:grid-cols-4">
+          {/* Desktop vertical dividers */}
+          {[1, 2, 3].map((i) => (
+            <div
+              key={`v-${i}`}
+              className="absolute top-0 bottom-0 hidden lg:block pointer-events-none"
+              style={{
+                left: `${i * 25}%`,
+                width: "0.5px",
+                background:
+                  "linear-gradient(to bottom, transparent 0%, rgba(255,255,255,0.15) 20%, rgba(255,255,255,0.15) 80%, transparent 100%)",
+              }}
+            />
+          ))}
+
+          {/* Mobile crosshair — vertical */}
           <div
             className="absolute left-1/2 top-0 bottom-0 lg:hidden pointer-events-none"
             style={{
               width: "0.5px",
-              background: "linear-gradient(to bottom, transparent 0%, rgba(255,255,255,0.12) 20%, rgba(255,255,255,0.12) 80%, transparent 100%)",
+              background:
+                "linear-gradient(to bottom, transparent 0%, rgba(255,255,255,0.15) 20%, rgba(255,255,255,0.15) 80%, transparent 100%)",
             }}
           />
-          {/* Mobile crosshair — horizontal center */}
+          {/* Mobile crosshair — horizontal */}
           <div
             className="absolute top-1/2 left-0 right-0 lg:hidden pointer-events-none"
             style={{
               height: "0.5px",
-              background: "linear-gradient(to right, transparent 0%, rgba(255,255,255,0.12) 20%, rgba(255,255,255,0.12) 80%, transparent 100%)",
+              background:
+                "linear-gradient(to right, transparent 0%, rgba(255,255,255,0.15) 20%, rgba(255,255,255,0.15) 80%, transparent 100%)",
             }}
           />
 
-          {pillars.map((p, idx) => (
-            <div
-              key={p.label}
-              className={`group relative p-6 md:p-8 lg:p-10 ${
-                /* add top border for bottom row on mobile */
-                idx >= 2 ? "lg:border-t-0" : ""
-              }`}
-            >
-              {/* Icon */}
-              <div className="mb-5">
-                <p.icon
-                  className="w-7 h-7 transition-transform duration-500 group-hover:scale-105"
-                  style={{ color: "#525aa6" }}
-                />
-              </div>
-
-              {/* Label */}
+          {pillars.map((p) => (
+            <div key={p.label} className="group p-6 md:p-8 lg:p-10">
+              <p.icon
+                className="w-6 h-6 text-white mb-5 transition-transform duration-500 group-hover:scale-105"
+              />
               <span
                 className="block text-[11px] font-bold tracking-[0.2em] mb-4"
                 style={{
@@ -123,10 +118,8 @@ const ProductArchitectureSection = () => (
               >
                 {p.label}
               </span>
-
-              {/* Title */}
               <h3
-                className="text-base md:text-lg font-bold mb-3"
+                className="text-base md:text-lg font-medium mb-3"
                 style={{
                   color: "#525aa6",
                   fontFamily: "'Euclid Circular A', 'Plus Jakarta Sans', sans-serif",
@@ -134,8 +127,6 @@ const ProductArchitectureSection = () => (
               >
                 {p.title}
               </h3>
-
-              {/* Body */}
               <p
                 className="text-sm leading-relaxed"
                 style={{

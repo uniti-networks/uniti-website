@@ -23,7 +23,7 @@ function createNodes(w: number, h: number): Node[] {
     vy: (Math.random() - 0.5) * 0.25,
     radius: 1.5 + Math.random() * 2,
     phase: Math.random() * Math.PI * 2,
-    speed: 0.3 + Math.random() * 0.7,
+    speed: 0.3 + Math.random() * 0.7
   }));
 }
 
@@ -108,9 +108,9 @@ const NodeCanvas = () => {
     <canvas
       ref={ref}
       className="absolute inset-0 w-full h-full pointer-events-none"
-      style={{ mixBlendMode: "screen" }}
-    />
-  );
+      style={{ mixBlendMode: "screen" }} />);
+
+
 };
 
 /* ── Hero Section ── */
@@ -137,8 +137,8 @@ const HeroSection = () => {
   return (
     <section
       ref={sectionRef}
-      className="relative w-full min-h-[90vh] overflow-hidden flex items-center"
-    >
+      className="relative w-full min-h-[90vh] overflow-hidden flex items-center">
+      
       {/* Background image with parallax */}
       <img
         src={heroImg}
@@ -147,18 +147,18 @@ const HeroSection = () => {
         style={{
           objectPosition: "60% center",
           transform: `translateY(${offset}px)`,
-          willChange: "transform",
-        }}
-      />
+          willChange: "transform"
+        }} />
+      
 
       {/* Dark overlay for text contrast */}
       <div
         className="absolute inset-0"
         style={{
           background:
-            "linear-gradient(105deg, hsla(239,46%,18%,0.82) 0%, hsla(239,46%,22%,0.55) 50%, hsla(239,46%,30%,0.3) 100%)",
-        }}
-      />
+          "linear-gradient(105deg, hsla(239,46%,18%,0.82) 0%, hsla(239,46%,22%,0.55) 50%, hsla(239,46%,30%,0.3) 100%)"
+        }} />
+      
 
       {/* Node network overlay */}
       <NodeCanvas />
@@ -166,31 +166,31 @@ const HeroSection = () => {
       {/* Content */}
       <div className="relative z-10 w-full max-w-7xl mx-auto px-8 md:px-16 lg:px-20 py-24">
         <div
-          className="max-w-xl animate-[fadeInUp_0.8s_ease-out_both]"
-        >
-          <p
-            className="text-xs font-bold uppercase tracking-[3px] text-white/60 mb-5"
-            style={{ fontFamily: "'Europa', 'Inter', sans-serif" }}
-          >
-            The Activation Layer
-          </p>
+          className="max-w-xl animate-[fadeInUp_0.8s_ease-out_both]">
+          
+          
+
+
+
+
+          
 
           <h1
             className="text-4xl md:text-5xl lg:text-[3.5rem] font-extrabold text-white leading-[1.08] mb-6"
             style={{
               fontFamily: "'Euclid Circular A', 'Plus Jakarta Sans', sans-serif",
-              letterSpacing: "-0.02em",
-            }}
-          >
-            Contextual Intelligence:
+              letterSpacing: "-0.02em"
+            }}>Digital Activation That Pays
+
+
             <br />
             The Uniti Beat Engine
           </h1>
 
           <p
             className="text-white/75 text-base md:text-lg leading-relaxed max-w-md mb-10"
-            style={{ fontFamily: "'Europa', 'Inter', sans-serif" }}
-          >
+            style={{ fontFamily: "'Europa', 'Inter', sans-serif" }}>
+            
             The activation layer that makes smartphones productive — for users,
             operators, and the services they carry.
           </p>
@@ -199,9 +199,9 @@ const HeroSection = () => {
             onClick={scrollToProduct}
             className="rounded-lg px-8 py-3.5 text-sm font-semibold text-white tracking-wide transition-all duration-300 hover:brightness-110 hover:scale-[1.02] active:scale-[0.98] bg-accent animate-[fadeInUp_0.8s_ease-out_0.3s_both]"
             style={{
-              fontFamily: "'Euclid Circular A', 'Plus Jakarta Sans', sans-serif",
-            }}
-          >
+              fontFamily: "'Euclid Circular A', 'Plus Jakarta Sans', sans-serif"
+            }}>
+            
             Discover the Solution
           </button>
         </div>
@@ -209,8 +209,8 @@ const HeroSection = () => {
 
       {/* Bottom fade to white */}
       <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-background to-transparent" />
-    </section>
-  );
+    </section>);
+
 };
 
 export default HeroSection;

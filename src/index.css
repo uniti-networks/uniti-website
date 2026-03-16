@@ -114,6 +114,19 @@
   }
 }
 
+@keyframes borderPulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 hsla(234, 34%, 49%, 0);
+  }
+  50% {
+    box-shadow: 0 0 30px 4px hsla(234, 34%, 49%, 0.35);
+  }
+}
+
+.animate-border-pulse {
+  animation: borderPulse 3s ease-in-out infinite;
+}
+
 @keyframes fadeInUp {
   from {
     opacity: 0;

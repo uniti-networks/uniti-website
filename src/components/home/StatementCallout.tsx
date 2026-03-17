@@ -14,8 +14,8 @@ const StatementCallout = () => (
         <span className="text-white">
           Hardware is no longer the bottleneck. The real challenge is the{" "}
         </span>
-        <span style={{ color: "#525aa6" }}>Relevance Gap</span>
-        <span style={{ color: "#94A3B8" }}>
+        <span style={{ color: "#94A3B8" }}>Relevance Gap</span>
+        <span className="text-white">
           {" "}— the distance between device ownership and meaningful digital utility.
         </span>
       </h2>

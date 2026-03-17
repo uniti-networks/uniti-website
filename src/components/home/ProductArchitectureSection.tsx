@@ -23,7 +23,7 @@ const pillars = [
   {
     icon: Volume2,
     label: "ACCESS",
-    title: "Adaptive Audio",
+    title: "Adaptive\nAudio",
     text: "Voice guidance in local languages ensures comprehension never limits utility.",
   },
 ];
@@ -123,6 +123,7 @@ const ProductArchitectureSection = () => (
                 style={{
                   color: "#525aa6",
                   fontFamily: "'Euclid Circular A', 'Plus Jakarta Sans', sans-serif",
+                  whiteSpace: "pre-line",
                 }}
               >
                 {p.title}

@@ -203,13 +203,13 @@ const ActivitiesSection = () => (
               <img
                 src={logoMtn}
                 alt="MTN logo"
-                className="h-[15px] w-auto object-contain"
+                className="h-10 w-auto object-contain"
                 style={{ filter: "brightness(0) invert(1)", opacity: 0.85 }}
               />
               <img
                 src={logoEsoko}
                 alt="Esoko logo"
-                className="h-[5px] w-auto object-contain"
+                className="h-10 w-auto object-contain"
                 style={{ filter: "brightness(0) invert(1)", opacity: 0.85 }}
               />
               <img

@@ -2,9 +2,9 @@ const SectionDivider = () => (
   <div
     className="w-full"
     style={{
-      height: "0.5px",
+      height: "1px",
       background:
-        "linear-gradient(to right, transparent 0%, rgba(255,255,255,0.06) 20%, rgba(255,255,255,0.06) 80%, transparent 100%)",
+        "linear-gradient(to right, transparent 0%, rgba(255,255,255,0.04) 25%, rgba(255,255,255,0.04) 75%, transparent 100%)",
     }}
   />
 );

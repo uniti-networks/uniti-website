@@ -201,10 +201,10 @@ const ConstellationCanvas = () => {
 
 // Container is 1200×820. Center = 600, 410.
 const W = 1200;
-const H = 760;
+const H = 700;
 const CX = W / 2;
-const CY = H / 2 + 40; // push center down to create 80px+ gap from headline
-const RADIUS = 289; // 340 * 0.85 = 289
+const CY = H / 2 + 60; // push center down for more headline gap
+const RADIUS = 260; // tighter radius to reduce bottom gap
 
 // Pentagonal: 90° (top), 162°, 234°, 306°, 18°
 const ANGLES_DEG = [90, 162, 234, 306, 18];

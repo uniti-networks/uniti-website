@@ -270,7 +270,7 @@ const ActivitiesSection = () => (
                   alt={`WeGrow field photo ${i + 1}`}
                   className="w-full object-cover"
                   style={{
-                    height: 120,
+                    height: 160,
                     borderRadius: 4,
                   }}
                 />

@@ -196,59 +196,62 @@ const ConstellationCanvas = () => {
 };
 
 /* ═══════════════════════════════════════
-   DESKTOP — 360° Circular Hub
+   DESKTOP — 360° Circular Hub (fixed coords)
    ═══════════════════════════════════════ */
 
-const HUB_CX = 50; // % center x
-const HUB_CY = 50; // % center y
-const ARC_RADIUS = 320; // px
-// Perfect pentagonal distribution: 0°, 72°, 144°, 216°, 288°
-// Offset by -90° so first node is at top
-const ARC_ANGLES_DEG = [90, 162, 234, 306, 18];
+// Container is 1200×820. Center = 600, 410.
+const W = 1200;
+const H = 820;
+const CX = W / 2;
+const CY = H / 2;
+const RADIUS = 340;
+
+// Pentagonal: 90° (top), 162°, 234°, 306°, 18° — math coords (CCW from right)
+const ANGLES_DEG = [90, 162, 234, 306, 18];
+
+// Pre-compute fixed positions
+const NODE_POSITIONS = ANGLES_DEG.map((deg) => {
+  const rad = (deg * Math.PI) / 180;
+  return { x: CX + RADIUS * Math.cos(rad), y: CY - RADIUS * Math.sin(rad) };
+});
+
+// Text alignment: top node centered, left-side right-aligned, right-side left-aligned
+const getNodeAlign = (deg: number): "center" | "right" | "left" => {
+  if (deg === 90) return "center";
+  if (deg > 90 && deg < 270) return "right";
+  return "left";
+};
+
+const getTranslate = (align: "center" | "right" | "left") => {
+  if (align === "center") return "translate(-50%, -110%)";
+  if (align === "right") return "translate(-100%, -50%)";
+  return "translate(0%, -50%)";
+};
+
+const getOffset = (align: "center" | "right" | "left") => {
+  if (align === "center") return { marginLeft: 0, marginRight: 0, marginTop: -12 };
+  if (align === "right") return { marginLeft: 0, marginRight: 20, marginTop: 0 };
+  return { marginLeft: 20, marginRight: 0, marginTop: 0 };
+};
 
 const DesktopHub = () => {
-  const containerRef = useRef<HTMLDivElement>(null);
-  const [dims, setDims] = useState({ w: 1200, h: 900 });
   const [hoveredIdx, setHoveredIdx] = useState<number | null>(null);
 
-  useEffect(() => {
-    const measure = () => {
-      if (containerRef.current) {
-        const r = containerRef.current.getBoundingClientRect();
-        setDims({ w: r.width, h: r.height });
-      }
-    };
-    measure();
-    window.addEventListener("resize", measure);
-    return () => window.removeEventListener("resize", measure);
-  }, []);
-
-  const cx = dims.w * HUB_CX / 100;
-  const cy = dims.h * HUB_CY / 100;
-
-  const nodeAnchors = ARC_ANGLES_DEG.map((deg) => {
-    const rad = (deg * Math.PI) / 180;
-    return {
-      x: cx + ARC_RADIUS * Math.cos(rad),
-      y: cy - ARC_RADIUS * Math.sin(rad),
-    };
-  });
-
   return (
-    <div
-      ref={containerRef}
-      className="hidden md:block relative z-10 px-6 md:px-12 lg:px-20 pb-20 lg:pb-28"
-    >
-      <div className="max-w-7xl mx-auto relative" style={{ height: "820px" }}>
+    <div className="hidden lg:flex justify-center relative z-10 pb-20 lg:pb-28">
+      <div className="relative" style={{ width: W, height: H }}>
         <ConstellationCanvas />
 
-        {/* SVG layer — connection lines + travelling particles */}
+        {/* SVG layer — hairlines + particles */}
         <svg
-          className="absolute inset-0 w-full h-full pointer-events-none"
+          className="absolute inset-0 pointer-events-none"
+          width={W}
+          height={H}
+          viewBox={`0 0 ${W} ${H}`}
           style={{ zIndex: 2 }}
         >
           <defs>
-            {nodeAnchors.map((_, i) => (
+            {NODE_POSITIONS.map((_, i) => (
               <radialGradient key={`pg-${i}`} id={`particle-glow-${i}`}>
                 <stop offset="0%" stopColor="#525aa6" stopOpacity="0.9" />
                 <stop offset="100%" stopColor="#525aa6" stopOpacity="0" />
@@ -256,15 +259,15 @@ const DesktopHub = () => {
             ))}
           </defs>
 
-          {nodeAnchors.map((anchor, i) => {
+          {NODE_POSITIONS.map((pos, i) => {
             const isHovered = hoveredIdx === i;
             return (
               <g key={i}>
                 <line
-                  x1={cx}
-                  y1={cy}
-                  x2={anchor.x}
-                  y2={anchor.y}
+                  x1={CX}
+                  y1={CY}
+                  x2={pos.x}
+                  y2={pos.y}
                   stroke={isHovered ? "#525aa6" : "rgba(82,90,166,0.18)"}
                   strokeWidth="0.5"
                   style={{ transition: "stroke 0.4s" }}
@@ -273,7 +276,7 @@ const DesktopHub = () => {
                   <animateMotion
                     dur={`${3 + i * 0.7}s`}
                     repeatCount="indefinite"
-                    path={`M${cx},${cy} L${anchor.x},${anchor.y}`}
+                    path={`M${CX},${CY} L${pos.x},${pos.y}`}
                   />
                 </circle>
                 <circle r="1.5" fill="rgba(82,90,166,0.5)">
@@ -281,7 +284,7 @@ const DesktopHub = () => {
                     dur={`${4.5 + i * 0.5}s`}
                     repeatCount="indefinite"
                     begin={`${1.5 + i * 0.3}s`}
-                    path={`M${cx},${cy} L${anchor.x},${anchor.y}`}
+                    path={`M${CX},${CY} L${pos.x},${pos.y}`}
                   />
                 </circle>
               </g>
@@ -289,12 +292,12 @@ const DesktopHub = () => {
           })}
         </svg>
 
-        {/* Central U hub */}
+        {/* Central U — dead center */}
         <div
           className="absolute"
           style={{
-            left: `${HUB_CX}%`,
-            top: `${HUB_CY}%`,
+            left: CX,
+            top: CY,
             transform: "translate(-50%, -50%)",
             zIndex: 5,
           }}
@@ -333,37 +336,38 @@ const DesktopHub = () => {
           />
         </div>
 
-        {/* Nodes — centered on their anchor point */}
+        {/* Nodes */}
         {nodes.map((node, i) => {
-          const anchor = nodeAnchors[i];
+          const pos = NODE_POSITIONS[i];
           const isHovered = hoveredIdx === i;
+          const align = getNodeAlign(ANGLES_DEG[i]);
+          const offset = getOffset(align);
 
           return (
             <div
               key={node.tag}
-              className="absolute transition-transform duration-500 ease-out text-center"
+              className="absolute transition-transform duration-500 ease-out"
               style={{
-                left: anchor.x,
-                top: anchor.y,
-                transform: `translate(-50%, -50%) scale(${isHovered ? 1.15 : 1})`,
-                maxWidth: "220px",
+                left: pos.x,
+                top: pos.y,
+                transform: `${getTranslate(align)} scale(${isHovered ? 1.15 : 1})`,
+                maxWidth: 280,
                 zIndex: isHovered ? 10 : 3,
+                textAlign: align === "center" ? "center" : align === "right" ? "right" : "left",
+                ...offset,
               }}
               onMouseEnter={() => setHoveredIdx(i)}
               onMouseLeave={() => setHoveredIdx(null)}
             >
               <div
-                className="flex justify-center mb-2 transition-all duration-400"
+                className={`mb-2 transition-all duration-400 ${align === "center" ? "flex justify-center" : ""}`}
                 style={{
                   filter: isHovered
                     ? "drop-shadow(0 0 10px rgba(82,90,166,0.7))"
                     : "none",
                 }}
               >
-                <NodeIcon
-                  type={node.icon}
-                  className="w-7 h-7 text-white/60"
-                />
+                <NodeIcon type={node.icon} className="w-7 h-7 text-white/60" />
               </div>
 
               <span
@@ -379,8 +383,7 @@ const DesktopHub = () => {
               <h3
                 className="text-[15px] font-medium mb-1.5 leading-tight"
                 style={{
-                  fontFamily:
-                    "'Euclid Circular A', 'Plus Jakarta Sans', sans-serif",
+                  fontFamily: "'Euclid Circular A', 'Plus Jakarta Sans', sans-serif",
                   letterSpacing: "-0.02em",
                   color: isHovered ? "#525aa6" : "rgba(255,255,255,0.85)",
                   whiteSpace: "pre-line",

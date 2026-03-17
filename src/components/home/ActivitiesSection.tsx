@@ -147,117 +147,138 @@ const ActivitiesSection = () => (
         </div>
 
         {/* ── Proof Cards (50/50) ── */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-6">
           {/* Card A — National Deployment */}
           <div
-            className="p-8 lg:p-10 flex flex-col transition-all duration-500"
+            className="relative p-8 lg:p-10 flex flex-col transition-all duration-500 rounded-2xl overflow-hidden"
             style={{
-              border: CARD_BORDER,
-              background: GLASS_BG,
-              backdropFilter: "blur(12px)",
-              WebkitBackdropFilter: "blur(12px)",
+              border: "1px solid rgba(255,255,255,0.1)",
+              background: "linear-gradient(135deg, rgba(255,255,255,0.04) 0%, rgba(255,255,255,0.01) 100%)",
+              backdropFilter: "blur(16px)",
+              WebkitBackdropFilter: "blur(16px)",
             }}
             onMouseEnter={(e) => {
               e.currentTarget.style.boxShadow =
-                "0 0 40px rgba(82,90,166,0.1), inset 0 0 30px rgba(82,90,166,0.03)";
+                "0 0 50px rgba(82,90,166,0.15), inset 0 0 40px rgba(82,90,166,0.05)";
+              e.currentTarget.style.borderColor = "rgba(255,255,255,0.18)";
             }}
             onMouseLeave={(e) => {
               e.currentTarget.style.boxShadow = "none";
+              e.currentTarget.style.borderColor = "rgba(255,255,255,0.1)";
             }}
           >
-            <h3
-              className="text-base md:text-lg font-medium mb-3"
+            {/* Inner radial glow */}
+            <div
+              className="absolute inset-0 pointer-events-none"
               style={{
-                fontFamily: FONT_TITLE,
-                color: MUTED_INDIGO,
+                background: "radial-gradient(ellipse at 50% 50%, rgba(30,32,74,0.5) 0%, transparent 70%)",
               }}
-            >
-              National Deployment: MTN Ghana &amp; Esoko
-            </h3>
-            <p
-              className="text-sm leading-relaxed mb-8 flex-1"
-              style={{
-                fontFamily: FONT_BODY,
-                color: "rgba(255,255,255,0.9)",
-              }}
-            >
-              Uniti is working with MTN Ghana and Esoko on a phased deployment
-              that establishes the behavioral infrastructure required to activate
-              one million users from MTN's subscriber base.
-            </p>
-            {/* White logos — visually balanced */}
-            <div className="flex items-center gap-4 md:gap-10">
-              <img
-                src={logoMtn}
-                alt="MTN logo"
-                className="h-8 md:h-12 w-auto object-contain"
-                style={{ filter: "brightness(0) invert(1)", opacity: 0.85 }}
-              />
-              <img
-                src={logoEsoko}
-                alt="Esoko logo"
-                className="h-3.5 md:h-5 w-auto object-contain"
-                style={{ filter: "brightness(0) invert(1)", opacity: 0.85 }}
-              />
-              <img
-                src={logoUniti}
-                alt="Uniti logo"
-                className="h-6 md:h-8 w-auto object-contain"
-                style={{ opacity: 0.85 }}
-              />
+            />
+            <div className="relative z-10 flex flex-col flex-1">
+              <h3
+                className="text-base md:text-lg font-medium mb-3"
+                style={{
+                  fontFamily: FONT_TITLE,
+                  color: MUTED_INDIGO,
+                }}
+              >
+                National Deployment: MTN Ghana &amp; Esoko
+              </h3>
+              <p
+                className="text-sm leading-relaxed mb-8 flex-1"
+                style={{
+                  fontFamily: FONT_BODY,
+                  color: "rgba(255,255,255,0.9)",
+                }}
+              >
+                Uniti is working with MTN Ghana and Esoko on a phased deployment
+                that establishes the behavioral infrastructure required to activate
+                one million users from MTN's subscriber base.
+              </p>
+              {/* White logos — visually balanced */}
+              <div className="flex items-center gap-4 md:gap-10">
+                <img
+                  src={logoMtn}
+                  alt="MTN logo"
+                  className="h-8 md:h-12 w-auto object-contain"
+                  style={{ filter: "brightness(0) invert(1)", opacity: 0.85 }}
+                />
+                <img
+                  src={logoEsoko}
+                  alt="Esoko logo"
+                  className="h-3.5 md:h-5 w-auto object-contain"
+                  style={{ filter: "brightness(0) invert(1)", opacity: 0.85 }}
+                />
+                <img
+                  src={logoUniti}
+                  alt="Uniti logo"
+                  className="h-6 md:h-8 w-auto object-contain"
+                  style={{ opacity: 0.85 }}
+                />
+              </div>
             </div>
           </div>
 
           {/* Card B — WeGrow Project */}
           <div
-            className="p-8 lg:p-10 flex flex-col transition-all duration-500"
+            className="relative p-8 lg:p-10 flex flex-col transition-all duration-500 rounded-2xl overflow-hidden"
             style={{
-              border: CARD_BORDER,
-              borderLeft: "none",
-              background: GLASS_BG,
-              backdropFilter: "blur(12px)",
-              WebkitBackdropFilter: "blur(12px)",
+              border: "1px solid rgba(255,255,255,0.1)",
+              background: "linear-gradient(135deg, rgba(255,255,255,0.04) 0%, rgba(255,255,255,0.01) 100%)",
+              backdropFilter: "blur(16px)",
+              WebkitBackdropFilter: "blur(16px)",
             }}
             onMouseEnter={(e) => {
               e.currentTarget.style.boxShadow =
-                "0 0 40px rgba(82,90,166,0.1), inset 0 0 30px rgba(82,90,166,0.03)";
+                "0 0 50px rgba(82,90,166,0.15), inset 0 0 40px rgba(82,90,166,0.05)";
+              e.currentTarget.style.borderColor = "rgba(255,255,255,0.18)";
             }}
             onMouseLeave={(e) => {
               e.currentTarget.style.boxShadow = "none";
+              e.currentTarget.style.borderColor = "rgba(255,255,255,0.1)";
             }}
           >
-            <h3
-              className="text-base md:text-lg font-medium mb-3"
+            {/* Inner radial glow */}
+            <div
+              className="absolute inset-0 pointer-events-none"
               style={{
-                fontFamily: FONT_TITLE,
-                color: MUTED_INDIGO,
+                background: "radial-gradient(ellipse at 50% 50%, rgba(30,32,74,0.5) 0%, transparent 70%)",
               }}
-            >
-              The WeGrow Project
-            </h3>
-            <p
-              className="text-sm leading-relaxed mb-8 flex-1"
-              style={{
-                fontFamily: FONT_BODY,
-                color: "rgba(255,255,255,0.9)",
-              }}
-            >
-              Our infrastructure is built on validated behavioral data. In our
-              foundational deployment with CARE International and DANIDA, we
-              successfully moved users from silent device ownership to active
-              digital participation.
-            </p>
-            {/* Photo grid — stacked on mobile, 3-col on desktop */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-2">
-              {weGrowPhotos.map((src, i) => (
-                <img
-                  key={i}
-                  src={src}
-                  alt={`WeGrow field photo ${i + 1}`}
-                  className="w-full object-cover h-[140px] md:h-[160px]"
-                  style={{ borderRadius: 4 }}
-                />
-              ))}
+            />
+            <div className="relative z-10 flex flex-col flex-1">
+              <h3
+                className="text-base md:text-lg font-medium mb-3"
+                style={{
+                  fontFamily: FONT_TITLE,
+                  color: MUTED_INDIGO,
+                }}
+              >
+                The WeGrow Project
+              </h3>
+              <p
+                className="text-sm leading-relaxed mb-8 flex-1"
+                style={{
+                  fontFamily: FONT_BODY,
+                  color: "rgba(255,255,255,0.9)",
+                }}
+              >
+                Our infrastructure is built on validated behavioral data. In our
+                foundational deployment with CARE International and DANIDA, we
+                successfully moved users from silent device ownership to active
+                digital participation.
+              </p>
+              {/* Photo grid — stacked on mobile, 3-col on desktop */}
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-2">
+                {weGrowPhotos.map((src, i) => (
+                  <img
+                    key={i}
+                    src={src}
+                    alt={`WeGrow field photo ${i + 1}`}
+                    className="w-full object-cover h-[140px] md:h-[160px]"
+                    style={{ borderRadius: 4 }}
+                  />
+                ))}
+              </div>
             </div>
           </div>
         </div>

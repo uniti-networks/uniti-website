@@ -48,7 +48,7 @@ const GLASS_BG = "rgba(255,255,255,0.03)";
 const ActivitiesSection = () => (
   <section
     className="relative w-full overflow-hidden"
-    style={{ background: "radial-gradient(ellipse at center, #1e204a 0%, #0b0c1f 70%)", margin: 0 }}
+    style={{ background: "#0b0c1f", margin: 0 }}
   >
     {/* Subtle center glow */}
     <div

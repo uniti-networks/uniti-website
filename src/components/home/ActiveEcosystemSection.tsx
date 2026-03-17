@@ -558,7 +558,7 @@ const ActiveEcosystemSection = () => (
     }}
   >
     {/* ── Headline ── */}
-    <div className="relative z-10 px-6 pt-16 md:px-12 md:pt-24 lg:px-20 lg:pt-32">
+    <div className="relative z-10 px-6 pt-12 md:px-12 md:pt-20 lg:px-20 lg:pt-24">
       <div className="max-w-7xl mx-auto">
         <h2
           className="text-[26px] md:text-[34px] lg:text-[42px] font-medium leading-[1.15] mb-6 md:mb-10"

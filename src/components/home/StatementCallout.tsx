@@ -1,6 +1,6 @@
 const StatementCallout = () => (
   <section
-    className="relative px-6 py-24 md:py-32 lg:py-40 overflow-hidden"
+    className="relative px-6 py-16 md:py-20 lg:py-24 overflow-hidden"
     style={{ background: "radial-gradient(ellipse at center, #1e204a 0%, #0b0c1f 70%)" }}
   >
     <div className="max-w-3xl mx-auto text-center">

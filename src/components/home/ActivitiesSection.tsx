@@ -198,24 +198,24 @@ const ActivitiesSection = () => (
               that establishes the behavioral infrastructure required to activate
               one million users from MTN's subscriber base.
             </p>
-            {/* White logos */}
+            {/* White logos — visually balanced */}
             <div className="flex items-center gap-10">
               <img
                 src={logoMtn}
                 alt="MTN logo"
-                className="h-10 w-auto object-contain"
+                className="h-8 w-auto object-contain"
                 style={{ filter: "brightness(0) invert(1)", opacity: 0.85 }}
               />
               <img
                 src={logoEsoko}
                 alt="Esoko logo"
-                className="h-10 w-auto object-contain"
+                className="h-5 w-auto object-contain"
                 style={{ filter: "brightness(0) invert(1)", opacity: 0.85 }}
               />
               <img
                 src={logoUniti}
                 alt="Uniti logo"
-                className="h-10 w-auto object-contain"
+                className="h-8 w-auto object-contain"
                 style={{ opacity: 0.85 }}
               />
             </div>

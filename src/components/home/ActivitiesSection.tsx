@@ -247,16 +247,16 @@ const ActivitiesSection = () => (
               successfully moved users from silent device ownership to active
               digital participation.
             </p>
-            {/* 1×3 photo row — matching logo height */}
-            <div className="grid grid-cols-3 gap-2">
+            {/* Photo grid — stacked on mobile, 3-col on desktop */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-2">
               {weGrowPhotos.map((src, i) => (
                 <img
                   key={i}
                   src={src}
                   alt={`WeGrow field photo ${i + 1}`}
-                  className="w-full object-cover"
+                  className="w-full object-cover rounded"
                   style={{
-                    height: 160,
+                    height: window.innerWidth < 768 ? 140 : 160,
                     borderRadius: 4,
                   }}
                 />

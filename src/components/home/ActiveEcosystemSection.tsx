@@ -4,35 +4,30 @@ import unitiU from "@/assets/uniti-u-white.svg";
 /* ── Node data ── */
 const nodes = [
   {
-    fig: "FIG 01",
     tag: "VERIFIED UTILITY",
     title: "Mobile Network\nOperators",
     desc: "We convert passive subscribers into high-intent users by building sustainable positive digital habits, making the device essential to daily life and driving long-term ARPU growth.",
     icon: "tower",
   },
   {
-    fig: "FIG 02",
     tag: "PORTFOLIO DE-RISKING",
     title: "Device Financers",
     desc: "Repayment consistency is directly tied to device essentiality. We ensure the device is deeply integrated into the user's life, significantly lowering NPL risks.",
     icon: "phone",
   },
   {
-    fig: "FIG 03",
     tag: "THE INDUCTION LAYER",
     title: "App Developers",
     desc: "We provide a direct, scalable Induction Layer that meets users where they are, achieving 6–8x the industry-standard engagement rate.",
     icon: "code",
   },
   {
-    fig: "FIG 04",
     tag: "IMPACT AT SCALE",
     title: "NGOs / Not-for-Profits",
     desc: "We reach underserved populations with digital services that drive measurable social outcomes beyond initial rollout.",
     icon: "globe",
   },
   {
-    fig: "FIG 05",
     tag: "DIGITAL INCLUSION INFRASTRUCTURE",
     title: "Governments",
     desc: "We support national digital transformation agendas by activating citizens as productive digital participants.",

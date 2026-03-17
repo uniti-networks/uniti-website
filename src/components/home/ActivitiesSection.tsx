@@ -70,7 +70,7 @@ const ActivitiesSection = () => (
           }}
         >
           <span className="text-white">The Path to Scale</span>
-          <span style={{ color: "#525aa6", opacity: 0.7 }}>
+          <span style={{ color: "#94A3B8" }}>
             {" "}— We are bridging the gap between basic connectivity and full
             digital participation through a series of targeted roll-outs.
           </span>

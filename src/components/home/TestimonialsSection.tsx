@@ -6,9 +6,20 @@ const testimonials = [
 ];
 
 const TestimonialsSection = () => (
-  <section className="px-6 py-12 md:px-12 md:py-20 lg:px-20 lg:py-24">
+  <section
+    className="px-6 py-12 md:px-12 md:py-20 lg:px-20 lg:py-24"
+    style={{ background: "#0b0c1f" }}
+  >
     <div className="container-wide">
-      <h2 className="text-3xl md:text-4xl font-extrabold text-center mb-12">What People Say</h2>
+      <h2
+        className="text-[28px] md:text-[36px] lg:text-[44px] font-medium leading-[1.1] text-center text-white mb-12"
+        style={{
+          fontFamily: "'Euclid Circular A', 'Plus Jakarta Sans', sans-serif",
+          letterSpacing: "-0.02em",
+        }}
+      >
+        What People Say
+      </h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         {testimonials.map((src, i) => (
           <img

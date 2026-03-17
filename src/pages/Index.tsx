@@ -23,11 +23,11 @@ const Index = () => (
       <ActiveEcosystemSection />
       <SectionDivider />
       <ActivitiesSection />
-      <SectionDivider light />
+      <SectionDivider />
       <TestimonialsSection />
-      <SectionDivider light />
+      <SectionDivider />
       <ContactSection />
-      <SectionDivider light />
+      <SectionDivider />
       <TeamCTA />
     </main>
     <Footer />

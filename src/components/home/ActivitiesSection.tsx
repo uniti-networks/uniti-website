@@ -190,8 +190,7 @@ const ActivitiesSection = () => (
               className="text-sm leading-relaxed mb-8 flex-1"
               style={{
                 fontFamily: FONT_BODY,
-                fontWeight: 300,
-                color: "rgba(255,255,255,0.7)",
+                color: "rgba(255,255,255,0.9)",
               }}
             >
               Uniti is working with MTN Ghana and Esoko on a phased deployment
@@ -252,8 +251,7 @@ const ActivitiesSection = () => (
               className="text-sm leading-relaxed mb-8 flex-1"
               style={{
                 fontFamily: FONT_BODY,
-                fontWeight: 300,
-                color: "rgba(255,255,255,0.7)",
+                color: "rgba(255,255,255,0.9)",
               }}
             >
               Our infrastructure is built on validated behavioral data. In our

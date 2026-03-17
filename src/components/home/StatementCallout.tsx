@@ -1,15 +1,17 @@
 const StatementCallout = () => (
-  <section className="bg-background px-6 py-24 md:py-32 lg:py-40">
+  <section
+    className="px-6 py-24 md:py-32 lg:py-40"
+    style={{ background: "#0b0c1f" }}
+  >
     <div className="max-w-3xl mx-auto text-center">
       <p
-        className="text-2xl md:text-3xl lg:text-[2rem] font-bold leading-relaxed"
+        className="text-2xl md:text-3xl lg:text-[2rem] font-bold leading-relaxed text-white"
         style={{
           fontFamily: "'Euclid Circular A', 'Plus Jakarta Sans', sans-serif",
-          color: "rgb(34, 35, 91)",
         }}
       >
         Hardware is no longer the bottleneck. The real challenge is the{" "}
-        <span style={{ color: "rgb(82, 90, 166)" }}>Relevance Gap</span> — the
+        <span style={{ color: "#525aa6" }}>Relevance Gap</span> — the
         distance between device ownership and meaningful digital utility.
       </p>
     </div>

@@ -244,7 +244,7 @@ const DesktopHub = () => {
   const [hoveredIdx, setHoveredIdx] = useState<number | null>(null);
 
   return (
-    <div className="hidden lg:flex justify-center relative z-10 pb-20 lg:pb-28">
+    <div className="hidden lg:flex justify-center relative z-10 pb-20 lg:pb-28" style={{ marginTop: 120 }}>
       <div className="relative" style={{ width: W, height: H }}>
         <ConstellationCanvas />
 

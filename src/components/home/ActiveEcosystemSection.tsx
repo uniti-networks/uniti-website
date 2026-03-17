@@ -201,21 +201,19 @@ const ConstellationCanvas = () => {
 };
 
 /* ═══════════════════════════════════════
-   DESKTOP — Radial Hub
+   DESKTOP — 360° Circular Hub
    ═══════════════════════════════════════ */
 
-// Positions on a symmetrical arc (half-circle) — all equidistant from center
-// Arc spans from ~150° to ~30° (top half), radius = 320px from center
 const HUB_CX = 50; // % center x
-const HUB_CY = 44; // % center y
-const ARC_RADIUS = 310; // px
-// Angles in degrees: evenly spaced across top arc (180°)
-// 5 nodes: 162°, 126°, 90°, 54°, 18° from left to right
-const ARC_ANGLES_DEG = [162, 126, 90, 54, 18];
+const HUB_CY = 50; // % center y
+const ARC_RADIUS = 320; // px
+// Perfect pentagonal distribution: 0°, 72°, 144°, 216°, 288°
+// Offset by -90° so first node is at top
+const ARC_ANGLES_DEG = [90, 162, 234, 306, 18];
 
 const DesktopHub = () => {
   const containerRef = useRef<HTMLDivElement>(null);
-  const [dims, setDims] = useState({ w: 1200, h: 800 });
+  const [dims, setDims] = useState({ w: 1200, h: 900 });
   const [hoveredIdx, setHoveredIdx] = useState<number | null>(null);
 
   useEffect(() => {
@@ -233,7 +231,6 @@ const DesktopHub = () => {
   const cx = dims.w * HUB_CX / 100;
   const cy = dims.h * HUB_CY / 100;
 
-  // Compute node anchor points on the arc (where the line ends)
   const nodeAnchors = ARC_ANGLES_DEG.map((deg) => {
     const rad = (deg * Math.PI) / 180;
     return {
@@ -247,7 +244,7 @@ const DesktopHub = () => {
       ref={containerRef}
       className="hidden md:block relative z-10 px-6 md:px-12 lg:px-20 pb-20 lg:pb-28"
     >
-      <div className="max-w-7xl mx-auto relative" style={{ height: "720px" }}>
+      <div className="max-w-7xl mx-auto relative" style={{ height: "820px" }}>
         <ConstellationCanvas />
 
         {/* SVG layer — connection lines + travelling particles */}
@@ -256,7 +253,6 @@ const DesktopHub = () => {
           style={{ zIndex: 2 }}
         >
           <defs>
-            {/* Particle travelling along each line */}
             {nodeAnchors.map((_, i) => (
               <radialGradient key={`pg-${i}`} id={`particle-glow-${i}`}>
                 <stop offset="0%" stopColor="#525aa6" stopOpacity="0.9" />
@@ -269,7 +265,6 @@ const DesktopHub = () => {
             const isHovered = hoveredIdx === i;
             return (
               <g key={i}>
-                {/* Hairline */}
                 <line
                   x1={cx}
                   y1={cy}
@@ -279,7 +274,6 @@ const DesktopHub = () => {
                   strokeWidth="0.5"
                   style={{ transition: "stroke 0.4s" }}
                 />
-                {/* Travelling particle */}
                 <circle r="2.5" fill={`url(#particle-glow-${i})`}>
                   <animateMotion
                     dur={`${3 + i * 0.7}s`}
@@ -287,7 +281,6 @@ const DesktopHub = () => {
                     path={`M${cx},${cy} L${anchor.x},${anchor.y}`}
                   />
                 </circle>
-                {/* Second particle, offset */}
                 <circle r="1.5" fill="rgba(82,90,166,0.5)">
                   <animateMotion
                     dur={`${4.5 + i * 0.5}s`}
@@ -311,7 +304,6 @@ const DesktopHub = () => {
             zIndex: 5,
           }}
         >
-          {/* Intensified halo glow */}
           <div
             className="absolute rounded-full animate-beat-pulse"
             style={{
@@ -346,35 +338,27 @@ const DesktopHub = () => {
           />
         </div>
 
-        {/* Nodes */}
+        {/* Nodes — centered on their anchor point */}
         {nodes.map((node, i) => {
           const anchor = nodeAnchors[i];
           const isHovered = hoveredIdx === i;
-          // Position text block relative to the anchor point
-          // Left-side nodes: text right-aligned to anchor; right-side: left-aligned
-          const angle = ARC_ANGLES_DEG[i];
-          const isLeft = angle > 90;
-          const isCenter = angle === 90;
 
           return (
             <div
-              key={node.fig}
-              className="absolute transition-transform duration-500 ease-out"
+              key={node.tag}
+              className="absolute transition-transform duration-500 ease-out text-center"
               style={{
                 left: anchor.x,
                 top: anchor.y,
-                transform: `translate(${isCenter ? "-50%" : isLeft ? "-100%" : "0%"}, -20px) scale(${isHovered ? 1.15 : 1})`,
-                transformOrigin: isCenter ? "center top" : isLeft ? "right top" : "left top",
-                maxWidth: "240px",
+                transform: `translate(-50%, -50%) scale(${isHovered ? 1.15 : 1})`,
+                maxWidth: "220px",
                 zIndex: isHovered ? 10 : 3,
-                paddingLeft: isLeft ? 0 : isCenter ? 0 : 12,
-                paddingRight: isLeft ? 12 : 0,
               }}
               onMouseEnter={() => setHoveredIdx(i)}
               onMouseLeave={() => setHoveredIdx(null)}
             >
               <div
-                className="mb-2 transition-all duration-400"
+                className="flex justify-center mb-2 transition-all duration-400"
                 style={{
                   filter: isHovered
                     ? "drop-shadow(0 0 10px rgba(82,90,166,0.7))"
@@ -386,17 +370,6 @@ const DesktopHub = () => {
                   className="w-7 h-7 text-white/60"
                 />
               </div>
-
-              <span
-                className="block text-[9px] mb-0.5 tracking-[0.15em]"
-                style={{
-                  fontFamily:
-                    "'SF Mono', 'Fira Code', 'Consolas', monospace",
-                  color: "rgba(255,255,255,0.3)",
-                }}
-              >
-                {node.fig}
-              </span>
 
               <span
                 className="block text-[9px] font-bold tracking-[0.18em] mb-1.5"
@@ -502,15 +475,6 @@ const MobileNode = ({
           <NodeIcon type={node.icon} className="w-7 h-7 text-white/60" />
         </div>
 
-        <span
-          className="block text-[9px] mb-0.5 tracking-[0.15em]"
-          style={{
-            fontFamily: "'SF Mono', 'Fira Code', 'Consolas', monospace",
-            color: "rgba(255,255,255,0.28)",
-          }}
-        >
-          {node.fig}
-        </span>
 
         <span
           className="block text-[9px] font-bold tracking-[0.18em] mb-1.5"

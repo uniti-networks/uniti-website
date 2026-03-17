@@ -1,8 +1,15 @@
 const StatementCallout = () => (
   <section
-    className="px-6 py-24 md:py-32 lg:py-40"
+    className="relative px-6 py-24 md:py-32 lg:py-40 overflow-hidden"
     style={{ background: "#0b0c1f" }}
   >
+    <div
+      className="absolute inset-0 pointer-events-none"
+      style={{
+        background:
+          "radial-gradient(ellipse at 50% 50%, rgba(30,32,74,0.4) 0%, transparent 60%)",
+      }}
+    />
     <div className="max-w-3xl mx-auto text-center">
       <p
         className="text-2xl md:text-3xl lg:text-[2rem] font-bold leading-relaxed text-white"

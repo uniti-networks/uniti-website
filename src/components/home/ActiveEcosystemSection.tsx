@@ -566,7 +566,7 @@ const ActiveEcosystemSection = () => (
             fontFamily:
               "'Euclid Circular A', 'Plus Jakarta Sans', sans-serif",
             letterSpacing: "-0.025em",
-            maxWidth: 1100,
+            maxWidth: 1200,
           }}
         >
           <span className="text-white">The Active Ecosystem</span>

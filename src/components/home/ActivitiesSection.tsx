@@ -202,7 +202,7 @@ const ActivitiesSection = () => (
               <img
                 src={logoMtn}
                 alt="MTN logo"
-                className="h-8 w-auto object-contain"
+                className="h-12 w-auto object-contain"
                 style={{ filter: "brightness(0) invert(1)", opacity: 0.85 }}
               />
               <img

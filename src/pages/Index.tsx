@@ -18,7 +18,7 @@ const Index = () => (
       <StatementCallout />
       <ProductArchitectureSection />
       <ActiveEcosystemSection />
-      <ClientsSection />
+      
       <ActivitiesSection />
       <TestimonialsSection />
       <ContactSection />

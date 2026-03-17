@@ -37,7 +37,7 @@ const ProductArchitectureSection = () => (
       margin: 0,
     }}
   >
-    <div className="relative z-10 px-6 pt-16 pb-8 md:px-12 md:pt-24 md:pb-10 lg:px-20 lg:pt-32 lg:pb-12">
+    <div className="relative z-10 px-6 pt-12 pb-8 md:px-12 md:pt-20 md:pb-10 lg:px-20 lg:pt-24 lg:pb-12">
       <div className="max-w-7xl mx-auto">
         {/* ── Typographic header ── */}
         <h2

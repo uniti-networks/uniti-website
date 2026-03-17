@@ -27,7 +27,7 @@ const ContactSection = () => {
   };
 
   return (
-    <section className="section-padding section-alt" id="contact">
+    <section className="px-6 py-12 md:px-12 md:py-20 lg:px-20 lg:py-24 section-alt" id="contact">
       <div className="container-narrow">
         <h2 className="text-3xl md:text-4xl font-extrabold text-center mb-4">Get in Touch</h2>
         <p className="text-center text-foreground mb-12">Tell us about your needs and how we can work together.</p>

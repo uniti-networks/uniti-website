@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 
 const TeamCTA = () => (
-  <section className="section-padding text-center">
+  <section className="px-6 py-12 md:px-12 md:py-20 lg:px-20 lg:py-24 text-center">
     <div className="container-narrow">
       <h2 className="text-3xl md:text-4xl font-extrabold mb-4">Meet the Team</h2>
       <p className="text-foreground text-lg mb-8">

@@ -475,15 +475,6 @@ const MobileNode = ({
           <NodeIcon type={node.icon} className="w-7 h-7 text-white/60" />
         </div>
 
-        <span
-          className="block text-[9px] mb-0.5 tracking-[0.15em]"
-          style={{
-            fontFamily: "'SF Mono', 'Fira Code', 'Consolas', monospace",
-            color: "rgba(255,255,255,0.28)",
-          }}
-        >
-          {node.fig}
-        </span>
 
         <span
           className="block text-[9px] font-bold tracking-[0.18em] mb-1.5"

@@ -4,7 +4,7 @@ import HeroSection from "@/components/home/HeroSection";
 import StatementCallout from "@/components/home/StatementCallout";
 import ProductArchitectureSection from "@/components/home/ProductArchitectureSection";
 import ActiveEcosystemSection from "@/components/home/ActiveEcosystemSection";
-import ClientsSection from "@/components/home/ClientsSection";
+
 import ActivitiesSection from "@/components/home/ActivitiesSection";
 import TestimonialsSection from "@/components/home/TestimonialsSection";
 import ContactSection from "@/components/home/ContactSection";

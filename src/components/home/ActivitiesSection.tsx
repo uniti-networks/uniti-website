@@ -50,12 +50,12 @@ const ActivitiesSection = () => (
     className="relative w-full overflow-hidden"
     style={{ background: "#0b0c1f", margin: 0 }}
   >
-    {/* Subtle center glow */}
+    {/* Subtle low glow — NOT a centered radial to avoid seam with section above */}
     <div
       className="absolute inset-0 pointer-events-none"
       style={{
         background:
-          "radial-gradient(ellipse at 50% 30%, rgba(30,32,74,0.5) 0%, transparent 60%)",
+          "radial-gradient(ellipse at 50% 80%, rgba(30,32,74,0.35) 0%, transparent 50%)",
       }}
     />
 

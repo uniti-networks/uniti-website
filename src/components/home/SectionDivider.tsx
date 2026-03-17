@@ -1,13 +1,15 @@
-const SectionDivider = ({ light = false }: { light?: boolean }) => (
-  <div
-    className="w-full"
-    style={{
-      height: "1px",
-      background: light
-        ? "linear-gradient(to right, transparent 0%, rgba(0,0,0,0.06) 25%, rgba(0,0,0,0.06) 75%, transparent 100%)"
-        : "linear-gradient(to right, transparent 0%, rgba(255,255,255,0.04) 25%, rgba(255,255,255,0.04) 75%, transparent 100%)",
-    }}
-  />
+const SectionDivider = () => (
+  <div className="flex justify-center py-[80px]">
+    <div
+      className="w-[70%] md:w-[70%] max-sm:w-[90%]"
+      style={{
+        height: "0.5px",
+        background:
+          "linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.3) 30%, rgba(255,255,255,0.3) 70%, rgba(255,255,255,0) 100%)",
+        boxShadow: "0 0 8px rgba(82, 90, 166, 0.4)",
+      }}
+    />
+  </div>
 );
 
 export default SectionDivider;

@@ -555,11 +555,12 @@ const ActiveEcosystemSection = () => (
     <div className="relative z-10 px-6 pt-16 md:px-12 md:pt-24 lg:px-20 lg:pt-32">
       <div className="max-w-7xl mx-auto">
         <h2
-          className="text-[26px] md:text-[34px] lg:text-[42px] font-medium leading-[1.15] max-w-[1100px] mb-6 md:mb-10"
+          className="text-[26px] md:text-[34px] lg:text-[42px] font-medium leading-[1.15] mb-6 md:mb-10"
           style={{
             fontFamily:
               "'Euclid Circular A', 'Plus Jakarta Sans', sans-serif",
-            letterSpacing: "-0.02em",
+            letterSpacing: "-0.025em",
+            maxWidth: 1100,
           }}
         >
           <span className="text-white">The Active Ecosystem</span>
@@ -573,11 +574,11 @@ const ActiveEcosystemSection = () => (
       </div>
     </div>
 
-    {/* ── Desktop: Radial Hub ── */}
+    {/* ── Desktop: Radial Hub (≥1024px) ── */}
     <DesktopHub />
 
-    {/* ── Mobile: Vertical Timeline ── */}
-    <div className="md:hidden relative z-10 px-6 pb-20">
+    {/* ── Mobile / Tablet: Vertical Timeline (<1024px) ── */}
+    <div className="lg:hidden relative z-10 px-6 pb-20">
       {/* Central U with halo */}
       <div className="flex justify-center mb-14 relative">
         <div
@@ -616,7 +617,7 @@ const ActiveEcosystemSection = () => (
 
         <div className="flex flex-col gap-20">
           {nodes.map((node, i) => (
-            <MobileNode key={node.fig} node={node} index={i} />
+            <MobileNode key={node.tag} node={node} index={i} />
           ))}
         </div>
       </div>

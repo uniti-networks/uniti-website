@@ -80,27 +80,15 @@ const ActivitiesSection = () => (
         <div className="relative grid grid-cols-2 lg:grid-cols-4 mb-16 md:mb-24">
           {/* Desktop vertical dividers with blush glow */}
           {[1, 2, 3].map((i) => (
-            <div key={`v-${i}`} className="absolute top-0 bottom-0 hidden lg:block pointer-events-none" style={{ left: `${i * 25}%` }}>
-              {/* Blush glow behind line */}
-              <div
-                className="absolute inset-0"
-                style={{
-                  width: 40,
-                  marginLeft: -20,
-                  background: "linear-gradient(to bottom, transparent 0%, rgba(82,90,166,0.04) 30%, rgba(82,90,166,0.04) 70%, transparent 100%)",
-                }}
-              />
-              <div
-                style={{
-                  position: "absolute",
-                  left: 0,
-                  top: 0,
-                  bottom: 0,
-                  width: "0.5px",
-                  background: `linear-gradient(to bottom, transparent 0%, ${HAIRLINE_COLOR} 20%, ${HAIRLINE_COLOR} 80%, transparent 100%)`,
-                }}
-              />
-            </div>
+            <div
+              key={`v-${i}`}
+              className="absolute top-0 bottom-0 hidden lg:block pointer-events-none"
+              style={{
+                left: `${i * 25}%`,
+                width: "0.5px",
+                background: `linear-gradient(to bottom, transparent 0%, ${HAIRLINE_COLOR} 20%, ${HAIRLINE_COLOR} 80%, transparent 100%)`,
+              }}
+            />
           ))}
 
           {/* Mobile crosshair — vertical */}

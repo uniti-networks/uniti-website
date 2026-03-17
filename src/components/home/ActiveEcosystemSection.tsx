@@ -244,7 +244,7 @@ const DesktopHub = () => {
   const [hoveredIdx, setHoveredIdx] = useState<number | null>(null);
 
   return (
-    <div className="hidden lg:flex justify-center relative z-10 pb-20 lg:pb-28">
+    <div className="hidden lg:flex justify-center relative z-10 pb-20 lg:pb-28" style={{ marginTop: 120 }}>
       <div className="relative" style={{ width: W, height: H }}>
         <ConstellationCanvas />
 
@@ -566,7 +566,7 @@ const ActiveEcosystemSection = () => (
             fontFamily:
               "'Euclid Circular A', 'Plus Jakarta Sans', sans-serif",
             letterSpacing: "-0.025em",
-            maxWidth: 1100,
+            maxWidth: 1200,
           }}
         >
           <span className="text-white">The Active Ecosystem</span>

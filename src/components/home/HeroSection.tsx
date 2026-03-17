@@ -206,8 +206,8 @@ const HeroSection = () => {
         </div>
       </div>
 
-      {/* Bottom fade to white */}
-      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-background to-transparent" />
+      {/* Bottom fade to dark */}
+      <div className="absolute bottom-0 left-0 right-0 h-24" style={{ background: "linear-gradient(to top, #0b0c1f, transparent)" }} />
     </section>);
 
 };

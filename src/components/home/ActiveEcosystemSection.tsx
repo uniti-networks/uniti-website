@@ -201,21 +201,20 @@ const ConstellationCanvas = () => {
 
 // Container is 1200×820. Center = 600, 410.
 const W = 1200;
-const H = 820;
+const H = 760;
 const CX = W / 2;
-const CY = H / 2;
-const RADIUS = 340;
+const CY = H / 2 + 40; // push center down to create 80px+ gap from headline
+const RADIUS = 289; // 340 * 0.85 = 289
 
-// Pentagonal: 90° (top), 162°, 234°, 306°, 18° — math coords (CCW from right)
+// Pentagonal: 90° (top), 162°, 234°, 306°, 18°
 const ANGLES_DEG = [90, 162, 234, 306, 18];
 
-// Pre-compute fixed positions
 const NODE_POSITIONS = ANGLES_DEG.map((deg) => {
   const rad = (deg * Math.PI) / 180;
   return { x: CX + RADIUS * Math.cos(rad), y: CY - RADIUS * Math.sin(rad) };
 });
 
-// Text alignment: top node centered, left-side right-aligned, right-side left-aligned
+// Left-side (deg 90-270) = right-aligned text, right-side = left-aligned
 const getNodeAlign = (deg: number): "center" | "right" | "left" => {
   if (deg === 90) return "center";
   if (deg > 90 && deg < 270) return "right";
@@ -230,8 +229,15 @@ const getTranslate = (align: "center" | "right" | "left") => {
 
 const getOffset = (align: "center" | "right" | "left") => {
   if (align === "center") return { marginLeft: 0, marginRight: 0, marginTop: -12 };
-  if (align === "right") return { marginLeft: 0, marginRight: 20, marginTop: 0 };
-  return { marginLeft: 20, marginRight: 0, marginTop: 0 };
+  if (align === "right") return { marginLeft: 0, marginRight: 24, marginTop: 0 };
+  return { marginLeft: 24, marginRight: 0, marginTop: 0 };
+};
+
+// Icon alignment helper: right-aligned nodes get icon on the right, left-aligned on the left
+const getIconJustify = (align: "center" | "right" | "left") => {
+  if (align === "center") return "justify-center";
+  if (align === "right") return "justify-end";
+  return "justify-start";
 };
 
 const DesktopHub = () => {
@@ -350,7 +356,7 @@ const DesktopHub = () => {
               style={{
                 left: pos.x,
                 top: pos.y,
-                transform: `${getTranslate(align)} scale(${isHovered ? 1.15 : 1})`,
+                transform: `${getTranslate(align)} scale(${isHovered ? 1.2 : 1})`,
                 maxWidth: 280,
                 zIndex: isHovered ? 10 : 3,
                 textAlign: align === "center" ? "center" : align === "right" ? "right" : "left",
@@ -360,7 +366,7 @@ const DesktopHub = () => {
               onMouseLeave={() => setHoveredIdx(null)}
             >
               <div
-                className={`mb-2 transition-all duration-400 ${align === "center" ? "flex justify-center" : ""}`}
+                className={`flex mb-2 transition-all duration-400 ${getIconJustify(align)}`}
                 style={{
                   filter: isHovered
                     ? "drop-shadow(0 0 10px rgba(82,90,166,0.7))"

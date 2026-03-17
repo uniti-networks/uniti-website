@@ -186,23 +186,23 @@ const ActivitiesSection = () => (
               one million users from MTN's subscriber base.
             </p>
             {/* White logos — visually balanced */}
-            <div className="flex items-center gap-10">
+            <div className="flex items-center gap-4 md:gap-10">
               <img
                 src={logoMtn}
                 alt="MTN logo"
-                className="h-12 w-auto object-contain"
+                className="h-8 md:h-12 w-auto object-contain"
                 style={{ filter: "brightness(0) invert(1)", opacity: 0.85 }}
               />
               <img
                 src={logoEsoko}
                 alt="Esoko logo"
-                className="h-5 w-auto object-contain"
+                className="h-3.5 md:h-5 w-auto object-contain"
                 style={{ filter: "brightness(0) invert(1)", opacity: 0.85 }}
               />
               <img
                 src={logoUniti}
                 alt="Uniti logo"
-                className="h-8 w-auto object-contain"
+                className="h-6 md:h-8 w-auto object-contain"
                 style={{ opacity: 0.85 }}
               />
             </div>
@@ -247,18 +247,15 @@ const ActivitiesSection = () => (
               successfully moved users from silent device ownership to active
               digital participation.
             </p>
-            {/* 1×3 photo row — matching logo height */}
-            <div className="grid grid-cols-3 gap-2">
+            {/* Photo grid — stacked on mobile, 3-col on desktop */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-2">
               {weGrowPhotos.map((src, i) => (
                 <img
                   key={i}
                   src={src}
                   alt={`WeGrow field photo ${i + 1}`}
-                  className="w-full object-cover"
-                  style={{
-                    height: 160,
-                    borderRadius: 4,
-                  }}
+                  className="w-full object-cover h-[140px] md:h-[160px]"
+                  style={{ borderRadius: 4 }}
                 />
               ))}
             </div>

@@ -43,16 +43,16 @@ const jobOpenings: JobOpening[] = [
 
 const PersonCard = ({ person }: { person: TeamMember }) => (
   <div className="text-center">
-    <div className="w-32 h-32 mx-auto rounded-full bg-section-alt border-2 border-dashed border-border mb-4 flex items-center justify-center overflow-hidden">
+    <div className="w-32 h-32 mx-auto rounded-full border-2 border-dashed border-white/20 mb-4 flex items-center justify-center overflow-hidden" style={{ background: "#1e204a" }}>
       {person.image ? (
         <img src={person.image} alt={person.name} className="w-full h-full object-cover" />
       ) : (
-        <span className="text-xs text-muted-foreground">Photo</span>
+        <span className="text-xs text-white/50">Photo</span>
       )}
     </div>
-    <h3 className="font-heading text-base font-bold text-heading">{person.name}</h3>
+    <h3 className="font-heading text-base font-bold text-white">{person.name}</h3>
     <p className="text-sm text-accent font-medium mb-2">{person.role}</p>
-    <p className="text-sm text-foreground mb-3 max-w-xs mx-auto">{person.bio}</p>
+    <p className="text-sm text-white/70 mb-3 max-w-xs mx-auto">{person.bio}</p>
     <a href={person.linkedin} className="inline-flex items-center gap-1 text-accent hover:text-accent/80 transition-colors">
       <Linkedin className="w-4 h-4" />
     </a>
@@ -74,13 +74,13 @@ const TeamCareer = () => {
   return (
     <>
       <Navbar />
-      <main className="pt-16">
+      <main className="pt-16" style={{ background: "#0b0c1f" }}>
         {/* Hero */}
-        <section className="section-padding bg-primary text-center">
+        <section className="section-padding text-center" style={{ background: "radial-gradient(ellipse at center, #1e204a 0%, #0b0c1f 70%)" }}>
           <div className="container-narrow">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-primary-foreground mb-6">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white mb-6">
             </h1>
-            <p className="text-lg text-primary-foreground/80 mb-8">
+            <p className="text-lg text-white/70 mb-8">
               Join the team building the future of digital activation.
             </p>
             <a href="#jobs">
@@ -92,9 +92,9 @@ const TeamCareer = () => {
         </section>
 
         {/* Team */}
-        <section className="section-padding">
+        <section className="section-padding" style={{ background: "#0b0c1f" }}>
           <div className="container-wide">
-            <h2 className="text-3xl md:text-4xl font-extrabold text-center mb-12">Our Team</h2>
+            <h2 className="text-3xl md:text-4xl font-extrabold text-center text-white mb-12">Our Team</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
               {teamMembers.map((m) => (
                 <PersonCard key={m.name} person={m} />
@@ -104,9 +104,9 @@ const TeamCareer = () => {
         </section>
 
         {/* Advisors */}
-        <section className="section-padding section-alt">
+        <section className="section-padding" style={{ background: "#0b0c1f" }}>
           <div className="container-wide">
-            <h2 className="text-3xl md:text-4xl font-extrabold text-center mb-12">Board of Advisors</h2>
+            <h2 className="text-3xl md:text-4xl font-extrabold text-center text-white mb-12">Board of Advisors</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 max-w-3xl mx-auto">
               {advisors.map((a) => (
                 <PersonCard key={a.name} person={a} />
@@ -116,26 +116,26 @@ const TeamCareer = () => {
         </section>
 
         {/* Job Openings */}
-        <section className="section-padding" id="jobs">
+        <section className="section-padding" id="jobs" style={{ background: "#0b0c1f" }}>
           <div className="container-narrow">
-            <h2 className="text-3xl md:text-4xl font-extrabold text-center mb-12">Open Positions</h2>
+            <h2 className="text-3xl md:text-4xl font-extrabold text-center text-white mb-12">Open Positions</h2>
             <div className="space-y-4">
               {jobOpenings.map((job, i) => (
-                <div key={i} className="border border-border rounded-xl overflow-hidden">
+                <div key={i} className="border border-white/10 rounded-xl overflow-hidden">
                   <button
                     onClick={() => setOpenJob(openJob === i ? null : i)}
-                    className="w-full flex items-center justify-between p-6 text-left hover:bg-section-alt transition-colors"
+                    className="w-full flex items-center justify-between p-6 text-left hover:bg-white/5 transition-colors"
                   >
                     <div>
-                      <h3 className="font-heading text-lg font-bold text-heading">{job.title}</h3>
-                      <p className="text-sm text-muted-foreground mt-1">{job.location} · {job.type}</p>
+                      <h3 className="font-heading text-lg font-bold text-white">{job.title}</h3>
+                      <p className="text-sm text-white/50 mt-1">{job.location} · {job.type}</p>
                     </div>
-                    <ChevronDown className={`w-5 h-5 text-muted-foreground transition-transform ${openJob === i ? "rotate-180" : ""}`} />
+                    <ChevronDown className={`w-5 h-5 text-white/50 transition-transform ${openJob === i ? "rotate-180" : ""}`} />
                   </button>
 
                   {openJob === i && (
-                    <div className="px-6 pb-6 border-t border-border pt-4">
-                      <p className="text-foreground mb-6">{job.description}</p>
+                    <div className="px-6 pb-6 border-t border-white/10 pt-4">
+                      <p className="text-white/70 mb-6 whitespace-pre-line">{job.description}</p>
 
                       {showForm === i ? (
                         <form onSubmit={handleApply} className="space-y-4">
@@ -145,7 +145,7 @@ const TeamCareer = () => {
                             placeholder="Full Name"
                             value={appForm.name}
                             onChange={(e) => setAppForm({ ...appForm, name: e.target.value })}
-                            className="w-full px-4 py-3 rounded-lg border border-input bg-background text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-accent"
+                            className="w-full px-4 py-3 rounded-lg border border-white/10 bg-white/5 text-white text-sm placeholder:text-white/40 focus:outline-none focus:ring-2 focus:ring-accent"
                           />
                           <input
                             type="email"
@@ -153,7 +153,7 @@ const TeamCareer = () => {
                             placeholder="Email"
                             value={appForm.email}
                             onChange={(e) => setAppForm({ ...appForm, email: e.target.value })}
-                            className="w-full px-4 py-3 rounded-lg border border-input bg-background text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-accent"
+                            className="w-full px-4 py-3 rounded-lg border border-white/10 bg-white/5 text-white text-sm placeholder:text-white/40 focus:outline-none focus:ring-2 focus:ring-accent"
                           />
                           <textarea
                             required
@@ -161,12 +161,12 @@ const TeamCareer = () => {
                             placeholder="Cover Letter"
                             value={appForm.cover}
                             onChange={(e) => setAppForm({ ...appForm, cover: e.target.value })}
-                            className="w-full px-4 py-3 rounded-lg border border-input bg-background text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-accent resize-none"
+                            className="w-full px-4 py-3 rounded-lg border border-white/10 bg-white/5 text-white text-sm placeholder:text-white/40 focus:outline-none focus:ring-2 focus:ring-accent resize-none"
                           />
-                          <p className="text-xs text-muted-foreground">CV/Resume upload will be available soon. Please include relevant links in your cover letter.</p>
+                          <p className="text-xs text-white/40">CV/Resume upload will be available soon. Please include relevant links in your cover letter.</p>
                           <div className="flex gap-3">
                             <Button type="submit" className="bg-accent text-accent-foreground hover:bg-accent/90">Submit Application</Button>
-                            <Button type="button" variant="outline" onClick={() => setShowForm(null)}>Cancel</Button>
+                            <Button type="button" variant="outline" className="border-white/20 text-white hover:bg-white/10" onClick={() => setShowForm(null)}>Cancel</Button>
                           </div>
                         </form>
                       ) : (

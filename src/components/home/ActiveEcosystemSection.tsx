@@ -360,6 +360,7 @@ const DesktopHub = () => {
                 maxWidth: 280,
                 zIndex: isHovered ? 10 : 3,
                 textAlign: align === "center" ? "center" : align === "right" ? "right" : "left",
+                transition: "transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1)",
                 ...offset,
               }}
               onMouseEnter={() => setHoveredIdx(i)}

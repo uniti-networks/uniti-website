@@ -400,13 +400,13 @@ const DesktopHub = () => {
               </h3>
 
               <p
-                className="text-[12px] leading-[1.65]"
+                className="text-[13.2px] leading-[1.65]"
                 style={{
                   fontFamily: "'Europa', 'Inter', sans-serif",
                   color: isHovered
-                    ? "rgba(255,255,255,0.75)"
+                    ? "#FFFFFF"
                     : "rgba(255,255,255,0.38)",
-                  transition: "color 0.4s",
+                  transition: "color 0.5s cubic-bezier(0.25, 0.1, 0.25, 1)",
                 }}
               >
                 {node.desc}

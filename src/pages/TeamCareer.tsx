@@ -3,6 +3,8 @@ import { Linkedin, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import NodeCanvas from "@/components/NodeCanvas";
+import heroCityscape from "@/assets/hero-cityscape.png";
 
 interface TeamMember {
   name: string;

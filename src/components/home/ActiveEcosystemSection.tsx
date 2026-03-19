@@ -506,13 +506,13 @@ const MobileNode = ({
         </h3>
 
         <p
-          className="text-[12px] leading-[1.65]"
+          className="text-[13.2px] leading-[1.65]"
           style={{
             fontFamily: "'Europa', 'Inter', sans-serif",
             color: active
-              ? "rgba(255,255,255,0.7)"
+              ? "#FFFFFF"
               : "rgba(255,255,255,0.25)",
-            transition: "color 0.5s",
+            transition: "color 0.5s cubic-bezier(0.25, 0.1, 0.25, 1)",
           }}
         >
           {node.desc}

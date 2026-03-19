@@ -3,6 +3,8 @@ import { Linkedin, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import NodeCanvas from "@/components/NodeCanvas";
+import heroCityscape from "@/assets/hero-cityscape.png";
 
 interface TeamMember {
   name: string;
@@ -76,15 +78,52 @@ const TeamCareer = () => {
       <Navbar />
       <main className="pt-16" style={{ background: "#0b0c1f" }}>
         {/* Hero */}
-        <section className="section-padding text-center" style={{ background: "radial-gradient(ellipse at center, #1e204a 0%, #0b0c1f 70%)" }}>
-          <div className="container-narrow">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white mb-6">
+        <section className="relative w-full min-h-[70vh] overflow-hidden flex items-center justify-center">
+          {/* Background image — hard edge, no bottom fade */}
+          <img
+            src={heroCityscape}
+            alt="Aerial cityscape at golden hour — urban infrastructure at scale"
+            className="absolute inset-0 w-full h-full object-cover"
+            style={{ objectPosition: "center 40%" }}
+          />
+
+          {/* Dark overlay for contrast */}
+          <div
+            className="absolute inset-0"
+            style={{
+              background:
+                "linear-gradient(180deg, hsla(239,46%,8%,0.72) 0%, hsla(239,46%,12%,0.65) 100%)",
+            }}
+          />
+
+          {/* Node mesh overlay — identical to Home Hero */}
+          <NodeCanvas />
+
+          {/* Content */}
+          <div className="relative z-10 text-center px-6 py-24 max-w-3xl mx-auto animate-[fadeInUp_0.8s_ease-out_both]">
+            <h1
+              className="text-4xl md:text-5xl lg:text-[3.5rem] font-extrabold text-white leading-[1.08] mb-5"
+              style={{
+                fontFamily: "'Euclid Circular A', 'Plus Jakarta Sans', sans-serif",
+                letterSpacing: "-0.02em",
+              }}
+            >
+              The Architects of
+              <br />
+              Digital Transition
             </h1>
-            <p className="text-lg text-white/70 mb-8">
+            <p
+              className="text-white/70 text-base md:text-lg leading-relaxed max-w-lg mx-auto mb-10"
+              style={{ fontFamily: "'Europa', 'Inter', sans-serif" }}
+            >
               Join the team building the future of digital activation.
             </p>
             <a href="#jobs">
-              <Button size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
+              <Button
+                size="lg"
+                className="bg-accent text-accent-foreground hover:bg-accent/90 hover:brightness-110 hover:scale-[1.02] active:scale-[0.98] transition-all duration-300"
+                style={{ fontFamily: "'Euclid Circular A', 'Plus Jakarta Sans', sans-serif" }}
+              >
                 Job Openings
               </Button>
             </a>

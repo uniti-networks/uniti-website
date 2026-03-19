@@ -204,7 +204,7 @@ const W = 1200;
 const H = 700;
 const CX = W / 2;
 const CY = H / 2 + 60; // push center down for more headline gap
-const RADIUS = 234; // 260 * 0.9 = 234
+const RADIUS = 199; // 234 * 0.85 = 199 (15% closer)
 
 // Pentagonal: 90° (top), 162°, 234°, 306°, 18°
 const ANGLES_DEG = [90, 162, 234, 306, 18];
@@ -360,6 +360,7 @@ const DesktopHub = () => {
                 maxWidth: 280,
                 zIndex: isHovered ? 10 : 3,
                 textAlign: align === "center" ? "center" : align === "right" ? "right" : "left",
+                transition: "transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1)",
                 ...offset,
               }}
               onMouseEnter={() => setHoveredIdx(i)}
@@ -393,20 +394,20 @@ const DesktopHub = () => {
                   letterSpacing: "-0.02em",
                   color: isHovered ? "#525aa6" : "rgba(255,255,255,0.85)",
                   whiteSpace: "pre-line",
-                  transition: "color 0.35s",
+                  transition: "color 0.5s cubic-bezier(0.25, 0.1, 0.25, 1)",
                 }}
               >
                 {node.title}
               </h3>
 
               <p
-                className="text-[12px] leading-[1.65]"
+                className="text-[13.2px] leading-[1.65]"
                 style={{
                   fontFamily: "'Europa', 'Inter', sans-serif",
                   color: isHovered
-                    ? "rgba(255,255,255,0.75)"
+                    ? "#FFFFFF"
                     : "rgba(255,255,255,0.38)",
-                  transition: "color 0.4s",
+                  transition: "color 0.5s cubic-bezier(0.25, 0.1, 0.25, 1)",
                 }}
               >
                 {node.desc}
@@ -505,13 +506,13 @@ const MobileNode = ({
         </h3>
 
         <p
-          className="text-[12px] leading-[1.65]"
+          className="text-[13.2px] leading-[1.65]"
           style={{
             fontFamily: "'Europa', 'Inter', sans-serif",
             color: active
-              ? "rgba(255,255,255,0.7)"
+              ? "#FFFFFF"
               : "rgba(255,255,255,0.25)",
-            transition: "color 0.5s",
+            transition: "color 0.5s cubic-bezier(0.25, 0.1, 0.25, 1)",
           }}
         >
           {node.desc}

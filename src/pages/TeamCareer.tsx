@@ -44,7 +44,7 @@ const PersonCard = ({ person }: { person: TeamMember }) => (
   <div className="text-center">
     <div className="w-[148px] h-[148px] mx-auto rounded-full mb-4 flex items-center justify-center overflow-hidden" style={{ background: "radial-gradient(circle at 50% 40%, #1a1c48 0%, #0a0b1e 100%)" }}>
       {person.image ? (
-        <img src={person.image} alt={person.name} className="w-full h-full object-cover" style={{ objectPosition: "center center" }} />
+        <img src={person.image} alt={person.name} className="w-full h-full object-cover" style={{ objectPosition: "center center", transform: "scale(1.2)" }} />
       ) : (
         <span className="text-xs text-white/50">Photo</span>
       )}

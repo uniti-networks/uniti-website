@@ -14,16 +14,13 @@ interface TeamMember {
   image: string | null;
 }
 
-const teamMembers: TeamMember[] = [
+const allTeam: TeamMember[] = [
   { name: "Kami Dar", role: "CEO & FOUNDER", bio: "Kami leads Uniti's strategic vision, partner alignment and growth mapping. He has 25+ years experience at the intersection of technology and social impact, as Co-founder of Devex, the global development sector's media platform, and advisor to various organizations engaged in large-scale system change.", linkedin: "#", image: "/lovable-uploads/team-kami.png" },
+  { name: "Max Giacomelli", role: "EXECUTIVE CHAIR", bio: "Bringing decades of experience in telecommunications and emerging markets.", linkedin: "#", image: "/lovable-uploads/team-max.png" },
   { name: "Anna Montanes", role: "PRODUCT STRATEGY", bio: "Architecting the Uniti Beat engine and platform infrastructure.", linkedin: "#", image: "/lovable-uploads/team-anna.png" },
   { name: "Samuel Alomenu", role: "BUSINESS OPERATIONS LEAD", bio: "With an MBA from Esade, Barcelona, Samuel heads Uniti's business and sales operations. He has experience leading programs and applying disruptive technology to drive impact.", linkedin: "#", image: "/lovable-uploads/team-samuel.png" },
-  { name: "Rita Quansah", role: "COUNTRY LEAD, GHANA", bio: "Based out of Accra, Rita leads our operations in Ghana and service delivery, and supports the Uniti all Centre. Her background is managing maternal health and education programs in Ghana with Jhpiego and similar organizations.", linkedin: "#", image: "/lovable-uploads/team-rita.png" },
   { name: "Karan Vir Arya", role: "ENGAGEMENT LEAD", bio: "A former corporate lawyer, Karan leads the development of Uniti Beat, translating complex digital workflows into intuitive experiences for first-time smartphone users and active participants in the digital economy. His previous experiences include Google and Deutsche Bank.", linkedin: "#", image: "/lovable-uploads/team-karan.png" },
-];
-
-const advisors: TeamMember[] = [
-  { name: "Max Giacomelli", role: "EXECUTIVE CHAIR", bio: "Bringing decades of experience in telecommunications and emerging markets.", linkedin: "#", image: "/lovable-uploads/team-max.png" },
+  { name: "Rita Quansah", role: "COUNTRY LEAD, GHANA", bio: "Based out of Accra, Rita leads our operations in Ghana and service delivery, and supports the Uniti all Centre. Her background is managing maternal health and education programs in Ghana with Jhpiego and similar organizations.", linkedin: "#", image: "/lovable-uploads/team-rita.png" },
   { name: "Rosa Wang", role: "ADVISOR", bio: "An author, strategist, and public communicator on transformative technologies. Her experience as Global Director for Digital Financial Services with Opportunity International and long-term commitment to spreading digital and mobile technologies to those excluded from the digital revolution are an incredible asset to the Uniti team.", linkedin: "#", image: "/lovable-uploads/team-rosa.png" },
 ];
 

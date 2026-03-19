@@ -42,7 +42,7 @@ const jobOpenings: JobOpening[] = [
 
 const PersonCard = ({ person }: { person: TeamMember }) => (
   <div className="text-center">
-    <div className="w-32 h-32 mx-auto rounded-full border-2 border-dashed border-white/20 mb-4 flex items-center justify-center overflow-hidden" style={{ background: "#1e204a" }}>
+    <div className="w-32 h-32 mx-auto rounded-full mb-4 flex items-center justify-center overflow-hidden" style={{ background: "radial-gradient(circle at 50% 40%, #1a1c48 0%, #0a0b1e 100%)" }}>
       {person.image ? (
         <img src={person.image} alt={person.name} className="w-full h-full object-cover" />
       ) : (

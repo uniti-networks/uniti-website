@@ -204,7 +204,7 @@ const W = 1200;
 const H = 700;
 const CX = W / 2;
 const CY = H / 2 + 60; // push center down for more headline gap
-const RADIUS = 234; // 260 * 0.9 = 234
+const RADIUS = 199; // 234 * 0.85 = 199 (15% closer)
 
 // Pentagonal: 90° (top), 162°, 234°, 306°, 18°
 const ANGLES_DEG = [90, 162, 234, 306, 18];

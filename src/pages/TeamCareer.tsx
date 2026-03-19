@@ -127,26 +127,20 @@ const TeamCareer = () => {
           </div>
         </section>
 
-        {/* Team */}
+        {/* Team — strict 2-column grid */}
         <section className="section-padding" style={{ background: "#0b0c1f" }}>
-          <div className="container-wide">
+          <div className="container-wide max-w-3xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-extrabold text-center text-white mb-12">Our Team</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
-              {teamMembers.map((m) => (
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-12 gap-y-14">
+              {allTeam.slice(0, 6).map((m) => (
                 <PersonCard key={m.name} person={m} />
               ))}
             </div>
-          </div>
-        </section>
-
-        {/* Advisors */}
-        <section className="section-padding" style={{ background: "#0b0c1f" }}>
-          <div className="container-wide">
-            <h2 className="text-3xl md:text-4xl font-extrabold text-center text-white mb-12">Board of Advisors</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 max-w-3xl mx-auto">
-              {advisors.map((a) => (
-                <PersonCard key={a.name} person={a} />
-              ))}
+            {/* Rosa Wang — centered */}
+            <div className="mt-14 flex justify-center">
+              <div className="w-full max-w-xs">
+                <PersonCard person={allTeam[6]} />
+              </div>
             </div>
           </div>
         </section>

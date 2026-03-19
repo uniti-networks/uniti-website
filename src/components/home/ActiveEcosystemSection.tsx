@@ -394,7 +394,7 @@ const DesktopHub = () => {
                   letterSpacing: "-0.02em",
                   color: isHovered ? "#525aa6" : "rgba(255,255,255,0.85)",
                   whiteSpace: "pre-line",
-                  transition: "color 0.35s",
+                  transition: "color 0.5s cubic-bezier(0.25, 0.1, 0.25, 1)",
                 }}
               >
                 {node.title}

@@ -42,19 +42,16 @@ const jobOpenings: JobOpening[] = [
 
 const PersonCard = ({ person }: { person: TeamMember }) => (
   <div className="text-center">
-    <div className="w-32 h-32 mx-auto rounded-full mb-4 flex items-center justify-center overflow-hidden" style={{ background: "radial-gradient(circle at 50% 40%, #1a1c48 0%, #0a0b1e 100%)" }}>
+    <div className="w-[148px] h-[148px] mx-auto rounded-full mb-4 flex items-center justify-center overflow-hidden" style={{ background: "radial-gradient(circle at 50% 40%, #1a1c48 0%, #0a0b1e 100%)" }}>
       {person.image ? (
-        <img src={person.image} alt={person.name} className="w-full h-full object-cover" />
+        <img src={person.image} alt={person.name} className="w-full h-full object-cover" style={{ objectPosition: "center center" }} />
       ) : (
         <span className="text-xs text-white/50">Photo</span>
       )}
     </div>
     <h3 className="font-heading text-base font-bold text-white">{person.name}</h3>
     <p className="text-sm text-accent font-medium mb-2">{person.role}</p>
-    <p className="text-sm text-white/70 mb-3 max-w-xs mx-auto">{person.bio}</p>
-    <a href={person.linkedin} className="inline-flex items-center gap-1 text-accent hover:text-accent/80 transition-colors">
-      <Linkedin className="w-4 h-4" />
-    </a>
+    <p className="text-sm text-white mb-3 max-w-xs mx-auto">{person.bio}</p>
   </div>
 );
 

@@ -5,7 +5,6 @@ const Footer = () =>
     <div className="container-wide">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         <div>
-          <h3 className="font-heading text-lg font-bold text-primary-foreground mb-4">Uniti</h3>
           <p className="text-sm text-primary-foreground/70">
             Digital activation that pays. Making smartphones productive for everyone.
           </p>

@@ -13,7 +13,8 @@ const Footer = () =>
           <h4 className="font-heading text-sm font-semibold text-primary-foreground mb-3">Pages</h4>
           <div className="flex flex-col gap-2">
             <Link to="/" className="text-sm text-primary-foreground/70 hover:text-primary-foreground transition-colors">Home</Link>
-            <Link to="/team" className="text-sm text-primary-foreground/70 hover:text-primary-foreground transition-colors">Team & Careers</Link>
+            <Link to="/team" className="text-sm text-primary-foreground/70 hover:text-primary-foreground transition-colors">Team</Link>
+            <Link to="/careers" className="text-sm text-primary-foreground/70 hover:text-primary-foreground transition-colors">Careers</Link>
             <Link to="/learn" className="text-sm text-primary-foreground/70 hover:text-primary-foreground transition-colors">Learn with Uniti</Link>
             <Link to="/licensing" className="text-sm text-primary-foreground/70 hover:text-primary-foreground transition-colors">Licensing</Link>
           </div>

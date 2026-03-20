@@ -5,7 +5,8 @@ import logoUniti from "@/assets/logo-uniti.png";
 
 const navLinks = [
   { label: "Home", path: "/" },
-  { label: "Team & Careers", path: "/team" },
+  { label: "Team", path: "/team" },
+  { label: "Careers", path: "/careers" },
   { label: "Learn with Uniti", path: "/learn" },
   { label: "Licensing", path: "/licensing" },
 ];

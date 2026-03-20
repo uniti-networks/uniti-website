@@ -4,7 +4,8 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import Index from "./pages/Index.tsx";
-import TeamCareer from "./pages/TeamCareer.tsx";
+import Team from "./pages/Team.tsx";
+import Careers from "./pages/Careers.tsx";
 import LearnWithUniti from "./pages/LearnWithUniti.tsx";
 import Licensing from "./pages/Licensing.tsx";
 import NotFound from "./pages/NotFound.tsx";
@@ -19,7 +20,8 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
-          <Route path="/team" element={<TeamCareer />} />
+          <Route path="/team" element={<Team />} />
+          <Route path="/careers" element={<Careers />} />
           <Route path="/learn" element={<LearnWithUniti />} />
           <Route path="/licensing" element={<Licensing />} />
           <Route path="*" element={<NotFound />} />

@@ -5,7 +5,8 @@ import logoUniti from "@/assets/logo-uniti.png";
 
 const navLinks = [
   { label: "Home", path: "/" },
-  { label: "Team & Careers", path: "/team" },
+  { label: "Team", path: "/team" },
+  { label: "Careers", path: "/careers" },
   { label: "Learn with Uniti", path: "/learn" },
   { label: "Licensing", path: "/licensing" },
 ];
@@ -18,7 +19,7 @@ const Navbar = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background border-b border-border">
       <div className="container-wide flex items-center justify-between h-16 px-6 lg:px-20">
         <Link to="/" className="flex items-center">
-          <img src={logoUniti} alt="Uniti" className="h-14 w-auto" />
+          <img src={logoUniti} alt="Uniti" className="h-28 w-auto" />
         </Link>
         
 

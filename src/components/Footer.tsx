@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
-const Footer = () => (
-  <footer className="bg-primary text-primary-foreground py-12 px-6 lg:px-20">
+const Footer = () =>
+<footer className="bg-primary text-primary-foreground py-12 px-6 lg:px-20">
     <div className="container-wide">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         <div>
@@ -21,14 +21,14 @@ const Footer = () => (
         </div>
         <div>
           <h4 className="font-heading text-sm font-semibold text-primary-foreground mb-3">Contact</h4>
-          <p className="text-sm text-primary-foreground/70">info@uniti.app</p>
+          <p className="text-sm text-primary-foreground/70">connect@unitinetworks.com</p>
         </div>
       </div>
       <div className="mt-12 pt-8 border-t border-primary-foreground/20 text-center">
         <p className="text-xs text-primary-foreground/50">© {new Date().getFullYear()} Uniti. All rights reserved.</p>
       </div>
     </div>
-  </footer>
-);
+  </footer>;
+
 
 export default Footer;

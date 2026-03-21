@@ -401,7 +401,7 @@ const DesktopHub = () => {
               </h3>
 
               <p
-                className="text-[13.2px] leading-[1.65]"
+                 className="text-base leading-[1.65]"
                 style={{
                   fontFamily: "'Europa', 'Inter', sans-serif",
                   color: isHovered
@@ -506,7 +506,7 @@ const MobileNode = ({
         </h3>
 
         <p
-          className="text-[13.2px] leading-[1.65]"
+          className="text-base leading-[1.65]"
           style={{
             fontFamily: "'Europa', 'Inter', sans-serif",
             color: active

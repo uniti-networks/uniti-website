@@ -84,7 +84,7 @@ const HeroSection = () => {
 
           <button
             onClick={scrollToProduct}
-            className="rounded-lg px-8 py-3.5 text-sm font-semibold text-white tracking-wide transition-all duration-300 hover:brightness-110 hover:scale-[1.02] active:scale-[0.98] bg-accent animate-[fadeInUp_0.8s_ease-out_0.3s_both]"
+            className="rounded-lg px-8 py-3.5 text-base font-semibold text-white tracking-wide transition-all duration-300 hover:brightness-110 hover:scale-[1.02] active:scale-[0.98] bg-accent animate-[fadeInUp_0.8s_ease-out_0.3s_both]"
             style={{
               fontFamily: "'Euclid Circular A', 'Plus Jakarta Sans', sans-serif"
             }}>

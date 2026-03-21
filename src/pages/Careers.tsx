@@ -14,7 +14,7 @@ interface JobOpening {
 }
 
 const BehavioralScienceContent = () => (
-  <div className="space-y-4 text-white/80 text-sm md:text-base leading-relaxed">
+   <div className="space-y-4 text-white/80 text-base leading-relaxed">
     <p>Uniti Networks is solving the digital activation gap in Africa. We've built an AI-driven coaching platform that helps first-time smartphone users successfully adopt apps in finance, health, education, and agriculture. Our engagement rates are 5-10x industry standard, and we've proven the model works with real users in Ghana.</p>
     <p>Now we need to make it systematically better.</p>
 
@@ -59,7 +59,7 @@ const BehavioralScienceContent = () => (
 );
 
 const OperationsManagerContent = () => (
-  <div className="space-y-4 text-white/80 text-sm md:text-base leading-relaxed">
+   <div className="space-y-4 text-white/80 text-base leading-relaxed">
     <p>Uniti Networks turns Africa's 300M underserved smartphone users into engaged customers for digital services. We combine device financing, AI-driven coaching, and service aggregation to make smartphones productive from day one. We've signed partnerships that give us a pathway to 1M users, locked in committed revenues from app partners, and achieved engagement rates 5-10x industry standard.</p>
     <p>We're scaling fast. And we need someone to help us execute.</p>
 
@@ -104,7 +104,7 @@ const OperationsManagerContent = () => (
 );
 
 const IndependentBoardMemberContent = () => (
-  <div className="space-y-4 text-white/80 text-sm md:text-base leading-relaxed">
+  <div className="space-y-4 text-white/80 text-base leading-relaxed">
     <p>As we celebrate our first commercial launch in Ghana and prepare to expand through licensees and raise a seed round, Uniti Networks is looking to strengthen its Board by adding its first independent Board member.</p>
 
     <h4 className="text-white font-bold text-base md:text-lg mt-6">About Uniti Networks</h4>
@@ -166,7 +166,7 @@ const IndependentBoardMemberContent = () => (
         </ul>
       </li>
     </ul>
-    <p className="text-white/50 text-sm mt-4">Applications will remain open until we identify the right candidate, but we encourage you to submit yours sooner rather than later. We aim to respond to all serious inquiries within one week.</p>
+    <p className="text-white/50 text-base mt-4">Applications will remain open until we identify the right candidate, but we encourage you to submit yours sooner rather than later. We aim to respond to all serious inquiries within one week.</p>
   </div>
 );
 
@@ -265,7 +265,7 @@ const Careers = () => {
                   >
                     <div>
                       <h3 className="font-heading text-lg font-bold text-white">{job.title}</h3>
-                      <p className="text-sm text-white/50 mt-1">{job.location} · {job.type}</p>
+                      <p className="text-base text-white/50 mt-1">{job.location} · {job.type}</p>
                     </div>
                     <ChevronDown className={`w-5 h-5 text-white/50 transition-transform duration-200 ${openJob === i ? "rotate-180" : ""}`} />
                   </button>

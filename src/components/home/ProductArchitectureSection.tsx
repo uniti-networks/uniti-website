@@ -129,7 +129,7 @@ const ProductArchitectureSection = () => (
                 {p.title}
               </h3>
               <p
-                className="text-sm leading-relaxed"
+                className="text-base leading-relaxed"
                 style={{
                   color: "rgba(255,255,255,0.9)",
                   fontFamily: "'Europa', 'Inter', sans-serif",

@@ -29,7 +29,7 @@ const Navbar = () => {
             <Link
               key={link.path}
               to={link.path}
-              className={`text-sm font-medium transition-colors hover:text-accent ${
+              className={`text-base font-medium transition-colors hover:text-accent ${
                 location.pathname === link.path ? "text-accent" : "text-foreground"
               }`}
             >
@@ -56,7 +56,7 @@ const Navbar = () => {
               key={link.path}
               to={link.path}
               onClick={() => setOpen(false)}
-              className={`block py-3 text-sm font-medium transition-colors hover:text-accent ${
+              className={`block py-3 text-base font-medium transition-colors hover:text-accent ${
                 location.pathname === link.path ? "text-accent" : "text-foreground"
               }`}
             >

@@ -26,12 +26,12 @@ const PersonCard = ({ person }: { person: TeamMember }) => (
       {person.image ? (
         <img src={person.image} alt={person.name} className="w-full h-full object-cover" style={{ objectPosition: "center center", transform: "scale(1.2)" }} />
       ) : (
-        <span className="text-xs text-white/50">Photo</span>
+        <span className="text-base text-white/50">Photo</span>
       )}
     </div>
     <h3 className="font-heading text-base font-bold text-white">{person.name}</h3>
-    <p className="text-sm text-accent font-medium mb-2">{person.role}</p>
-    <p className="text-sm text-white mb-3 max-w-xs mx-auto">{person.bio}</p>
+     <p className="text-base text-accent font-medium mb-2">{person.role}</p>
+     <p className="text-base text-white mb-3 max-w-xs mx-auto">{person.bio}</p>
   </div>
 );
 

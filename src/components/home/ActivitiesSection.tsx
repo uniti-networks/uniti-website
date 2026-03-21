@@ -133,7 +133,7 @@ const ActivitiesSection = () => (
                 {node.title}
               </h3>
               <p
-                className="text-sm leading-relaxed"
+                className="text-base leading-relaxed"
                 style={{
                   color: "#ffffff",
                   fontFamily: FONT_TITLE,
@@ -185,7 +185,7 @@ const ActivitiesSection = () => (
                 National Deployment: MTN Ghana &amp; Esoko
               </h3>
               <p
-                className="text-sm leading-relaxed mb-8 flex-1"
+                 className="text-base leading-relaxed mb-8 flex-1"
                 style={{
                   fontFamily: FONT_BODY,
                   color: "rgba(255,255,255,0.9)",
@@ -256,7 +256,7 @@ const ActivitiesSection = () => (
                 The WeGrow Project
               </h3>
               <p
-                className="text-sm leading-relaxed mb-8 flex-1"
+                className="text-base leading-relaxed mb-8 flex-1"
                 style={{
                   fontFamily: FONT_BODY,
                   color: "rgba(255,255,255,0.9)",

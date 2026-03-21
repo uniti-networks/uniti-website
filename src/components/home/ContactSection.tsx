@@ -30,7 +30,7 @@ const ContactSection = () => {
   };
 
   const inputClasses =
-    "w-full px-4 py-3 rounded-lg text-sm text-white focus:outline-none focus:ring-2 focus:ring-accent/50";
+    "w-full px-4 py-3 rounded-lg text-base text-white focus:outline-none focus:ring-2 focus:ring-accent/50";
   const inputStyle = {
     fontFamily: FONT_BODY,
     background: "rgba(255,255,255,0.04)",
@@ -61,7 +61,7 @@ const ContactSection = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             <div>
               <label
-                className="block text-sm font-medium mb-2"
+                 className="block text-base font-medium mb-2"
                 style={{ color: "#7e8fbf", fontFamily: FONT_BODY }}
               >
                 Name
@@ -77,7 +77,7 @@ const ContactSection = () => {
             </div>
             <div>
               <label
-                className="block text-sm font-medium mb-2"
+                 className="block text-base font-medium mb-2"
                 style={{ color: "#7e8fbf", fontFamily: FONT_BODY }}
               >
                 Email
@@ -95,7 +95,7 @@ const ContactSection = () => {
 
           <div>
             <label
-              className="block text-sm font-medium mb-2"
+               className="block text-base font-medium mb-2"
               style={{ color: "#7e8fbf", fontFamily: FONT_BODY }}
             >
               I am contacting as a...
@@ -116,7 +116,7 @@ const ContactSection = () => {
 
           <div>
             <label
-              className="block text-sm font-medium mb-2"
+              className="block text-base font-medium mb-2"
               style={{ color: "#7e8fbf", fontFamily: FONT_BODY }}
             >
               Message

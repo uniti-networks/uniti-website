@@ -67,7 +67,7 @@ const ClientsSection = () => (
           The Active Ecosystem
         </h2>
         <p
-          className="text-muted-foreground text-sm md:text-base max-w-2xl mx-auto leading-relaxed"
+          className="text-muted-foreground text-base max-w-2xl mx-auto leading-relaxed"
           style={{ fontFamily: "'Europa', 'Inter', sans-serif" }}
         >
           Uniti aligns the incentives of the digital value chain, converting the
@@ -173,7 +173,7 @@ const EcoModule = ({ icon: Icon, fig, tag, title, desc, span, index }: EcoModule
 
     {/* Body */}
     <p
-      className="text-sm leading-[1.8] text-muted-foreground"
+      className="text-base leading-[1.8] text-muted-foreground"
       style={{ fontFamily: "'Europa', 'Inter', sans-serif" }}
     >
       {desc}

@@ -41,7 +41,7 @@ const Team = () => {
       <Navbar />
       <main className="pt-16" style={{ background: "#0b0c1f" }}>
         {/* Hero */}
-        <section className="relative w-full min-h-[70vh] overflow-hidden flex items-center justify-center">
+        <section className="relative w-full min-h-[70vh] overflow-hidden flex items-center">
           <img
             src={heroCityscape}
             alt="Aerial cityscape at golden hour — urban infrastructure at scale"

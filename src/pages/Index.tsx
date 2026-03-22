@@ -7,7 +7,7 @@ import ActiveEcosystemSection from "@/components/home/ActiveEcosystemSection";
 import ActivitiesSection from "@/components/home/ActivitiesSection";
 import TestimonialsSection from "@/components/home/TestimonialsSection";
 import ContactSection from "@/components/home/ContactSection";
-import TeamCTA from "@/components/home/TeamCTA";
+
 import SectionDivider from "@/components/home/SectionDivider";
 
 const Index = () => (
@@ -27,8 +27,6 @@ const Index = () => (
       <TestimonialsSection />
       <SectionDivider />
       <ContactSection />
-      <SectionDivider />
-      <TeamCTA />
     </main>
     <Footer />
   </>

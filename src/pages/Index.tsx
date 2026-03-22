@@ -15,7 +15,6 @@ const Index = () => (
     <Navbar />
     <main className="pt-16">
       <HeroSection />
-      <SectionDivider />
       <StatementCallout />
       <SectionDivider />
       <ProductArchitectureSection />

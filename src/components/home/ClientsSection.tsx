@@ -42,7 +42,7 @@ const clients = [
 const ClientsSection = () => (
   <section
     className="section-padding"
-    style={{ background: "#FCFCFD" }}
+    style={{ background: "#0b0c1f" }}
   >
     <div className="container-wide">
       {/* Header */}
@@ -51,7 +51,7 @@ const ClientsSection = () => (
           className="block text-[11px] tracking-[0.25em] uppercase mb-4"
           style={{
             fontFamily: "'SF Mono', 'Fira Code', 'Consolas', monospace",
-            color: "hsl(var(--muted-foreground))",
+            color: "rgba(255,255,255,0.5)",
           }}
         >
           ECOSYSTEM
@@ -61,14 +61,14 @@ const ClientsSection = () => (
           style={{
             fontFamily: "'Euclid Circular A', 'Plus Jakarta Sans', sans-serif",
             letterSpacing: "-0.03em",
-            color: "hsl(var(--heading))",
+            color: "#ffffff",
           }}
         >
           The Active Ecosystem
         </h2>
         <p
-          className="text-muted-foreground text-base max-w-2xl mx-auto leading-relaxed"
-          style={{ fontFamily: "'Europa', 'Inter', sans-serif" }}
+           className="text-base max-w-2xl mx-auto leading-relaxed"
+           style={{ fontFamily: "'Europa', 'Inter', sans-serif", color: "rgba(255,255,255,0.7)" }}
         >
           Uniti aligns the incentives of the digital value chain, converting the
           challenge of the "Activation Gap" into a measurable commercial
@@ -80,7 +80,7 @@ const ClientsSection = () => (
       <div
         className="grid grid-cols-1 md:grid-cols-4"
         style={{
-          border: "0.5px solid rgba(34, 35, 91, 0.10)",
+          border: "0.5px solid rgba(255, 255, 255, 0.10)",
           borderRadius: "2px",
         }}
       >
@@ -108,8 +108,8 @@ const EcoModule = ({ icon: Icon, fig, tag, title, desc, span, index }: EcoModule
       span ? "md:col-span-2" : "md:col-span-1"
     }`}
     style={{
-      borderRight: "0.5px solid rgba(34, 35, 91, 0.10)",
-      borderBottom: index < 1 || index >= 1 ? "0.5px solid rgba(34, 35, 91, 0.10)" : "none",
+      borderRight: "0.5px solid rgba(255, 255, 255, 0.10)",
+      borderBottom: index < 1 || index >= 1 ? "0.5px solid rgba(255, 255, 255, 0.10)" : "none",
       background: "transparent",
     }}
     onMouseEnter={(e) => {
@@ -127,7 +127,7 @@ const EcoModule = ({ icon: Icon, fig, tag, title, desc, span, index }: EcoModule
       className="block text-[10px] mb-6"
       style={{
         fontFamily: "'SF Mono', 'Fira Code', 'Consolas', monospace",
-        color: "hsl(var(--muted-foreground))",
+        color: "rgba(255,255,255,0.4)",
         opacity: 0.6,
       }}
     >
@@ -139,11 +139,11 @@ const EcoModule = ({ icon: Icon, fig, tag, title, desc, span, index }: EcoModule
       <div className="flex flex-col items-center">
         <Icon
           className="w-4 h-4 shrink-0"
-          style={{ color: "hsl(var(--heading))" }}
+          style={{ color: "#ffffff" }}
         />
         <div
           className="w-px flex-1 mt-2 transition-colors duration-300 group-hover:bg-accent"
-          style={{ backgroundColor: "rgba(34, 35, 91, 0.12)" }}
+          style={{ backgroundColor: "rgba(255, 255, 255, 0.12)" }}
         />
       </div>
       <div className="flex flex-col justify-start">
@@ -165,7 +165,7 @@ const EcoModule = ({ icon: Icon, fig, tag, title, desc, span, index }: EcoModule
       style={{
         fontFamily: "'Euclid Circular A', 'Plus Jakarta Sans', sans-serif",
         letterSpacing: "-0.03em",
-        color: "hsl(var(--heading))",
+        color: "#ffffff",
       }}
     >
       {title}
@@ -173,8 +173,8 @@ const EcoModule = ({ icon: Icon, fig, tag, title, desc, span, index }: EcoModule
 
     {/* Body */}
     <p
-      className="text-base leading-[1.8] text-muted-foreground"
-      style={{ fontFamily: "'Europa', 'Inter', sans-serif" }}
+      className="text-base leading-[1.8]"
+      style={{ fontFamily: "'Europa', 'Inter', sans-serif", color: "rgba(255,255,255,0.7)" }}
     >
       {desc}
     </p>

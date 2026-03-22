@@ -1,5 +1,5 @@
 const SectionDivider = () => (
-  <div className="flex justify-center py-[40px]" style={{ background: "#0b0c1f" }}>
+  <div className="flex justify-center py-[16px]" style={{ background: "#0b0c1f" }}>
     <div
       className="w-[70%] md:w-[70%] max-sm:w-[90%]"
       style={{

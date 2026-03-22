@@ -214,7 +214,7 @@ const Careers = () => {
         {/* Hero Section */}
         <section
           ref={sectionRef}
-          className="relative w-full min-h-[50vh] overflow-hidden flex items-center justify-center"
+          className="relative w-full min-h-[50vh] overflow-hidden flex items-center"
         >
           <img
             src={heroImg}
@@ -234,22 +234,24 @@ const Careers = () => {
             }}
           />
           <NodeCanvas />
-          <div className="relative z-10 text-center px-6 py-24">
-            <h1
-              className="text-[26px] md:text-[34px] lg:text-[42px] font-medium leading-[1.15] text-white mb-4"
-              style={{
-                fontFamily: "'Euclid Circular A', 'Plus Jakarta Sans', sans-serif",
-                letterSpacing: "-0.025em",
-              }}
-            >
-              Open Positions
-            </h1>
-            <p
-              className="text-white/60 text-base md:text-lg max-w-lg mx-auto"
-              style={{ fontFamily: "'Europa', 'Inter', sans-serif" }}
-            >
-              Join the team building the future of digital activation.
-            </p>
+          <div className="relative z-10 w-full max-w-7xl mx-auto px-8 md:px-16 lg:px-20 py-24 animate-[fadeInUp_0.8s_ease-out_both]">
+            <div className="max-w-xl">
+              <h1
+                className="text-4xl md:text-5xl lg:text-[3.5rem] font-extrabold text-white leading-[1.08] mb-6"
+                style={{
+                  fontFamily: "'Euclid Circular A', 'Plus Jakarta Sans', sans-serif",
+                  letterSpacing: "-0.02em",
+                }}
+              >
+                Open Positions
+              </h1>
+              <p
+                className="text-white/75 text-base md:text-lg leading-relaxed max-w-md mb-10"
+                style={{ fontFamily: "'Europa', 'Inter', sans-serif" }}
+              >
+                Join the team building the future of digital activation.
+              </p>
+            </div>
           </div>
         </section>
 

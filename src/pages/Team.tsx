@@ -41,7 +41,7 @@ const Team = () => {
       <Navbar />
       <main className="pt-16" style={{ background: "#0b0c1f" }}>
         {/* Hero */}
-        <section className="relative w-full min-h-[70vh] overflow-hidden flex items-center justify-center">
+        <section className="relative w-full min-h-[70vh] overflow-hidden flex items-center">
           <img
             src={heroCityscape}
             alt="Aerial cityscape at golden hour — urban infrastructure at scale"
@@ -56,24 +56,26 @@ const Team = () => {
             }}
           />
           <NodeCanvas />
-          <div className="relative z-10 text-center px-6 py-24 max-w-3xl mx-auto animate-[fadeInUp_0.8s_ease-out_both]">
-            <h1
-              className="text-4xl md:text-5xl lg:text-[3.5rem] font-extrabold text-white leading-[1.08] mb-5"
-              style={{
-                fontFamily: "'Euclid Circular A', 'Plus Jakarta Sans', sans-serif",
-                letterSpacing: "-0.02em",
-              }}
-            >
-              The Architects of
-              <br />
-              Digital Transition
-            </h1>
-            <p
-              className="text-white/70 text-base md:text-lg leading-relaxed max-w-lg mx-auto mb-10"
-              style={{ fontFamily: "'Europa', 'Inter', sans-serif" }}
-            >
-              Meet the team building the future of digital activation.
-            </p>
+          <div className="relative z-10 w-full max-w-7xl mx-auto px-8 md:px-16 lg:px-20 py-24 animate-[fadeInUp_0.8s_ease-out_both]">
+            <div className="max-w-xl">
+              <h1
+                className="text-4xl md:text-5xl lg:text-[3.5rem] font-extrabold text-white leading-[1.08] mb-6"
+                style={{
+                  fontFamily: "'Euclid Circular A', 'Plus Jakarta Sans', sans-serif",
+                  letterSpacing: "-0.02em",
+                }}
+              >
+                The Architects of
+                <br />
+                Digital Transition
+              </h1>
+              <p
+                className="text-white/75 text-base md:text-lg leading-relaxed max-w-md mb-10"
+                style={{ fontFamily: "'Europa', 'Inter', sans-serif" }}
+              >
+                Meet the team building the future of digital activation.
+              </p>
+            </div>
           </div>
         </section>
 

@@ -59,7 +59,7 @@ const ActivitiesSection = () => (
       }}
     />
 
-    <div className="relative z-10 px-6 pt-12 pb-12 md:px-12 md:pt-20 md:pb-20 lg:px-20 lg:pt-24 lg:pb-24">
+    <div className="relative z-10 px-6 pt-10 pb-10 md:px-12 md:pt-16 md:pb-16 lg:px-20 lg:pt-20 lg:pb-20">
       <div className="max-w-7xl mx-auto">
         {/* ── Headline ── */}
         <h2

@@ -13,6 +13,8 @@ const C = {
   warmWhite: "#fdfcfa",
   white: "#ffffff",
   muted: "#94A3B8",
+  bgDark: "#0b0c1f",
+  bgGrad: "radial-gradient(ellipse at center, #1e204a 0%, #0b0c1f 70%)",
 };
 
 /* ── Reusable label ── */
@@ -203,7 +205,7 @@ const Licensing = () => {
         {/* ─── 1. Hero ─── */}
         <section
           className="relative overflow-hidden"
-          style={{ background: C.paris }}
+          style={{ background: C.bgGrad }}
         >
           {/* Subtle gradient overlay */}
           <div

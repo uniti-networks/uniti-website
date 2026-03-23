@@ -59,7 +59,7 @@ const ClientsSection = () => (
         <h2
           className="text-3xl md:text-4xl font-extrabold mb-5"
           style={{
-            fontFamily: "'Euclid Circular A', 'Plus Jakarta Sans', sans-serif",
+            fontFamily: "'Visby CF', 'Euclid Circular A', 'Plus Jakarta Sans', sans-serif",
             letterSpacing: "-0.03em",
             color: "#ffffff",
           }}
@@ -163,7 +163,7 @@ const EcoModule = ({ icon: Icon, fig, tag, title, desc, span, index }: EcoModule
     <h3
       className="text-base md:text-lg font-bold mb-3"
       style={{
-        fontFamily: "'Euclid Circular A', 'Plus Jakarta Sans', sans-serif",
+        fontFamily: "'Visby CF', 'Euclid Circular A', 'Plus Jakarta Sans', sans-serif",
         letterSpacing: "-0.03em",
         color: "#ffffff",
       }}

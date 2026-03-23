@@ -7,7 +7,7 @@ const StatementCallout = () => (
       <h2
         className="text-[28px] md:text-[36px] lg:text-[44px] font-medium leading-[1.15]"
         style={{
-          fontFamily: "'Euclid Circular A', 'Plus Jakarta Sans', sans-serif",
+          fontFamily: "'Visby CF', 'Euclid Circular A', 'Plus Jakarta Sans', sans-serif",
           letterSpacing: "-0.02em",
         }}
       >

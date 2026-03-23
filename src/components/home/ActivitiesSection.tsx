@@ -38,7 +38,7 @@ const methodology = [
   },
 ];
 
-const FONT_TITLE = "'Euclid Circular A', 'Plus Jakarta Sans', sans-serif";
+const FONT_TITLE = "'Visby CF', 'Euclid Circular A', 'Plus Jakarta Sans', sans-serif";
 const FONT_BODY = "'Europa', 'Inter', sans-serif";
 const MUTED_INDIGO = "#7e8fbf";
 const HAIRLINE_COLOR = "rgba(255,255,255,0.15)";

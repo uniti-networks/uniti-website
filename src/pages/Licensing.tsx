@@ -14,184 +14,184 @@ const C = {
   white: "#ffffff",
   muted: "#94A3B8",
   bgDark: "#0b0c1f",
-  bgGrad: "radial-gradient(ellipse at center, #1e204a 0%, #0b0c1f 70%)",
+  bgGrad: "radial-gradient(ellipse at center, #1e204a 0%, #0b0c1f 70%)"
 };
 
 /* ── Reusable label ── */
-const GoldLabel = ({ children }: { children: string }) => (
-  <p
-    className="text-sm font-semibold tracking-[0.15em] uppercase mb-4"
-    style={{ fontFamily: "'Europa', 'Inter', sans-serif", color: C.gold }}
-  >
+const GoldLabel = ({ children }: {children: string;}) =>
+<p
+  className="text-sm font-semibold tracking-[0.15em] uppercase mb-4"
+  style={{ fontFamily: "'Europa', 'Inter', sans-serif", color: C.gold }}>
+  
     {children}
-  </p>
-);
+  </p>;
+
 
 /* ── Serif heading ── */
 const SerifHeading = ({
   children,
-  className = "",
-}: {
-  children: React.ReactNode;
-  className?: string;
-}) => (
-  <h2
-    className={`text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight mb-6 text-white ${className}`}
-    style={{ fontFamily: "'Visby CF', 'Euclid Circular A', 'Plus Jakarta Sans', sans-serif", letterSpacing: "-0.02em" }}
-  >
+  className = ""
+
+
+
+}: {children: React.ReactNode;className?: string;}) =>
+<h2
+  className={`text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight mb-6 text-white ${className}`}
+  style={{ fontFamily: "'Visby CF', 'Euclid Circular A', 'Plus Jakarta Sans', sans-serif", letterSpacing: "-0.02em" }}>
+  
     {children}
-  </h2>
-);
+  </h2>;
+
 
 /* ── Body text ── */
 const Body = ({
   children,
-  className = "",
-}: {
-  children: React.ReactNode;
-  className?: string;
-}) => (
-  <p
-    className={`text-base md:text-lg leading-relaxed ${className}`}
-    style={{ fontFamily: "'Euclid Circular A', 'Europa', 'Inter', sans-serif", color: C.white }}
-  >
+  className = ""
+
+
+
+}: {children: React.ReactNode;className?: string;}) =>
+<p
+  className={`text-base md:text-lg leading-relaxed ${className}`}
+  style={{ fontFamily: "'Euclid Circular A', 'Europa', 'Inter', sans-serif", color: C.white }}>
+  
     {children}
-  </p>
-);
+  </p>;
+
 
 /* ── Ownership pill ── */
 const OwnershipPill = ({
   label,
-  color,
-}: {
-  label: string;
-  color: string;
-}) => (
-  <span
-    className="inline-block rounded-full px-3 py-1 text-xs font-medium text-white mr-2 mb-1"
-    style={{ background: color, fontFamily: "'Europa', 'Inter', sans-serif" }}
-  >
+  color
+
+
+
+}: {label: string;color: string;}) =>
+<span
+  className="inline-block rounded-full px-3 py-1 text-xs font-medium text-white mr-2 mb-1"
+  style={{ background: color, fontFamily: "'Europa', 'Inter', sans-serif" }}>
+  
     {label}
-  </span>
-);
+  </span>;
+
 
 /* ── Deployment stack data ── */
 const stackRows = [
-  {
-    num: 1,
-    name: "Platform",
-    desc: "AI coaching engine, intervention logic library (1,200+ interventions), analytics dashboard, onboarding flows",
-    tags: [{ label: "Uniti", color: C.cobalt }],
-  },
-  {
-    num: 2,
-    name: "Content & Localisation",
-    desc: "Local language translation, text-to-speech audio, in-app screen guides — approx. 6 weeks per market",
-    tags: [
-      { label: "Uniti", color: C.cobalt },
-      { label: "Partner input", color: C.teal },
-    ],
-  },
-  {
-    num: 3,
-    name: "Service Suite",
-    desc: "App selection across finance, health, education. Monetisation tiers and pricing defined collaboratively",
-    tags: [{ label: "Together", color: C.teal }],
-  },
-  {
-    num: 4,
-    name: "Integrations",
-    desc: "Cash and data reward mechanisms, telco API connections, loan management, group savings apps",
-    tags: [{ label: "Together", color: C.teal }],
-  },
-  {
-    num: 5,
-    name: "Device",
-    desc: "Hardware procurement and financing, soft lock (optional), preinstallation, payment collection",
-    tags: [{ label: "Partner", color: C.gold }],
-  },
-  {
-    num: 6,
-    name: "Distribution",
-    desc: "Channel strategy — telco, NGO, employer, community. Agent networks and co-marketing",
-    tags: [{ label: "Partner", color: C.gold }],
-  },
-  {
-    num: 7,
-    name: "Operations",
-    desc: "Field support, reward delivery, user helpdesk, compliance, ongoing partnership management",
-    tags: [
-      { label: "Partner", color: C.gold },
-      { label: "Uniti support", color: C.cobalt },
-    ],
-  },
-];
+{
+  num: 1,
+  name: "Platform",
+  desc: "AI coaching engine, intervention logic library (1,200+ interventions), analytics dashboard, onboarding flows",
+  tags: [{ label: "Uniti", color: C.cobalt }]
+},
+{
+  num: 2,
+  name: "Content & Localisation",
+  desc: "Local language translation, text-to-speech audio, in-app screen guides — approx. 6 weeks per market",
+  tags: [
+  { label: "Uniti", color: C.cobalt },
+  { label: "Partner input", color: C.teal }]
+
+},
+{
+  num: 3,
+  name: "Service Suite",
+  desc: "App selection across finance, health, education. Monetisation tiers and pricing defined collaboratively",
+  tags: [{ label: "Together", color: C.teal }]
+},
+{
+  num: 4,
+  name: "Integrations",
+  desc: "Cash and data reward mechanisms, telco API connections, loan management, group savings apps",
+  tags: [{ label: "Together", color: C.teal }]
+},
+{
+  num: 5,
+  name: "Device",
+  desc: "Hardware procurement and financing, soft lock (optional), preinstallation, payment collection",
+  tags: [{ label: "Partner", color: C.gold }]
+},
+{
+  num: 6,
+  name: "Distribution",
+  desc: "Channel strategy — telco, NGO, employer, community. Agent networks and co-marketing",
+  tags: [{ label: "Partner", color: C.gold }]
+},
+{
+  num: 7,
+  name: "Operations",
+  desc: "Field support, reward delivery, user helpdesk, compliance, ongoing partnership management",
+  tags: [
+  { label: "Partner", color: C.gold },
+  { label: "Uniti support", color: C.cobalt }]
+
+}];
+
 
 /* ── Value items ── */
 const youGet = [
-  { title: "Exclusive territory rights", desc: "Protected market access" },
-  { title: "Proven platform + onboarding", desc: "6-month intensive setup" },
-  { title: "75–80% revenue retention", desc: "" },
-  {
-    title: "1,200+ intervention library",
-    desc: "Behavioural science and AI coaching",
-  },
-  {
-    title: "Ongoing platform support",
-    desc: "Product updates, quarterly reviews",
-  },
-];
+{ title: "Exclusive territory rights", desc: "Protected market access" },
+{ title: "Proven platform + onboarding", desc: "6-month intensive setup" },
+{ title: "75–80% revenue retention", desc: "" },
+{
+  title: "1,200+ intervention library",
+  desc: "Behavioural science and AI coaching"
+},
+{
+  title: "Ongoing platform support",
+  desc: "Product updates, quarterly reviews"
+}];
+
 
 const unitiBrings = [
-  {
-    title: "Core technology",
-    desc: "AI coaching engine, intervention logic, analytics",
-  },
-  {
-    title: "Content localisation",
-    desc: "Language, audio, screen guides",
-  },
-  {
-    title: "Behavioural science",
-    desc: "3–5 years of field research",
-  },
-  {
-    title: "Engagement outcomes at 6–8× industry norms",
-    desc: "Validated in Ghana with MTN",
-  },
-  {
-    title: "Partner ecosystem",
-    desc: "App developers, MNOs, device financers, development organisations",
-  },
-];
+{
+  title: "Core technology",
+  desc: "AI coaching engine, intervention logic, analytics"
+},
+{
+  title: "Content localisation",
+  desc: "Language, audio, screen guides"
+},
+{
+  title: "Behavioural science",
+  desc: "3–5 years of field research"
+},
+{
+  title: "Engagement outcomes at 6–8× industry norms",
+  desc: "Validated in Ghana with MTN"
+},
+{
+  title: "Partner ecosystem",
+  desc: "App developers, MNOs, device financers, development organisations"
+}];
+
 
 /* ── Partner profile cards ── */
 const partnerCards = [
-  {
-    title: "Investment capacity",
-    desc: "Ability to fund device procurement, field operations, and a 6–12 month ramp to revenue.",
-  },
-  {
-    title: "In-country infrastructure",
-    desc: "Existing distribution channels, warehousing, or retail presence in target markets.",
-  },
-  {
-    title: "Operational capability",
-    desc: "A team that can manage field agents, support users, and maintain partner relationships.",
-  },
-  {
-    title: "Mission alignment",
-    desc: "A genuine commitment to digital inclusion — not just market share.",
-  },
-];
+{
+  title: "Investment capacity",
+  desc: "Ability to fund device procurement, field operations, and a 6–12 month ramp to revenue."
+},
+{
+  title: "In-country infrastructure",
+  desc: "Existing distribution channels, warehousing, or retail presence in target markets."
+},
+{
+  title: "Operational capability",
+  desc: "A team that can manage field agents, support users, and maintain partner relationships."
+},
+{
+  title: "Mission alignment",
+  desc: "A genuine commitment to digital inclusion — not just market share."
+}];
+
 
 /* ── Stats ── */
 const stats = [
-  { value: "MTN Ghana", label: "MOU signed, 1M-user pathway" },
-  { value: "6", label: "Committed app partners across finance, health & education" },
-  { value: "6–8×", label: "Industry engagement norms" },
-  { value: "5", label: "Markets in active conversation" },
-];
+{ value: "MTN Ghana", label: "MOU signed, 1M-user pathway" },
+{ value: "6", label: "Committed app partners across finance, health & education" },
+{ value: "6–8×", label: "Industry engagement norms" },
+{ value: "5", label: "Markets in active conversation" }];
+
 
 const Licensing = () => {
   return (
@@ -201,25 +201,25 @@ const Licensing = () => {
         {/* ─── 1. Hero ─── */}
         <section
           className="relative overflow-hidden"
-          style={{ background: C.bgGrad }}
-        >
+          style={{ background: C.bgGrad }}>
+          
           {/* Subtle gradient overlay */}
           <div
             className="absolute inset-0 pointer-events-none"
             style={{
-              background: `radial-gradient(ellipse 60% 80% at 85% 50%, ${C.teal}12 0%, transparent 70%), radial-gradient(ellipse 40% 60% at 90% 30%, ${C.sky}0a 0%, transparent 60%)`,
-            }}
-          />
+              background: `radial-gradient(ellipse 60% 80% at 85% 50%, ${C.teal}12 0%, transparent 70%), radial-gradient(ellipse 40% 60% at 90% 30%, ${C.sky}0a 0%, transparent 60%)`
+            }} />
+          
           <div className="relative z-10 max-w-6xl mx-auto px-6 md:px-12 lg:px-20 py-24 md:py-32 lg:py-40">
             <GoldLabel>Licensing the Uniti Platform</GoldLabel>
              <h1
-               className="text-4xl md:text-5xl lg:text-[3.5rem] font-extrabold leading-[1.08] mb-8"
-               style={{
-                 fontFamily: "'Visby CF', 'Euclid Circular A', 'Plus Jakarta Sans', sans-serif",
-                 letterSpacing: "-0.02em",
-                 maxWidth: "720px",
-               }}
-             >
+              className="text-4xl md:text-5xl lg:text-[3.5rem] font-extrabold leading-[1.08] mb-8"
+              style={{
+                fontFamily: "'Visby CF', 'Euclid Circular A', 'Plus Jakarta Sans', sans-serif",
+                letterSpacing: "-0.02em",
+                maxWidth: "720px"
+              }}>
+              
                <span style={{ color: C.white }}>We built the activation stack.</span>
                <br />
                <span style={{ color: C.muted }}>You own the market.</span>
@@ -262,36 +262,36 @@ const Licensing = () => {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {[
-                {
-                  title: "Capital stays local",
-                  text: "License holders retain 75–80% of revenue from their territory. Profits are reinvested where they're generated.",
-                },
-                {
-                  title: "Jobs created in-country",
-                  text: "Every deployment builds a local team — field agents, support staff, partnership managers — not a remote headcount in another continent.",
-                },
-                {
-                  title: "Adapted to the ecosystem",
-                  text: "Content, language, service partners, and distribution are all shaped by local knowledge. The platform flexes. The market leads.",
-                },
-              ].map((card) => (
-                <div
-                  key={card.title}
-                  className="p-6 rounded-lg"
-                  style={{
-                    background: "rgba(255,255,255,0.04)",
-                    borderLeft: `3px solid ${C.gold}`,
-                  }}
-                >
+              {
+                title: "Capital stays local",
+                text: "License holders retain 75–80% of revenue from their territory. Profits are reinvested where they're generated."
+              },
+              {
+                title: "Jobs created in-country",
+                text: "Every deployment builds a local team — field agents, support staff, partnership managers — not a remote headcount in another continent."
+              },
+              {
+                title: "Adapted to the ecosystem",
+                text: "Content, language, service partners, and distribution are all shaped by local knowledge. The platform flexes. The market leads."
+              }].
+              map((card) =>
+              <div
+                key={card.title}
+                className="p-6 rounded-lg"
+                style={{
+                  background: "rgba(255,255,255,0.04)",
+                  borderLeft: `3px solid ${C.gold}`
+                }}>
+                
                    <h3
-                     className="text-lg font-semibold mb-3"
-                     style={{ fontFamily: "'Euclid Circular A', 'Europa', 'Inter', sans-serif", color: C.muted }}
-                   >
+                  className="text-lg font-semibold mb-3"
+                  style={{ fontFamily: "'Euclid Circular A', 'Europa', 'Inter', sans-serif", color: C.muted }}>
+                  
                      {card.title}
                    </h3>
                    <Body>{card.text}</Body>
                 </div>
-              ))}
+              )}
             </div>
           </div>
         </section>
@@ -335,40 +335,40 @@ const Licensing = () => {
 
             {/* Stack rows */}
             <div className="space-y-0">
-              {stackRows.map((row) => (
-                <div
-                  key={row.num}
-                  className="grid grid-cols-[2.5rem_1fr] md:grid-cols-[2.5rem_10rem_1fr_auto] items-start md:items-center gap-x-4 py-5 transition-colors duration-200"
-                  style={{ borderBottom: "1px solid rgba(255,255,255,0.08)" }}
-                >
+              {stackRows.map((row) =>
+              <div
+                key={row.num}
+                className="grid grid-cols-[2.5rem_1fr] md:grid-cols-[2.5rem_10rem_1fr_auto] items-start md:items-center gap-x-4 py-5 transition-colors duration-200"
+                style={{ borderBottom: "1px solid rgba(255,255,255,0.08)" }}>
+                
                   <span
-                    className="text-2xl font-light"
-                    style={{
-                      fontFamily: "'Visby CF', 'Euclid Circular A', 'Plus Jakarta Sans', sans-serif",
-                      color: C.gold,
-                    }}
-                  >
+                  className="text-2xl font-light"
+                  style={{
+                    fontFamily: "'Visby CF', 'Euclid Circular A', 'Plus Jakarta Sans', sans-serif",
+                    color: C.gold
+                  }}>
+                  
                     {row.num}
                   </span>
                   <h3
-                    className="text-base font-semibold col-span-1 md:col-span-1 text-white"
-                    style={{ fontFamily: "'Euclid Circular A', 'Europa', 'Inter', sans-serif" }}
-                  >
+                  className="text-base font-semibold col-span-1 md:col-span-1 text-white"
+                  style={{ fontFamily: "'Euclid Circular A', 'Europa', 'Inter', sans-serif" }}>
+                  
                     {row.name}
                   </h3>
                    <p
-                     className="hidden md:block text-base"
-                     style={{ fontFamily: "'Euclid Circular A', 'Europa', 'Inter', sans-serif", color: C.white }}
-                   >
+                  className="hidden md:block text-base"
+                  style={{ fontFamily: "'Euclid Circular A', 'Europa', 'Inter', sans-serif", color: C.white }}>
+                  
                     {row.desc}
                   </p>
                   <div className="col-span-2 md:col-span-1 mt-2 md:mt-0 flex flex-wrap">
-                    {row.tags.map((t) => (
-                      <OwnershipPill key={t.label} label={t.label} color={t.color} />
-                    ))}
+                    {row.tags.map((t) =>
+                  <OwnershipPill key={t.label} label={t.label} color={t.color} />
+                  )}
                   </div>
                 </div>
-              ))}
+              )}
             </div>
           </div>
         </section>
@@ -385,62 +385,62 @@ const Licensing = () => {
                   className="text-xl font-semibold pb-3 mb-8 text-white"
                   style={{
                     fontFamily: "'Euclid Circular A', 'Europa', 'Inter', sans-serif",
-                    borderBottom: `2px solid ${C.gold}`,
-                  }}
-                >
-                  What you get
+                    borderBottom: `2px solid ${C.gold}`
+                  }}>Your market
+
+
                 </h3>
                 <div className="space-y-6">
-                  {youGet.map((item) => (
-                    <div key={item.title}>
+                  {youGet.map((item) =>
+                  <div key={item.title}>
                        <p
-                         className="text-base font-semibold"
-                         style={{ fontFamily: "'Euclid Circular A', 'Europa', 'Inter', sans-serif", color: C.muted }}
-                       >
+                      className="text-base font-semibold"
+                      style={{ fontFamily: "'Euclid Circular A', 'Europa', 'Inter', sans-serif", color: C.muted }}>
+                      
                          {item.title}
                        </p>
-                       {item.desc && (
-                         <p
-                           className="text-base mt-1"
-                           style={{ fontFamily: "'Euclid Circular A', 'Europa', 'Inter', sans-serif", color: C.white }}
-                         >
+                       {item.desc &&
+                    <p
+                      className="text-base mt-1"
+                      style={{ fontFamily: "'Euclid Circular A', 'Europa', 'Inter', sans-serif", color: C.white }}>
+                      
                            {item.desc}
                          </p>
-                       )}
+                    }
                      </div>
-                   ))}
+                  )}
                  </div>
                </div>
                {/* Right */}
                <div>
                  <h3
-                   className="text-xl font-semibold pb-3 mb-8 text-white"
-                   style={{
-                     fontFamily: "'Euclid Circular A', 'Europa', 'Inter', sans-serif",
-                     borderBottom: `2px solid ${C.gold}`,
-                   }}
-                 >
-                   What Uniti brings
-                 </h3>
+                  className="text-xl font-semibold pb-3 mb-8 text-white"
+                  style={{
+                    fontFamily: "'Euclid Circular A', 'Europa', 'Inter', sans-serif",
+                    borderBottom: `2px solid ${C.gold}`
+                  }}>Our engine
+
+
+                </h3>
                  <div className="space-y-6">
-                   {unitiBrings.map((item) => (
-                     <div key={item.title}>
+                   {unitiBrings.map((item) =>
+                  <div key={item.title}>
                        <p
-                         className="text-base font-semibold"
-                         style={{ fontFamily: "'Euclid Circular A', 'Europa', 'Inter', sans-serif", color: C.muted }}
-                       >
+                      className="text-base font-semibold"
+                      style={{ fontFamily: "'Euclid Circular A', 'Europa', 'Inter', sans-serif", color: C.muted }}>
+                      
                          {item.title}
                        </p>
-                       {item.desc && (
-                         <p
-                           className="text-base mt-1"
-                           style={{ fontFamily: "'Euclid Circular A', 'Europa', 'Inter', sans-serif", color: C.white }}
-                         >
+                       {item.desc &&
+                    <p
+                      className="text-base mt-1"
+                      style={{ fontFamily: "'Euclid Circular A', 'Europa', 'Inter', sans-serif", color: C.white }}>
+                      
                            {item.desc}
                          </p>
-                       )}
+                    }
                     </div>
-                  ))}
+                  )}
                 </div>
               </div>
             </div>
@@ -458,24 +458,24 @@ const Licensing = () => {
               market.
             </Body>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {partnerCards.map((card) => (
-                <div
-                  key={card.title}
-                  className="p-6 rounded-lg transition-colors duration-200"
-                  style={{
-                    background: "rgba(255,255,255,0.04)",
-                    border: "1px solid rgba(255,255,255,0.08)",
-                  }}
-                >
+              {partnerCards.map((card) =>
+              <div
+                key={card.title}
+                className="p-6 rounded-lg transition-colors duration-200"
+                style={{
+                  background: "rgba(255,255,255,0.04)",
+                  border: "1px solid rgba(255,255,255,0.08)"
+                }}>
+                
                    <h3
-                     className="text-lg font-semibold mb-3"
-                     style={{ fontFamily: "'Euclid Circular A', 'Europa', 'Inter', sans-serif", color: C.muted }}
-                   >
+                  className="text-lg font-semibold mb-3"
+                  style={{ fontFamily: "'Euclid Circular A', 'Europa', 'Inter', sans-serif", color: C.muted }}>
+                  
                      {card.title}
                    </h3>
                    <Body>{card.desc}</Body>
                 </div>
-              ))}
+              )}
             </div>
           </div>
         </section>
@@ -494,28 +494,28 @@ const Licensing = () => {
               strategy, and support at scale.
             </Body>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-              {stats.map((s) => (
-                <div key={s.value}>
+              {stats.map((s) =>
+              <div key={s.value}>
                   <p
-                    className="text-3xl md:text-4xl mb-2"
-                    style={{
-                      fontFamily: "'Visby CF', 'Euclid Circular A', 'Plus Jakarta Sans', sans-serif",
-                      color: C.gold,
-                    }}
-                  >
+                  className="text-3xl md:text-4xl mb-2"
+                  style={{
+                    fontFamily: "'Visby CF', 'Euclid Circular A', 'Plus Jakarta Sans', sans-serif",
+                    color: C.gold
+                  }}>
+                  
                     {s.value}
                   </p>
                    <p
-                     className="text-sm leading-snug"
-                     style={{
-                       fontFamily: "'Euclid Circular A', 'Europa', 'Inter', sans-serif",
-                       color: C.white,
-                     }}
-                   >
+                  className="text-sm leading-snug"
+                  style={{
+                    fontFamily: "'Euclid Circular A', 'Europa', 'Inter', sans-serif",
+                    color: C.white
+                  }}>
+                  
                     {s.label}
                   </p>
                 </div>
-              ))}
+              )}
             </div>
           </div>
         </section>
@@ -530,15 +530,15 @@ const Licensing = () => {
               distribution looks like, and which services matter most.
             </Body>
              <p
-               className="text-base"
-               style={{ fontFamily: "'Euclid Circular A', 'Europa', 'Inter', sans-serif", color: C.white }}
-             >
+              className="text-base"
+              style={{ fontFamily: "'Euclid Circular A', 'Europa', 'Inter', sans-serif", color: C.white }}>
+              
               For inquiries, write to us at{" "}
               <a
                 href="mailto:licensing@unitinetworks.com"
                 className="font-bold transition-opacity duration-200 hover:opacity-80"
-                style={{ color: C.sky }}
-              >
+                style={{ color: C.sky }}>
+                
                 licensing@unitinetworks.com
               </a>
             </p>
@@ -546,8 +546,8 @@ const Licensing = () => {
         </section>
       </main>
       <Footer />
-    </>
-  );
+    </>);
+
 };
 
 export default Licensing;

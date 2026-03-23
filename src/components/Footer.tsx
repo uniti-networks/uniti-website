@@ -1,34 +1,31 @@
-import { Link } from "react-router-dom";
-
-const Footer = () =>
-<footer className="bg-primary text-primary-foreground py-12 px-6 lg:px-20">
-    <div className="container-wide">
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div>
-          <p className="text-base text-primary-foreground/70">
-            Digital activation that pays. Making smartphones productive for everyone.
-          </p>
-        </div>
-        <div>
-          <h4 className="font-heading text-base font-semibold text-primary-foreground mb-3">Pages</h4>
-          <div className="flex flex-col gap-2">
-            <Link to="/" className="text-base text-primary-foreground/70 hover:text-primary-foreground transition-colors">Home</Link>
-            <Link to="/team" className="text-base text-primary-foreground/70 hover:text-primary-foreground transition-colors">Team</Link>
-            <Link to="/careers" className="text-base text-primary-foreground/70 hover:text-primary-foreground transition-colors">Careers</Link>
-            
-            <Link to="/licensing" className="text-base text-primary-foreground/70 hover:text-primary-foreground transition-colors">Licensing</Link>
-          </div>
-        </div>
-        <div>
-          <h4 className="font-heading text-base font-semibold text-primary-foreground mb-3">Contact</h4>
-          <p className="text-base text-primary-foreground/70">connect@unitinetworks.com</p>
-        </div>
+const Footer = () => (
+  <footer
+    className="w-full"
+    style={{
+      background: "#283b8d",
+      borderTop: "1px solid rgba(255,255,255,0.1)",
+      padding: "48px 0",
+    }}
+  >
+    <div className="container-wide px-6 lg:px-20 flex flex-col md:flex-row items-start justify-between gap-6">
+      <div>
+        <p style={{ color: "rgba(255,255,255,0.7)", fontSize: "15px" }}>
+          Digital activation that pays
+        </p>
+        <p style={{ color: "rgba(255,255,255,0.4)", fontSize: "13px", marginTop: "6px" }}>
+          © 2026 Uniti Networks Ltd. All rights reserved.
+        </p>
       </div>
-      <div className="mt-12 pt-8 border-t border-primary-foreground/20 text-center">
-        <p className="text-xs text-primary-foreground/50">© {new Date().getFullYear()} Uniti. All rights reserved.</p>
+      <div className="flex flex-col gap-1 md:text-right">
+        <p style={{ color: "rgba(255,255,255,0.7)", fontSize: "15px" }}>
+          connect@unitinetworks.com
+        </p>
+        <p style={{ color: "rgba(255,255,255,0.7)", fontSize: "15px" }}>
+          licensing@unitinetworks.com
+        </p>
       </div>
     </div>
-  </footer>;
-
+  </footer>
+);
 
 export default Footer;

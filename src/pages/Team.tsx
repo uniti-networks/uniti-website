@@ -81,7 +81,6 @@ const PersonCard = ({ person }: { person: TeamMember }) => (
             transformOrigin: "center bottom",
           }}
         />
-        />
       ) : (
         <div
           className="w-full h-full flex items-center justify-center"

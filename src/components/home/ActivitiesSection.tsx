@@ -214,7 +214,6 @@ const ActivitiesSection = () => (
                   className="h-6 md:h-8 w-auto object-contain"
                 />
               </div>
-              </div>
             </div>
           </div>
 

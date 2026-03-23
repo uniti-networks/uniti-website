@@ -2,6 +2,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import NodeCanvas from "@/components/NodeCanvas";
 import heroCityscape from "@/assets/hero-team-cityscape.png";
+import { usePageMetadata } from "@/hooks/use-page-metadata";
 
 interface TeamMember {
   name: string;
@@ -95,6 +96,15 @@ const PersonCard = ({ person }: {person: TeamMember;}) =>
 
 
 const Team = () => {
+  usePageMetadata({
+    title: "Team — Uniti Networks",
+    description: "Meet the team behind Uniti Networks — 25+ years at the intersection of technology, mobile, and digital inclusion across Africa.",
+    ogTitle: "The Team — Uniti Networks",
+    ogDescription: "Meet the team building the future of digital activation.",
+    ogUrl: "https://unitinetworks.com/team",
+    twitterTitle: "The Team — Uniti Networks",
+    twitterDescription: "Meet the team building the future of digital activation.",
+  });
   return (
     <>
       <Navbar />

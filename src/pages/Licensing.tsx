@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import heroLicensing from "@/assets/hero-licensing.png";
+import { usePageMetadata } from "@/hooks/use-page-metadata";
 
 /* ── Color tokens ── */
 const C = {

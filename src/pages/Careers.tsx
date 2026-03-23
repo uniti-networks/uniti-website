@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 import NodeCanvas from "@/components/NodeCanvas";
 import heroImg from "@/assets/hero-careers.png";
 import JuniorDeveloperContent from "@/components/careers/JuniorDeveloperContent";
+import { usePageMetadata } from "@/hooks/use-page-metadata";
 
 interface JobOpening {
   title: string;

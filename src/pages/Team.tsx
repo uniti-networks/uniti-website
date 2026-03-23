@@ -2,6 +2,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import NodeCanvas from "@/components/NodeCanvas";
 import heroCityscape from "@/assets/hero-team-cityscape.png";
+import { usePageMetadata } from "@/hooks/use-page-metadata";
 
 interface TeamMember {
   name: string;

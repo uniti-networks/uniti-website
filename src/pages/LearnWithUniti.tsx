@@ -2,6 +2,7 @@ import { useState, useMemo } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Play } from "lucide-react";
+import { usePageMetadata } from "@/hooks/use-page-metadata";
 
 /* ── Video data ── */
 interface Video {

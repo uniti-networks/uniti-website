@@ -157,6 +157,15 @@ const VideoCard = ({ video }: { video: Video }) => (
 
 /* ── Page ── */
 const LearnWithUniti = () => {
+  usePageMetadata({
+    title: "Learn with Uniti — Video Guides",
+    description: "Step-by-step video guides to help first-time smartphone users get the most from their apps across finance, health, education, and work.",
+    ogTitle: "Learn with Uniti",
+    ogDescription: "Step-by-step video guides for digital activation across finance, health, education, and work.",
+    ogUrl: "https://unitinetworks.com/learn-with-uniti",
+    twitterTitle: "Learn with Uniti",
+    twitterDescription: "Step-by-step video guides for digital activation across finance, health, education, and work.",
+  });
   const [activeCategory, setActiveCategory] = useState("All");
 
   const categoryCounts = useMemo(() => {

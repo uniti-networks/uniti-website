@@ -196,6 +196,15 @@ const stats = [
 
 
 const Licensing = () => {
+  usePageMetadata({
+    title: "Licensing — Uniti Networks",
+    description: "License the Uniti platform to activate first-time smartphone users in your market. Local ownership, proven technology, 6–8x industry engagement.",
+    ogTitle: "License the Uniti Platform",
+    ogDescription: "We built the activation stack. You own the market. Local partners, local ownership — that's the architecture.",
+    ogUrl: "https://unitinetworks.com/licensing",
+    twitterTitle: "License the Uniti Platform",
+    twitterDescription: "We built the activation stack. You own the market. Local partners, local ownership — that's the architecture.",
+  });
   return (
     <>
       <Navbar />

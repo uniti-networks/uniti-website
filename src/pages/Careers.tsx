@@ -221,7 +221,7 @@ const Careers = () => {
         {/* Hero Section */}
         <section
           ref={sectionRef}
-          className="relative w-full min-h-[52vh] overflow-hidden flex items-center"
+          className="relative w-full h-[420px] overflow-hidden flex items-center"
         >
           <img
             src={heroImg}

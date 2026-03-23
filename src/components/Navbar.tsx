@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
-import logoUniti from "@/assets/logo-uniti.png";
+import logoUniti from "@/assets/logo-uniti-outline.png";
 
 const navLinks = [
   { label: "Home", path: "/" },
@@ -18,10 +18,9 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background border-b border-border">
       <div className="container-wide flex items-center justify-between h-16 px-6 lg:px-20">
-        <Link to="/" className="flex items-center h-16 overflow-hidden">
-          <img src={logoUniti} alt="Uniti" className="h-28 w-auto max-h-none" />
+        <Link to="/" className="flex items-center h-16">
+          <img src={logoUniti} alt="Uniti" className="h-10 w-auto" />
         </Link>
-        
 
         {/* Desktop */}
         <div className="hidden md:flex items-center gap-8">

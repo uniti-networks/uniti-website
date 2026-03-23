@@ -1,7 +1,7 @@
 import { Box, Settings, Puzzle, UserCheck } from "lucide-react";
 import logoMtn from "@/assets/logo-mtn-white.png";
 import logoEsoko from "@/assets/logo-esoko.png";
-import logoUniti from "@/assets/logo-uniti-white.png";
+import logoUniti from "@/assets/uniti-masterbrand-tricolor.svg";
 
 /* ── Data ── */
 

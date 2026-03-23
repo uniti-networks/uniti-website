@@ -25,8 +25,7 @@ const HeroSection = () => {
   return (
     <section
       ref={sectionRef}
-      className="relative w-full min-h-[90vh] xl:min-h-[80vh] 2xl:min-h-[70vh] overflow-hidden flex items-center"
-      style={{ aspectRatio: "21/9", maxHeight: "95vh" }}>
+      className="relative w-full min-h-[90vh] overflow-hidden flex items-center">
       
       {/* Background image with parallax */}
       <img

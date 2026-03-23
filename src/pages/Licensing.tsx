@@ -19,7 +19,7 @@ const C = {
 const GoldLabel = ({ children }: { children: string }) => (
   <p
     className="text-sm font-semibold tracking-[0.15em] uppercase mb-4"
-    style={{ fontFamily: "'DM Sans', sans-serif", color: C.gold }}
+    style={{ fontFamily: "'Europa', 'Inter', sans-serif", color: C.gold }}
   >
     {children}
   </p>
@@ -36,8 +36,8 @@ const SerifHeading = ({
   className?: string;
 }) => (
   <h2
-    className={`text-3xl md:text-4xl lg:text-5xl font-normal leading-tight mb-6 ${className}`}
-    style={{ fontFamily: "'DM Serif Display', serif", color }}
+    className={`text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight mb-6 ${className}`}
+    style={{ fontFamily: "'Euclid Circular A', 'Plus Jakarta Sans', sans-serif", letterSpacing: "-0.02em", color }}
   >
     {children}
   </h2>
@@ -55,7 +55,7 @@ const Body = ({
 }) => (
   <p
     className={`text-base md:text-lg leading-relaxed ${className}`}
-    style={{ fontFamily: "'DM Sans', sans-serif", color }}
+    style={{ fontFamily: "'Europa', 'Inter', sans-serif", color }}
   >
     {children}
   </p>
@@ -71,7 +71,7 @@ const OwnershipPill = ({
 }) => (
   <span
     className="inline-block rounded-full px-3 py-1 text-xs font-medium text-white mr-2 mb-1"
-    style={{ background: color, fontFamily: "'DM Sans', sans-serif" }}
+    style={{ background: color, fontFamily: "'Europa', 'Inter', sans-serif" }}
   >
     {label}
   </span>
@@ -215,9 +215,10 @@ const Licensing = () => {
           <div className="relative z-10 max-w-6xl mx-auto px-6 md:px-12 lg:px-20 py-24 md:py-32 lg:py-40">
             <GoldLabel>Licensing the Uniti Platform</GoldLabel>
             <h1
-              className="text-4xl md:text-5xl lg:text-[3.5rem] font-normal leading-[1.1] mb-8"
+              className="text-4xl md:text-5xl lg:text-[3.5rem] font-extrabold leading-[1.08] mb-8"
               style={{
-                fontFamily: "'DM Serif Display', serif",
+                fontFamily: "'Euclid Circular A', 'Plus Jakarta Sans', sans-serif",
+                letterSpacing: "-0.02em",
                 color: C.white,
                 maxWidth: "720px",
               }}
@@ -288,7 +289,7 @@ const Licensing = () => {
                   <h3
                     className="text-lg font-semibold mb-3"
                     style={{
-                      fontFamily: "'DM Sans', sans-serif",
+                      fontFamily: "'Europa', 'Inter', sans-serif",
                       color: C.paris,
                     }}
                   >
@@ -322,7 +323,7 @@ const Licensing = () => {
                 />
                 <span
                   className="text-sm"
-                  style={{ fontFamily: "'DM Sans', sans-serif", color: "#555" }}
+                  style={{ fontFamily: "'Europa', 'Inter', sans-serif", color: "#555" }}
                 >
                   Uniti delivers
                 </span>
@@ -334,7 +335,7 @@ const Licensing = () => {
                 />
                 <span
                   className="text-sm"
-                  style={{ fontFamily: "'DM Sans', sans-serif", color: "#555" }}
+                  style={{ fontFamily: "'Europa', 'Inter', sans-serif", color: "#555" }}
                 >
                   Designed together
                 </span>
@@ -346,7 +347,7 @@ const Licensing = () => {
                 />
                 <span
                   className="text-sm"
-                  style={{ fontFamily: "'DM Sans', sans-serif", color: "#555" }}
+                  style={{ fontFamily: "'Europa', 'Inter', sans-serif", color: "#555" }}
                 >
                   Partner delivers
                 </span>
@@ -366,7 +367,7 @@ const Licensing = () => {
                   <span
                     className="text-2xl font-light"
                     style={{
-                      fontFamily: "'DM Serif Display', serif",
+                      fontFamily: "'Euclid Circular A', 'Plus Jakarta Sans', sans-serif",
                       color: C.gold,
                     }}
                   >
@@ -375,7 +376,7 @@ const Licensing = () => {
                   <h3
                     className="text-base font-semibold col-span-1 md:col-span-1"
                     style={{
-                      fontFamily: "'DM Sans', sans-serif",
+                      fontFamily: "'Europa', 'Inter', sans-serif",
                       color: C.paris,
                     }}
                   >
@@ -384,7 +385,7 @@ const Licensing = () => {
                   <p
                     className="hidden md:block text-base"
                     style={{
-                      fontFamily: "'DM Sans', sans-serif",
+                      fontFamily: "'Europa', 'Inter', sans-serif",
                       color: "#666",
                     }}
                   >
@@ -416,7 +417,7 @@ const Licensing = () => {
                 <h3
                   className="text-xl font-semibold pb-3 mb-8"
                   style={{
-                    fontFamily: "'DM Sans', sans-serif",
+                    fontFamily: "'Europa', 'Inter', sans-serif",
                     color: C.paris,
                     borderBottom: `2px solid ${C.gold}`,
                   }}
@@ -429,7 +430,7 @@ const Licensing = () => {
                       <p
                         className="text-base font-semibold"
                         style={{
-                          fontFamily: "'DM Sans', sans-serif",
+                          fontFamily: "'Europa', 'Inter', sans-serif",
                           color: C.paris,
                         }}
                       >
@@ -439,7 +440,7 @@ const Licensing = () => {
                         <p
                           className="text-base mt-1"
                           style={{
-                            fontFamily: "'DM Sans', sans-serif",
+                            fontFamily: "'Europa', 'Inter', sans-serif",
                             color: "#666",
                           }}
                         >
@@ -455,7 +456,7 @@ const Licensing = () => {
                 <h3
                   className="text-xl font-semibold pb-3 mb-8"
                   style={{
-                    fontFamily: "'DM Sans', sans-serif",
+                    fontFamily: "'Europa', 'Inter', sans-serif",
                     color: C.paris,
                     borderBottom: `2px solid ${C.gold}`,
                   }}
@@ -468,7 +469,7 @@ const Licensing = () => {
                       <p
                         className="text-base font-semibold"
                         style={{
-                          fontFamily: "'DM Sans', sans-serif",
+                          fontFamily: "'Europa', 'Inter', sans-serif",
                           color: C.paris,
                         }}
                       >
@@ -478,7 +479,7 @@ const Licensing = () => {
                         <p
                           className="text-base mt-1"
                           style={{
-                            fontFamily: "'DM Sans', sans-serif",
+                            fontFamily: "'Europa', 'Inter', sans-serif",
                             color: "#666",
                           }}
                         >
@@ -516,7 +517,7 @@ const Licensing = () => {
                   <h3
                     className="text-lg font-semibold mb-3"
                     style={{
-                      fontFamily: "'DM Sans', sans-serif",
+                      fontFamily: "'Europa', 'Inter', sans-serif",
                       color: C.paris,
                     }}
                   >
@@ -548,7 +549,7 @@ const Licensing = () => {
                   <p
                     className="text-3xl md:text-4xl mb-2"
                     style={{
-                      fontFamily: "'DM Serif Display', serif",
+                      fontFamily: "'Euclid Circular A', 'Plus Jakarta Sans', sans-serif",
                       color: C.gold,
                     }}
                   >
@@ -557,7 +558,7 @@ const Licensing = () => {
                   <p
                     className="text-sm leading-snug"
                     style={{
-                      fontFamily: "'DM Sans', sans-serif",
+                      fontFamily: "'Europa', 'Inter', sans-serif",
                       color: "rgba(255,255,255,0.55)",
                     }}
                   >
@@ -580,7 +581,7 @@ const Licensing = () => {
             </Body>
             <p
               className="text-base"
-              style={{ fontFamily: "'DM Sans', sans-serif", color: "#555" }}
+              style={{ fontFamily: "'Europa', 'Inter', sans-serif", color: "#555" }}
             >
               For inquiries, write to us at{" "}
               <a

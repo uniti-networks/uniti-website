@@ -1,5 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import heroLicensing from "@/assets/hero-licensing.png";
 
 /* ── Color tokens ── */
 const C = {
@@ -200,15 +201,21 @@ const Licensing = () => {
       <main className="pt-16">
         {/* ─── 1. Hero ─── */}
         <section
-          className="relative overflow-hidden"
-          style={{ background: C.bgGrad }}>
+          className="relative overflow-hidden min-h-[70vh] flex items-center"
+          style={{ background: C.bgDark }}>
           
-          {/* Subtle gradient overlay */}
+          <img
+            src={heroLicensing}
+            alt="Busy market street with mobile commerce — emerging market infrastructure"
+            className="absolute inset-0 w-full h-full object-cover"
+            style={{ objectPosition: "center 40%" }}
+          />
           <div
-            className="absolute inset-0 pointer-events-none"
+            className="absolute inset-0"
             style={{
-              background: `radial-gradient(ellipse 60% 80% at 85% 50%, ${C.teal}12 0%, transparent 70%), radial-gradient(ellipse 40% 60% at 90% 30%, ${C.sky}0a 0%, transparent 60%)`
-            }} />
+              background: "linear-gradient(180deg, hsla(239,46%,8%,0.72) 0%, hsla(239,46%,12%,0.65) 100%)",
+            }}
+          />
           
           <div className="relative z-10 max-w-6xl mx-auto px-6 md:px-12 lg:px-20 py-24 md:py-32 lg:py-40">
             <GoldLabel>Licensing the Uniti Platform</GoldLabel>

@@ -26,13 +26,13 @@ const allTeam: TeamMember[] = [
 },
 {
   name: "Anna Montanes",
-  role: "HEAD OF PRODUCT",
+  role: "PRODUCT STRATEGY",
   bio: "Anna leads Uniti's product strategy and development, shaping the AI-powered activation framework for first-time smartphone users. She brings 16+ years of experience building technology for social impact across international development, health-tech, and community-tech, with deep expertise in data management and AI.",
   image: "/lovable-uploads/team-anna.png"
 },
 {
   name: "Samuel Alomenu",
-  role: "BUSINESS OPERATIONS,  GHANA",
+  role: "BUSINESS OPERATIONS LEAD",
   bio: "Samuel heads Uniti's business and sales operations, focused on expanding the Uniti ecosystem. He leads the acquisition of new app developers for the Uniti suite and manages strategic engagement with Mobile Network Operators (MNOs) and device financiers. With an MBA from Esade, Barcelona, he specializes in building the commercial partnerships and logistical frameworks required to scale Uniti's reach across emerging markets.",
   image: "/lovable-uploads/team-samuel.png",
   imagePosition: "center 30%"
@@ -122,8 +122,8 @@ const Team = () => {
                 style={{
                   fontFamily: "'Visby CF', 'Euclid Circular A', 'Plus Jakarta Sans', sans-serif",
                   letterSpacing: "-0.02em"
-                }}>Architecting
-Digital Activation
+                }}>Architecting Digital Activation
+
 
                 <br />
                 Digital Transition

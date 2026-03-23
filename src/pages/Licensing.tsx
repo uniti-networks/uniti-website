@@ -201,7 +201,7 @@ const Licensing = () => {
       <main className="pt-16">
         {/* ─── 1. Hero ─── */}
         <section
-          className="relative overflow-hidden min-h-[80vh] flex items-center"
+          className="relative overflow-hidden min-h-[52vh] flex items-center"
           style={{ background: C.bgDark }}>
           
           <img

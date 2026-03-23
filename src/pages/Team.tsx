@@ -9,6 +9,7 @@ interface TeamMember {
   bio: string;
   image: string | null;
   imagePosition?: string;
+  imageScale?: number;
 }
 
 const allTeam: TeamMember[] = [

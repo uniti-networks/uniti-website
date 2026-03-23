@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import NodeCanvas from "@/components/NodeCanvas";
-import heroImg from "@/assets/careers-hero.png";
+import heroImg from "@/assets/hero-careers.png";
 import JuniorDeveloperContent from "@/components/careers/JuniorDeveloperContent";
 
 interface JobOpening {
@@ -221,7 +221,7 @@ const Careers = () => {
         {/* Hero Section */}
         <section
           ref={sectionRef}
-          className="relative w-full min-h-[50vh] overflow-hidden flex items-center"
+          className="relative w-full min-h-[32vh] overflow-hidden flex items-center"
         >
           <img
             src={heroImg}

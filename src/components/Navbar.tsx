@@ -1,13 +1,12 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
-import logoUniti from "@/assets/logo-uniti-outline.png";
+import logoUniti from "@/assets/uniti-masterbrand-tricolor.svg";
 
 const navLinks = [
   { label: "Home", path: "/" },
   { label: "Team", path: "/team" },
   { label: "Careers", path: "/careers" },
-  { label: "Learn with Uniti", path: "/learn" },
   { label: "Licensing", path: "/licensing" },
 ];
 

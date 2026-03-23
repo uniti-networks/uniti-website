@@ -1,7 +1,7 @@
 import { Box, Settings, Puzzle, UserCheck } from "lucide-react";
 import logoMtn from "@/assets/logo-mtn-white.png";
 import logoEsoko from "@/assets/logo-esoko.png";
-import logoUniti from "@/assets/logo-uniti-white.png";
+import logoUniti from "@/assets/uniti-masterbrand-tricolor.svg";
 
 /* ── Data ── */
 
@@ -107,7 +107,6 @@ const ActivitiesSection = () => (
               background: `linear-gradient(to right, transparent 0%, ${HAIRLINE_COLOR} 20%, ${HAIRLINE_COLOR} 80%, transparent 100%)`,
             }}
           />
-
           {methodology.map((node) => (
             <div key={node.label} className="group p-6 md:p-8 lg:p-10">
               <node.Icon
@@ -213,7 +212,6 @@ const ActivitiesSection = () => (
                   src={logoUniti}
                   alt="Uniti logo"
                   className="h-6 md:h-8 w-auto object-contain"
-                  style={{ opacity: 0.85 }}
                 />
               </div>
             </div>

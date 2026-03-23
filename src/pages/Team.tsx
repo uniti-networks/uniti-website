@@ -26,13 +26,13 @@ const allTeam: TeamMember[] = [
 },
 {
   name: "Anna Montanes",
-  role: "PRODUCT STRATEGY",
+  role: "HEAD OF PRODUCT",
   bio: "Anna leads Uniti's product strategy and development, shaping the AI-powered activation framework for first-time smartphone users. She brings 16+ years of experience building technology for social impact across international development, health-tech, and community-tech, with deep expertise in data management and AI.",
   image: "/lovable-uploads/team-anna.png"
 },
 {
   name: "Samuel Alomenu",
-  role: "BUSINESS OPERATIONS LEAD",
+  role: "BUSINESS OPERATIONS,  GHANA",
   bio: "Samuel heads Uniti's business and sales operations, focused on expanding the Uniti ecosystem. He leads the acquisition of new app developers for the Uniti suite and manages strategic engagement with Mobile Network Operators (MNOs) and device financiers. With an MBA from Esade, Barcelona, he specializes in building the commercial partnerships and logistical frameworks required to scale Uniti's reach across emerging markets.",
   image: "/lovable-uploads/team-samuel.png",
   imagePosition: "center 30%"
@@ -115,7 +115,7 @@ const Team = () => {
             }} />
           
           <NodeCanvas />
-          <div className="relative z-10 w-full max-w-7xl mx-auto px-8 md:px-16 lg:px-20 py-24 animate-[fadeInUp_0.8s_ease-out_both]">
+          <div className="relative z-10 w-full max-w-7xl mx-auto px-8 md:px-16 lg:px-20 py-24 md:py-32 lg:py-40 animate-[fadeInUp_0.8s_ease-out_both]">
             <div className="max-w-xl">
               <h1
                 className="text-4xl md:text-5xl lg:text-[3.5rem] font-extrabold text-white leading-[1.08] mb-6"

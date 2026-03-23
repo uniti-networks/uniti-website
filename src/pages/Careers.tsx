@@ -221,7 +221,7 @@ const Careers = () => {
         {/* Hero Section */}
         <section
           ref={sectionRef}
-          className="relative w-full min-h-[32vh] overflow-hidden flex items-center"
+          className="relative w-full min-h-[52vh] overflow-hidden flex items-center"
         >
           <img
             src={heroImg}
@@ -241,7 +241,7 @@ const Careers = () => {
             }}
           />
           <NodeCanvas />
-          <div className="relative z-10 w-full max-w-7xl mx-auto px-8 md:px-16 lg:px-20 py-24 animate-[fadeInUp_0.8s_ease-out_both]">
+          <div className="relative z-10 w-full max-w-7xl mx-auto px-8 md:px-16 lg:px-20 py-24 md:py-32 lg:py-40 animate-[fadeInUp_0.8s_ease-out_both]">
             <div className="max-w-xl">
               <h1
                 className="text-4xl md:text-5xl lg:text-[3.5rem] font-extrabold text-white leading-[1.08] mb-6"

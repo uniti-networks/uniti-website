@@ -4,7 +4,6 @@ import { Menu, X } from "lucide-react";
 import logoUniti from "@/assets/uniti-masterbrand-tricolor.svg";
 
 const navLinks = [
-  { label: "Home", path: "/" },
   { label: "Team", path: "/team" },
   { label: "Careers", path: "/careers" },
   { label: "Licensing", path: "/licensing" },

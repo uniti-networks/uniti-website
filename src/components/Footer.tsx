@@ -2,7 +2,7 @@ const Footer = () => (
   <footer
     className="w-full"
     style={{
-      background: "#283b8d",
+      background: "linear-gradient(to bottom, #283b8d, #1e2d6b)",
       borderTop: "1px solid rgba(255,255,255,0.1)",
       padding: "48px 0",
     }}

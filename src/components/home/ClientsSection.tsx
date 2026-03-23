@@ -151,7 +151,7 @@ const EcoModule = ({ icon: Icon, fig, tag, title, desc, span, index }: EcoModule
           className="text-[10px] font-bold uppercase tracking-[0.2em] block"
           style={{
             fontFamily: "'Europa', 'Inter', sans-serif",
-            color: "hsl(var(--accent))",
+            color: "#af9942",
           }}
         >
           {tag}

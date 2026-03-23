@@ -110,9 +110,9 @@ const ProductArchitectureSection = () => (
                 className="w-6 h-6 text-white mb-5 transition-transform duration-500 group-hover:scale-105"
               />
               <span
-                className="block text-[11px] font-bold tracking-[0.2em] mb-4"
+                 className="block text-[11px] font-bold tracking-[0.2em] mb-4"
                 style={{
-                  color: "#525aa6",
+                  color: "#af9942",
                   fontFamily: "'Europa', 'Inter', sans-serif",
                 }}
               >

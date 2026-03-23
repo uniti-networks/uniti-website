@@ -115,7 +115,7 @@ const ActivitiesSection = () => (
                 strokeWidth={1.5}
               />
               <span
-                className="block text-[11px] font-bold tracking-[0.2em] mb-4"
+                className="block text-xs font-bold tracking-[0.2em] mb-4"
                 style={{
                   color: "#af9942",
                   fontFamily: FONT_BODY,

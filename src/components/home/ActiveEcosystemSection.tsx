@@ -378,7 +378,7 @@ const DesktopHub = () => {
               </div>
 
               <span
-                className="block text-[9px] font-bold tracking-[0.18em] mb-1.5"
+                className="block text-[11px] font-bold tracking-[0.18em] mb-1.5"
                 style={{
                   fontFamily: "'Europa', 'Inter', sans-serif",
                   color: "#af9942",
@@ -482,7 +482,7 @@ const MobileNode = ({
 
 
         <span
-           className="block text-[9px] font-bold tracking-[0.18em] mb-1.5"
+           className="block text-[11px] font-bold tracking-[0.18em] mb-1.5"
           style={{
             fontFamily: "'Europa', 'Inter', sans-serif",
             color: "#af9942",

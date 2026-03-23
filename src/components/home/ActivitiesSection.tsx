@@ -213,7 +213,7 @@ const ActivitiesSection = () => (
                   src={logoUniti}
                   alt="Uniti logo"
                   className="h-6 md:h-8 w-auto object-contain"
-                  style={{ opacity: 0.85 }}
+                />
                 />
               </div>
             </div>

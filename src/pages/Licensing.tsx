@@ -30,16 +30,14 @@ const GoldLabel = ({ children }: { children: string }) => (
 /* ── Serif heading ── */
 const SerifHeading = ({
   children,
-  color = C.paris,
   className = "",
 }: {
   children: React.ReactNode;
-  color?: string;
   className?: string;
 }) => (
   <h2
-    className={`text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight mb-6 ${className}`}
-    style={{ fontFamily: "'Visby CF', 'Euclid Circular A', 'Plus Jakarta Sans', sans-serif", letterSpacing: "-0.02em", color }}
+    className={`text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight mb-6 text-white ${className}`}
+    style={{ fontFamily: "'Visby CF', 'Euclid Circular A', 'Plus Jakarta Sans', sans-serif", letterSpacing: "-0.02em" }}
   >
     {children}
   </h2>
@@ -48,16 +46,16 @@ const SerifHeading = ({
 /* ── Body text ── */
 const Body = ({
   children,
-  color = "#3b3b4f",
   className = "",
+  bright = false,
 }: {
   children: React.ReactNode;
-  color?: string;
   className?: string;
+  bright?: boolean;
 }) => (
   <p
     className={`text-base md:text-lg leading-relaxed ${className}`}
-    style={{ fontFamily: "'Europa', 'Inter', sans-serif", color }}
+    style={{ fontFamily: "'Euclid Circular A', 'Europa', 'Inter', sans-serif", color: bright ? "rgba(255,255,255,0.85)" : C.muted }}
   >
     {children}
   </p>

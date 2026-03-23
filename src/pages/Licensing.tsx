@@ -36,8 +36,8 @@ const SerifHeading = ({
   className?: string;
 }) => (
   <h2
-    className={`text-3xl md:text-4xl lg:text-5xl font-normal leading-tight mb-6 ${className}`}
-    style={{ fontFamily: "'Euclid Circular A', 'Plus Jakarta Sans', sans-serif", color }}
+    className={`text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight mb-6 ${className}`}
+    style={{ fontFamily: "'Euclid Circular A', 'Plus Jakarta Sans', sans-serif", letterSpacing: "-0.02em", color }}
   >
     {children}
   </h2>

@@ -390,7 +390,7 @@ const DesktopHub = () => {
               <h3
                 className="text-[15px] font-medium mb-1.5 leading-tight"
                 style={{
-                  fontFamily: "'Euclid Circular A', 'Plus Jakarta Sans', sans-serif",
+                  fontFamily: "'Visby CF', 'Euclid Circular A', 'Plus Jakarta Sans', sans-serif",
                   letterSpacing: "-0.02em",
                   color: isHovered ? "#525aa6" : "rgba(255,255,255,0.85)",
                   whiteSpace: "pre-line",
@@ -495,7 +495,7 @@ const MobileNode = ({
           className="text-[15px] font-medium mb-1.5 leading-tight"
           style={{
             fontFamily:
-              "'Euclid Circular A', 'Plus Jakarta Sans', sans-serif",
+              "'Visby CF', 'Euclid Circular A', 'Plus Jakarta Sans', sans-serif",
             letterSpacing: "-0.02em",
             color: active ? "#fff" : "rgba(255,255,255,0.5)",
             whiteSpace: "pre-line",
@@ -565,7 +565,7 @@ const ActiveEcosystemSection = () => (
           className="text-[26px] md:text-[34px] lg:text-[42px] font-medium leading-[1.15] mb-6 md:mb-10"
           style={{
             fontFamily:
-              "'Euclid Circular A', 'Plus Jakarta Sans', sans-serif",
+              "'Visby CF', 'Euclid Circular A', 'Plus Jakarta Sans', sans-serif",
             letterSpacing: "-0.025em",
             maxWidth: 1200,
           }}

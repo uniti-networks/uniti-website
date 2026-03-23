@@ -66,7 +66,7 @@ const HeroSection = () => {
           <h1
             className="text-4xl md:text-5xl lg:text-[3.5rem] font-extrabold text-white leading-[1.08] mb-6"
             style={{
-              fontFamily: "'Euclid Circular A', 'Plus Jakarta Sans', sans-serif",
+              fontFamily: "'Visby CF', 'Euclid Circular A', 'Plus Jakarta Sans', sans-serif",
               letterSpacing: "-0.02em"
             }}>
             Digital Activation That Pays
@@ -86,7 +86,7 @@ const HeroSection = () => {
             onClick={scrollToProduct}
             className="rounded-lg px-8 py-3.5 text-base font-semibold text-white tracking-wide transition-all duration-300 hover:brightness-110 hover:scale-[1.02] active:scale-[0.98] bg-accent animate-[fadeInUp_0.8s_ease-out_0.3s_both]"
             style={{
-              fontFamily: "'Euclid Circular A', 'Plus Jakarta Sans', sans-serif"
+              fontFamily: "'Visby CF', 'Euclid Circular A', 'Plus Jakarta Sans', sans-serif"
             }}>
             
             Discover the Solution

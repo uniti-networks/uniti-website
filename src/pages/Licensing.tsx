@@ -37,7 +37,7 @@ const SerifHeading = ({
 }) => (
   <h2
     className={`text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight mb-6 ${className}`}
-    style={{ fontFamily: "'Euclid Circular A', 'Plus Jakarta Sans', sans-serif", letterSpacing: "-0.02em", color }}
+    style={{ fontFamily: "'Visby CF', 'Euclid Circular A', 'Plus Jakarta Sans', sans-serif", letterSpacing: "-0.02em", color }}
   >
     {children}
   </h2>
@@ -217,7 +217,7 @@ const Licensing = () => {
             <h1
               className="text-4xl md:text-5xl lg:text-[3.5rem] font-extrabold leading-[1.08] mb-8"
               style={{
-                fontFamily: "'Euclid Circular A', 'Plus Jakarta Sans', sans-serif",
+                fontFamily: "'Visby CF', 'Euclid Circular A', 'Plus Jakarta Sans', sans-serif",
                 letterSpacing: "-0.02em",
                 color: C.white,
                 maxWidth: "720px",
@@ -367,7 +367,7 @@ const Licensing = () => {
                   <span
                     className="text-2xl font-light"
                     style={{
-                      fontFamily: "'Euclid Circular A', 'Plus Jakarta Sans', sans-serif",
+                      fontFamily: "'Visby CF', 'Euclid Circular A', 'Plus Jakarta Sans', sans-serif",
                       color: C.gold,
                     }}
                   >
@@ -549,7 +549,7 @@ const Licensing = () => {
                   <p
                     className="text-3xl md:text-4xl mb-2"
                     style={{
-                      fontFamily: "'Euclid Circular A', 'Plus Jakarta Sans', sans-serif",
+                      fontFamily: "'Visby CF', 'Euclid Circular A', 'Plus Jakarta Sans', sans-serif",
                       color: C.gold,
                     }}
                   >

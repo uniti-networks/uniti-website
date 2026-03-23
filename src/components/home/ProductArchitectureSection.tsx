@@ -43,7 +43,7 @@ const ProductArchitectureSection = () => (
         <h2
           className="text-[28px] md:text-[36px] lg:text-[44px] font-medium leading-[1.1] max-w-[1200px] mb-8 md:mb-12"
           style={{
-            fontFamily: "'Euclid Circular A', 'Plus Jakarta Sans', sans-serif",
+            fontFamily: "'Visby CF', 'Euclid Circular A', 'Plus Jakarta Sans', sans-serif",
             letterSpacing: "-0.02em",
           }}
         >
@@ -122,7 +122,7 @@ const ProductArchitectureSection = () => (
                 className="text-base md:text-lg font-medium mb-3"
                 style={{
                   color: "#525aa6",
-                  fontFamily: "'Euclid Circular A', 'Plus Jakarta Sans', sans-serif",
+                  fontFamily: "'Visby CF', 'Euclid Circular A', 'Plus Jakarta Sans', sans-serif",
                   whiteSpace: "pre-line",
                 }}
               >

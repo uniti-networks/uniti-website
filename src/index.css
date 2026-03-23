@@ -1,5 +1,49 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=DM+Serif+Display&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap');
 
+/* Visby CF — primary heading font */
+@font-face {
+  font-family: 'Visby CF';
+  src: url('/fonts/VisbyCF-Light.otf') format('opentype');
+  font-weight: 300;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Visby CF';
+  src: url('/fonts/VisbyCF-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Visby CF';
+  src: url('/fonts/VisbyCF-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Visby CF';
+  src: url('/fonts/VisbyCF-DemiBold.otf') format('opentype');
+  font-weight: 600;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Visby CF';
+  src: url('/fonts/VisbyCF-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Visby CF';
+  src: url('/fonts/VisbyCF-ExtraBold.otf') format('opentype');
+  font-weight: 800;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Visby CF';
+  src: url('/fonts/VisbyCF-Heavy.otf') format('opentype');
+  font-weight: 900;
+  font-display: swap;
+}
+
 /* Euclid Circular A & Europa — commercial fonts; using system fallbacks until files are loaded */
 @font-face {
   font-family: 'Euclid Circular A';

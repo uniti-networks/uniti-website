@@ -87,7 +87,7 @@ const categoryColorMap: Record<string, string> = {
   "Priority Work": "#525aa6",
 };
 
-const FONT_HEADING = "'Euclid Circular A', 'Plus Jakarta Sans', sans-serif";
+const FONT_HEADING = "'Visby CF', 'Euclid Circular A', 'Plus Jakarta Sans', sans-serif";
 const FONT_BODY = "'Europa', 'Inter', sans-serif";
 
 /* ── Video card ── */

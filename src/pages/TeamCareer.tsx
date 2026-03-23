@@ -98,7 +98,7 @@ const TeamCareer = () => {
             <h1
               className="text-4xl md:text-5xl lg:text-[3.5rem] font-extrabold text-white leading-[1.08] mb-5"
               style={{
-                fontFamily: "'Euclid Circular A', 'Plus Jakarta Sans', sans-serif",
+                fontFamily: "'Visby CF', 'Euclid Circular A', 'Plus Jakarta Sans', sans-serif",
                 letterSpacing: "-0.02em",
               }}
             >
@@ -116,7 +116,7 @@ const TeamCareer = () => {
               <Button
                 size="lg"
                 className="bg-accent text-accent-foreground hover:bg-accent/90 hover:brightness-110 hover:scale-[1.02] active:scale-[0.98] transition-all duration-300"
-                style={{ fontFamily: "'Euclid Circular A', 'Plus Jakarta Sans', sans-serif" }}
+                style={{ fontFamily: "'Visby CF', 'Euclid Circular A', 'Plus Jakarta Sans', sans-serif" }}
               >
                 Job Openings
               </Button>

@@ -11,7 +11,7 @@ const capacities = [
   "Other",
 ];
 
-const FONT_TITLE = "'Euclid Circular A', 'Plus Jakarta Sans', sans-serif";
+const FONT_TITLE = "'Visby CF', 'Euclid Circular A', 'Plus Jakarta Sans', sans-serif";
 const FONT_BODY = "'Europa', 'Inter', sans-serif";
 
 const ContactSection = () => {

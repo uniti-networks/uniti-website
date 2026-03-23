@@ -239,7 +239,7 @@ const Careers = () => {
               <h1
                 className="text-4xl md:text-5xl lg:text-[3.5rem] font-extrabold text-white leading-[1.08] mb-6"
                 style={{
-                  fontFamily: "'Euclid Circular A', 'Plus Jakarta Sans', sans-serif",
+                  fontFamily: "'Visby CF', 'Euclid Circular A', 'Plus Jakarta Sans', sans-serif",
                   letterSpacing: "-0.02em",
                 }}
               >

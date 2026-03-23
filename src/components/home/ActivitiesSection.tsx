@@ -117,7 +117,7 @@ const ActivitiesSection = () => (
               <span
                 className="block text-[11px] font-bold tracking-[0.2em] mb-4"
                 style={{
-                  color: "#525aa6",
+                  color: "#af9942",
                   fontFamily: FONT_BODY,
                 }}
               >
@@ -179,7 +179,7 @@ const ActivitiesSection = () => (
                 className="text-base md:text-lg font-medium mb-3"
                 style={{
                   fontFamily: FONT_TITLE,
-                  color: MUTED_INDIGO,
+                  color: "#af9942",
                 }}
               >
                 National Deployment: MTN Ghana &amp; Esoko
@@ -250,7 +250,7 @@ const ActivitiesSection = () => (
                 className="text-base md:text-lg font-medium mb-3"
                 style={{
                   fontFamily: FONT_TITLE,
-                  color: MUTED_INDIGO,
+                  color: "#af9942",
                 }}
               >
                 The WeGrow Project

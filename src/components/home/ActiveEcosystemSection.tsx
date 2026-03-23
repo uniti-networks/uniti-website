@@ -381,7 +381,7 @@ const DesktopHub = () => {
                 className="block text-[9px] font-bold tracking-[0.18em] mb-1.5"
                 style={{
                   fontFamily: "'Europa', 'Inter', sans-serif",
-                  color: "#525aa6",
+                  color: "#af9942",
                 }}
               >
                 {node.tag}

@@ -8,6 +8,7 @@ interface TeamMember {
   role: string;
   bio: string;
   image: string | null;
+  imagePosition?: string;
 }
 
 const allTeam: TeamMember[] = [
@@ -20,7 +21,7 @@ const allTeam: TeamMember[] = [
   {
     name: "Max Giacomelli",
     role: "EXECUTIVE CHAIR",
-    bio: "Max drives Uniti's global scaling strategy, mobilizing capital and building the multi-stakeholder partnerships required to deliver digital impact at scale. With over two decades of experience at the intersection of commercial viability and social value, he previously led the GSMA's Mobile for Development team, managing a $25m+ annual portfolio that reached over 220 million people across emerging markets. Max is also the Co-founder of Africa: The Big Deal, the leading data platform tracking venture investment across the continent.",
+    bio: "Max drives Uniti's global scaling strategy, mobilizing capital and building the multi-stakeholder partnerships required to deliver digital impact at scale. With 20+ years of experience across for-profit and for-impact sectors, he previously led the GSMA's Mobile for Development team, managing a $25m+ portfolio reaching 220 million people. Max is also the Co-founder of Africa: The Big Deal, the leading platform for venture investment insights across the continent.",
     image: "/lovable-uploads/team-max.png",
   },
   {
@@ -34,6 +35,7 @@ const allTeam: TeamMember[] = [
     role: "BUSINESS OPERATIONS LEAD",
     bio: "Samuel heads Uniti's business and sales operations, focused on expanding the Uniti ecosystem. He leads the acquisition of new app developers for the Uniti suite and manages strategic engagement with Mobile Network Operators (MNOs) and device financiers. With an MBA from Esade, Barcelona, he specializes in building the commercial partnerships and logistical frameworks required to scale Uniti's reach across emerging markets.",
     image: "/lovable-uploads/team-samuel.png",
+    imagePosition: "center 30%",
   },
   {
     name: "Karan Vir Arya",
@@ -46,6 +48,7 @@ const allTeam: TeamMember[] = [
     role: "COUNTRY LEAD, GHANA",
     bio: "Based in Accra, Rita oversees the physical execution of Uniti's mission in Ghana, managing the localized Induction Layer. She leads the regional call centers and support infrastructure, ensuring that user activation and partner support are tailored to the specific logistical realities of the West African market. With a background in managing large-scale initiatives for organizations like Jhpiego, Rita ensures Uniti's global technology is effectively adapted to the Ghanaian landscape.",
     image: "/lovable-uploads/team-rita.png",
+    imagePosition: "center 30%",
   },
   {
     name: "Rosa Wang",
@@ -69,7 +72,7 @@ const PersonCard = ({ person }: { person: TeamMember }) => (
           src={person.image}
           alt={person.name}
           className="w-full h-full object-cover"
-          style={{ objectPosition: "center 15%" }}
+          style={{ objectPosition: person.imagePosition || "center 15%" }}
         />
       ) : (
         <div

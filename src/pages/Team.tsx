@@ -36,7 +36,8 @@ const allTeam: TeamMember[] = [
     role: "BUSINESS OPERATIONS LEAD",
     bio: "Samuel heads Uniti's business and sales operations, focused on expanding the Uniti ecosystem. He leads the acquisition of new app developers for the Uniti suite and manages strategic engagement with Mobile Network Operators (MNOs) and device financiers. With an MBA from Esade, Barcelona, he specializes in building the commercial partnerships and logistical frameworks required to scale Uniti's reach across emerging markets.",
     image: "/lovable-uploads/team-samuel.png",
-    imagePosition: "center 30%",
+    imagePosition: "center bottom",
+    imageScale: 1.35,
   },
   {
     name: "Karan Vir Arya",
@@ -49,7 +50,8 @@ const allTeam: TeamMember[] = [
     role: "COUNTRY LEAD, GHANA",
     bio: "Based in Accra, Rita oversees the physical execution of Uniti's mission in Ghana, managing the localized Induction Layer. She leads the regional call centers and support infrastructure, ensuring that user activation and partner support are tailored to the specific logistical realities of the West African market. With a background in managing large-scale initiatives for organizations like Jhpiego, Rita ensures Uniti's global technology is effectively adapted to the Ghanaian landscape.",
     image: "/lovable-uploads/team-rita.png",
-    imagePosition: "center 30%",
+    imagePosition: "center bottom",
+    imageScale: 1.35,
   },
   {
     name: "Rosa Wang",
@@ -73,7 +75,12 @@ const PersonCard = ({ person }: { person: TeamMember }) => (
           src={person.image}
           alt={person.name}
           className="w-full h-full object-cover"
-          style={{ objectPosition: person.imagePosition || "center 15%" }}
+          style={{
+            objectPosition: person.imagePosition || "center 15%",
+            transform: person.imageScale ? `scale(${person.imageScale})` : undefined,
+            transformOrigin: "center bottom",
+          }}
+        />
         />
       ) : (
         <div

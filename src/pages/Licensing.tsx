@@ -377,7 +377,7 @@ const Licensing = () => {
         <section style={{ background: C.bgGrad }}>
           <div className="max-w-6xl mx-auto px-6 md:px-12 lg:px-20 py-20 md:py-28">
             <GoldLabel>The Partnership</GoldLabel>
-            <SerifHeading>What each side brings</SerifHeading>
+            <SerifHeading>Clear roles. Shared outcomes.</SerifHeading>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mt-12">
               {/* Left */}
               <div>

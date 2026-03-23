@@ -6,7 +6,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import Index from "./pages/Index.tsx";
 import Team from "./pages/Team.tsx";
 import Careers from "./pages/Careers.tsx";
-import LearnWithUniti from "./pages/LearnWithUniti.tsx";
+
 import Licensing from "./pages/Licensing.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
@@ -22,7 +22,7 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/team" element={<Team />} />
           <Route path="/careers" element={<Careers />} />
-          <Route path="/learn" element={<LearnWithUniti />} />
+          
           <Route path="/licensing" element={<Licensing />} />
           <Route path="*" element={<NotFound />} />
         </Routes>

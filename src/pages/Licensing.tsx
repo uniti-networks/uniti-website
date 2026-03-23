@@ -215,9 +215,10 @@ const Licensing = () => {
           <div className="relative z-10 max-w-6xl mx-auto px-6 md:px-12 lg:px-20 py-24 md:py-32 lg:py-40">
             <GoldLabel>Licensing the Uniti Platform</GoldLabel>
             <h1
-              className="text-4xl md:text-5xl lg:text-[3.5rem] font-normal leading-[1.1] mb-8"
+              className="text-4xl md:text-5xl lg:text-[3.5rem] font-extrabold leading-[1.08] mb-8"
               style={{
                 fontFamily: "'Euclid Circular A', 'Plus Jakarta Sans', sans-serif",
+                letterSpacing: "-0.02em",
                 color: C.white,
                 maxWidth: "720px",
               }}

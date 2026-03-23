@@ -6,7 +6,7 @@ import ProductArchitectureSection from "@/components/home/ProductArchitectureSec
 import ActiveEcosystemSection from "@/components/home/ActiveEcosystemSection";
 import ActivitiesSection from "@/components/home/ActivitiesSection";
 import TestimonialsSection from "@/components/home/TestimonialsSection";
-import ContactSection from "@/components/home/ContactSection";
+
 
 import SectionDivider from "@/components/home/SectionDivider";
 
@@ -24,8 +24,6 @@ const Index = () => (
       <ActivitiesSection />
       <SectionDivider />
       <TestimonialsSection />
-      <SectionDivider />
-      <ContactSection />
     </main>
     <Footer />
   </>

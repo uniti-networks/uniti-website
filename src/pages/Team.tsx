@@ -123,10 +123,6 @@ const Team = () => {
                   fontFamily: "'Visby CF', 'Euclid Circular A', 'Plus Jakarta Sans', sans-serif",
                   letterSpacing: "-0.02em"
                 }}>Architecting Digital Activation
-
-
-                <br />
-                Digital Transition
               </h1>
               <p
                 className="text-white/75 text-base md:text-lg leading-relaxed max-w-md mb-10"

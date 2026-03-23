@@ -106,8 +106,6 @@ const ActivitiesSection = () => (
               height: "0.5px",
               background: `linear-gradient(to right, transparent 0%, ${HAIRLINE_COLOR} 20%, ${HAIRLINE_COLOR} 80%, transparent 100%)`,
             }}
-          />
-
           {methodology.map((node) => (
             <div key={node.label} className="group p-6 md:p-8 lg:p-10">
               <node.Icon

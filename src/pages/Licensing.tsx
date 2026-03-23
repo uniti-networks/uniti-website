@@ -205,7 +205,7 @@ const Licensing = () => {
         {/* ─── 1. Hero ─── */}
         <section
           className="relative overflow-hidden"
-          style={{ background: C.paris }}
+          style={{ background: C.bgGrad }}
         >
           {/* Subtle gradient overlay */}
           <div

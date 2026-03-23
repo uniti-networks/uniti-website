@@ -30,16 +30,14 @@ const GoldLabel = ({ children }: { children: string }) => (
 /* ── Serif heading ── */
 const SerifHeading = ({
   children,
-  color = C.paris,
   className = "",
 }: {
   children: React.ReactNode;
-  color?: string;
   className?: string;
 }) => (
   <h2
-    className={`text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight mb-6 ${className}`}
-    style={{ fontFamily: "'Visby CF', 'Euclid Circular A', 'Plus Jakarta Sans', sans-serif", letterSpacing: "-0.02em", color }}
+    className={`text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight mb-6 text-white ${className}`}
+    style={{ fontFamily: "'Visby CF', 'Euclid Circular A', 'Plus Jakarta Sans', sans-serif", letterSpacing: "-0.02em" }}
   >
     {children}
   </h2>
@@ -48,16 +46,16 @@ const SerifHeading = ({
 /* ── Body text ── */
 const Body = ({
   children,
-  color = "#3b3b4f",
   className = "",
+  bright = false,
 }: {
   children: React.ReactNode;
-  color?: string;
   className?: string;
+  bright?: boolean;
 }) => (
   <p
     className={`text-base md:text-lg leading-relaxed ${className}`}
-    style={{ fontFamily: "'Europa', 'Inter', sans-serif", color }}
+    style={{ fontFamily: "'Euclid Circular A', 'Europa', 'Inter', sans-serif", color: bright ? "rgba(255,255,255,0.85)" : C.muted }}
   >
     {children}
   </p>
@@ -229,7 +227,7 @@ const Licensing = () => {
               <br />
               You own the market.
             </h1>
-            <Body color="rgba(255,255,255,0.72)" className="max-w-xl">
+            <Body bright className="max-w-xl">
               Uniti licenses its digital activation platform to operators,
               organisations, and implementers who want to turn first-time
               smartphone users into productive digital citizens — in their
@@ -239,7 +237,7 @@ const Licensing = () => {
         </section>
 
         {/* ─── 2. Philosophy ─── */}
-        <section style={{ background: C.cream }}>
+        <section style={{ background: C.bgGrad }}>
           <div className="max-w-6xl mx-auto px-6 md:px-12 lg:px-20 py-20 md:py-28">
             <GoldLabel>Our Approach</GoldLabel>
             <SerifHeading>
@@ -284,20 +282,17 @@ const Licensing = () => {
                   key={card.title}
                   className="p-6 rounded-lg"
                   style={{
-                    background: C.warmWhite,
+                    background: "rgba(255,255,255,0.04)",
                     borderLeft: `3px solid ${C.gold}`,
                   }}
                 >
                   <h3
-                    className="text-lg font-semibold mb-3"
-                    style={{
-                      fontFamily: "'Europa', 'Inter', sans-serif",
-                      color: C.paris,
-                    }}
+                    className="text-lg font-semibold mb-3 text-white"
+                    style={{ fontFamily: "'Euclid Circular A', 'Europa', 'Inter', sans-serif" }}
                   >
                     {card.title}
                   </h3>
-                  <Body color="#555">{card.text}</Body>
+                  <Body>{card.text}</Body>
                 </div>
               ))}
             </div>
@@ -305,7 +300,7 @@ const Licensing = () => {
         </section>
 
         {/* ─── 3. Deployment Stack ─── */}
-        <section style={{ background: C.warmWhite }}>
+        <section style={{ background: C.bgDark }}>
           <div className="max-w-6xl mx-auto px-6 md:px-12 lg:px-20 py-20 md:py-28">
             <GoldLabel>How a Deployment Works</GoldLabel>
             <SerifHeading>Seven components. Clear ownership.</SerifHeading>
@@ -319,38 +314,20 @@ const Licensing = () => {
             {/* Legend */}
             <div className="flex flex-wrap gap-4 mb-8">
               <div className="flex items-center gap-2">
-                <span
-                  className="w-3 h-3 rounded-full"
-                  style={{ background: C.cobalt }}
-                />
-                <span
-                  className="text-sm"
-                  style={{ fontFamily: "'Europa', 'Inter', sans-serif", color: "#555" }}
-                >
+                <span className="w-3 h-3 rounded-full" style={{ background: C.cobalt }} />
+                <span className="text-sm" style={{ fontFamily: "'Euclid Circular A', 'Europa', 'Inter', sans-serif", color: C.muted }}>
                   Uniti delivers
                 </span>
               </div>
               <div className="flex items-center gap-2">
-                <span
-                  className="w-3 h-3 rounded-full"
-                  style={{ background: C.teal }}
-                />
-                <span
-                  className="text-sm"
-                  style={{ fontFamily: "'Europa', 'Inter', sans-serif", color: "#555" }}
-                >
+                <span className="w-3 h-3 rounded-full" style={{ background: C.teal }} />
+                <span className="text-sm" style={{ fontFamily: "'Euclid Circular A', 'Europa', 'Inter', sans-serif", color: C.muted }}>
                   Designed together
                 </span>
               </div>
               <div className="flex items-center gap-2">
-                <span
-                  className="w-3 h-3 rounded-full"
-                  style={{ background: C.gold }}
-                />
-                <span
-                  className="text-sm"
-                  style={{ fontFamily: "'Europa', 'Inter', sans-serif", color: "#555" }}
-                >
+                <span className="w-3 h-3 rounded-full" style={{ background: C.gold }} />
+                <span className="text-sm" style={{ fontFamily: "'Euclid Circular A', 'Europa', 'Inter', sans-serif", color: C.muted }}>
                   Partner delivers
                 </span>
               </div>
@@ -362,9 +339,7 @@ const Licensing = () => {
                 <div
                   key={row.num}
                   className="grid grid-cols-[2.5rem_1fr] md:grid-cols-[2.5rem_10rem_1fr_auto] items-start md:items-center gap-x-4 py-5 transition-colors duration-200"
-                  style={{
-                    borderBottom: `1px solid rgba(0,0,0,0.08)`,
-                  }}
+                  style={{ borderBottom: "1px solid rgba(255,255,255,0.08)" }}
                 >
                   <span
                     className="text-2xl font-light"
@@ -376,30 +351,20 @@ const Licensing = () => {
                     {row.num}
                   </span>
                   <h3
-                    className="text-base font-semibold col-span-1 md:col-span-1"
-                    style={{
-                      fontFamily: "'Europa', 'Inter', sans-serif",
-                      color: C.paris,
-                    }}
+                    className="text-base font-semibold col-span-1 md:col-span-1 text-white"
+                    style={{ fontFamily: "'Euclid Circular A', 'Europa', 'Inter', sans-serif" }}
                   >
                     {row.name}
                   </h3>
                   <p
                     className="hidden md:block text-base"
-                    style={{
-                      fontFamily: "'Europa', 'Inter', sans-serif",
-                      color: "#666",
-                    }}
+                    style={{ fontFamily: "'Euclid Circular A', 'Europa', 'Inter', sans-serif", color: C.muted }}
                   >
                     {row.desc}
                   </p>
                   <div className="col-span-2 md:col-span-1 mt-2 md:mt-0 flex flex-wrap">
                     {row.tags.map((t) => (
-                      <OwnershipPill
-                        key={t.label}
-                        label={t.label}
-                        color={t.color}
-                      />
+                      <OwnershipPill key={t.label} label={t.label} color={t.color} />
                     ))}
                   </div>
                 </div>
@@ -409,7 +374,7 @@ const Licensing = () => {
         </section>
 
         {/* ─── 4. Value Split ─── */}
-        <section style={{ background: C.cream }}>
+        <section style={{ background: C.bgGrad }}>
           <div className="max-w-6xl mx-auto px-6 md:px-12 lg:px-20 py-20 md:py-28">
             <GoldLabel>The Partnership</GoldLabel>
             <SerifHeading>What each side brings</SerifHeading>
@@ -417,10 +382,9 @@ const Licensing = () => {
               {/* Left */}
               <div>
                 <h3
-                  className="text-xl font-semibold pb-3 mb-8"
+                  className="text-xl font-semibold pb-3 mb-8 text-white"
                   style={{
-                    fontFamily: "'Europa', 'Inter', sans-serif",
-                    color: C.paris,
+                    fontFamily: "'Euclid Circular A', 'Europa', 'Inter', sans-serif",
                     borderBottom: `2px solid ${C.gold}`,
                   }}
                 >
@@ -430,21 +394,15 @@ const Licensing = () => {
                   {youGet.map((item) => (
                     <div key={item.title}>
                       <p
-                        className="text-base font-semibold"
-                        style={{
-                          fontFamily: "'Europa', 'Inter', sans-serif",
-                          color: C.paris,
-                        }}
+                        className="text-base font-semibold text-white"
+                        style={{ fontFamily: "'Euclid Circular A', 'Europa', 'Inter', sans-serif" }}
                       >
                         {item.title}
                       </p>
                       {item.desc && (
                         <p
                           className="text-base mt-1"
-                          style={{
-                            fontFamily: "'Europa', 'Inter', sans-serif",
-                            color: "#666",
-                          }}
+                          style={{ fontFamily: "'Euclid Circular A', 'Europa', 'Inter', sans-serif", color: C.muted }}
                         >
                           {item.desc}
                         </p>
@@ -456,10 +414,9 @@ const Licensing = () => {
               {/* Right */}
               <div>
                 <h3
-                  className="text-xl font-semibold pb-3 mb-8"
+                  className="text-xl font-semibold pb-3 mb-8 text-white"
                   style={{
-                    fontFamily: "'Europa', 'Inter', sans-serif",
-                    color: C.paris,
+                    fontFamily: "'Euclid Circular A', 'Europa', 'Inter', sans-serif",
                     borderBottom: `2px solid ${C.gold}`,
                   }}
                 >
@@ -469,21 +426,15 @@ const Licensing = () => {
                   {unitiBrings.map((item) => (
                     <div key={item.title}>
                       <p
-                        className="text-base font-semibold"
-                        style={{
-                          fontFamily: "'Europa', 'Inter', sans-serif",
-                          color: C.paris,
-                        }}
+                        className="text-base font-semibold text-white"
+                        style={{ fontFamily: "'Euclid Circular A', 'Europa', 'Inter', sans-serif" }}
                       >
                         {item.title}
                       </p>
                       {item.desc && (
                         <p
                           className="text-base mt-1"
-                          style={{
-                            fontFamily: "'Europa', 'Inter', sans-serif",
-                            color: "#666",
-                          }}
+                          style={{ fontFamily: "'Euclid Circular A', 'Europa', 'Inter', sans-serif", color: C.muted }}
                         >
                           {item.desc}
                         </p>
@@ -497,7 +448,7 @@ const Licensing = () => {
         </section>
 
         {/* ─── 5. Partner Profile ─── */}
-        <section style={{ background: C.warmWhite }}>
+        <section style={{ background: C.bgDark }}>
           <div className="max-w-6xl mx-auto px-6 md:px-12 lg:px-20 py-20 md:py-28">
             <GoldLabel>Who We Work With</GoldLabel>
             <SerifHeading>Ideal licensing partner</SerifHeading>
@@ -512,20 +463,17 @@ const Licensing = () => {
                   key={card.title}
                   className="p-6 rounded-lg transition-colors duration-200"
                   style={{
-                    background: C.cream,
-                    border: "1px solid rgba(0,0,0,0.06)",
+                    background: "rgba(255,255,255,0.04)",
+                    border: "1px solid rgba(255,255,255,0.08)",
                   }}
                 >
                   <h3
-                    className="text-lg font-semibold mb-3"
-                    style={{
-                      fontFamily: "'Europa', 'Inter', sans-serif",
-                      color: C.paris,
-                    }}
+                    className="text-lg font-semibold mb-3 text-white"
+                    style={{ fontFamily: "'Euclid Circular A', 'Europa', 'Inter', sans-serif" }}
                   >
                     {card.title}
                   </h3>
-                  <Body color="#555">{card.desc}</Body>
+                  <Body>{card.desc}</Body>
                 </div>
               ))}
             </div>
@@ -533,13 +481,13 @@ const Licensing = () => {
         </section>
 
         {/* ─── 6. Proof — Ghana ─── */}
-        <section style={{ background: C.paris }}>
+        <section style={{ background: C.bgGrad }}>
           <div className="max-w-6xl mx-auto px-6 md:px-12 lg:px-20 py-20 md:py-28">
             <GoldLabel>Live Deployment</GoldLabel>
-            <SerifHeading color={C.white}>
+            <SerifHeading>
               Ghana: the reference model
             </SerifHeading>
-            <Body color="rgba(255,255,255,0.72)" className="max-w-3xl mb-14">
+            <Body bright className="max-w-3xl mb-14">
               Ghana is proof-of-concept for the licensing model. Uniti operates
               Ghana directly — all future markets are licensed. The deployment
               validates unit economics, the app partner model, distribution
@@ -560,7 +508,7 @@ const Licensing = () => {
                   <p
                     className="text-sm leading-snug"
                     style={{
-                      fontFamily: "'Europa', 'Inter', sans-serif",
+                      fontFamily: "'Euclid Circular A', 'Europa', 'Inter', sans-serif",
                       color: "rgba(255,255,255,0.55)",
                     }}
                   >
@@ -573,7 +521,7 @@ const Licensing = () => {
         </section>
 
         {/* ─── 7. CTA ─── */}
-        <section style={{ background: C.cream }}>
+        <section style={{ background: C.bgDark }}>
           <div className="max-w-6xl mx-auto px-6 md:px-12 lg:px-20 py-20 md:py-28 text-center">
             <SerifHeading>Let's build your stack</SerifHeading>
             <Body className="max-w-2xl mx-auto mb-8">
@@ -583,13 +531,13 @@ const Licensing = () => {
             </Body>
             <p
               className="text-base"
-              style={{ fontFamily: "'Europa', 'Inter', sans-serif", color: "#555" }}
+              style={{ fontFamily: "'Euclid Circular A', 'Europa', 'Inter', sans-serif", color: C.muted }}
             >
               For inquiries, write to us at{" "}
               <a
                 href="mailto:licensing@unitinetworks.com"
                 className="font-bold transition-opacity duration-200 hover:opacity-80"
-                style={{ color: C.cobalt }}
+                style={{ color: C.sky }}
               >
                 licensing@unitinetworks.com
               </a>

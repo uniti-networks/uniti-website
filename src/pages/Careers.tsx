@@ -5,6 +5,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import NodeCanvas from "@/components/NodeCanvas";
 import heroImg from "@/assets/careers-hero.png";
+import JuniorDeveloperContent from "@/components/careers/JuniorDeveloperContent";
 
 interface JobOpening {
   title: string;
@@ -188,6 +189,12 @@ const jobOpenings: JobOpening[] = [
     location: "Remote",
     type: "Board",
     description: <IndependentBoardMemberContent />,
+  },
+  {
+    title: "Junior Developer & Data Operations",
+    location: "Remote",
+    type: "Part-time",
+    description: <JuniorDeveloperContent />,
   },
 ];
 

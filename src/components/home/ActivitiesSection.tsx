@@ -134,9 +134,8 @@ const ActivitiesSection = () => (
               <p
                 className="text-base leading-relaxed"
                 style={{
-                  color: "#ffffff",
-                  fontFamily: FONT_TITLE,
-                  fontWeight: 300,
+                  color: "rgba(255,255,255,0.9)",
+                  fontFamily: FONT_BODY,
                 }}
               >
                 {node.desc}

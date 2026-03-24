@@ -38,7 +38,7 @@ const SerifHeading = ({
 
 }: {children: React.ReactNode;className?: string;}) =>
 <h2
-  className={`text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight mb-6 text-white ${className}`}
+  className={`text-3xl md:text-4xl lg:text-5xl font-medium leading-tight mb-6 text-white ${className}`}
   style={{ fontFamily: "'Visby CF', 'Euclid Circular A', 'Plus Jakarta Sans', sans-serif", letterSpacing: "-0.02em" }}>
   
     {children}

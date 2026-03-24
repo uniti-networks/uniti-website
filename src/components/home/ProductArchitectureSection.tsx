@@ -23,7 +23,7 @@ const pillars = [
   {
     icon: Volume2,
     label: "ACCESS",
-    title: "Adaptive\nAudio",
+    title: "Adaptive Audio",
     text: "Voice guidance in local languages ensures comprehension never limits utility.",
   },
 ];

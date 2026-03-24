@@ -209,9 +209,13 @@ const RADIUS = 199; // 234 * 0.85 = 199 (15% closer)
 // Pentagonal: 90° (top), 162°, 234°, 306°, 18°
 const ANGLES_DEG = [90, 162, 234, 306, 18];
 
-const NODE_POSITIONS = ANGLES_DEG.map((deg) => {
+// Per-node radius: MNO (index 0) is 5% closer to center
+const NODE_RADII = [RADIUS * 0.95, RADIUS, RADIUS, RADIUS, RADIUS];
+
+const NODE_POSITIONS = ANGLES_DEG.map((deg, i) => {
   const rad = (deg * Math.PI) / 180;
-  return { x: CX + RADIUS * Math.cos(rad), y: CY - RADIUS * Math.sin(rad) };
+  const r = NODE_RADII[i];
+  return { x: CX + r * Math.cos(rad), y: CY - r * Math.sin(rad) };
 });
 
 // Left-side (deg 90-270) = right-aligned text, right-side = left-aligned
@@ -357,7 +361,7 @@ const DesktopHub = () => {
                 left: pos.x,
                 top: pos.y,
                 transform: `${getTranslate(align)} scale(${isHovered ? 1.2 : 1})`,
-                maxWidth: 280,
+                width: 280,
                 zIndex: isHovered ? 10 : 3,
                 textAlign: align === "center" ? "center" : align === "right" ? "right" : "left",
                 transition: "transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1)",

@@ -9,6 +9,7 @@ import Careers from "./pages/Careers.tsx";
 import LearnWithUniti from "./pages/LearnWithUniti.tsx";
 import Licensing from "./pages/Licensing.tsx";
 import NotFound from "./pages/NotFound.tsx";
+import ScrollToTop from "./components/ScrollToTop";
 
 const queryClient = new QueryClient();
 

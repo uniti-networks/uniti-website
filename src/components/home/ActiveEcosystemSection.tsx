@@ -574,7 +574,7 @@ const ActiveEcosystemSection = () => (
             maxWidth: 1200,
           }}
         >
-          <span className="text-white">The Active Ecosystem</span>
+          <span className="text-white">The Ecosystem</span>
           <span style={{ color: "#94A3B8" }}>
             {" "}
             — Uniti aligns the incentives of the digital value chain,

@@ -59,6 +59,10 @@
 }
 
 @tailwind base;
+
+html {
+  scroll-behavior: auto;
+}
 @tailwind components;
 @tailwind utilities;
 

@@ -304,7 +304,7 @@ const DesktopHub = () => {
 
         {/* Central U — dead center */}
         <div
-          className="absolute"
+          className="absolute pointer-events-none"
           style={{
             left: CX,
             top: CY,

@@ -16,7 +16,7 @@ const C = {
   warmWhite: "#fdfcfa",
   white: "#ffffff",
   muted: "#94A3B8",
-  mutedBlue: "#5A67D8",
+  mutedBlue: "#94A3B8",
   bgDark: "#0b0c1f",
   bgGrad: "radial-gradient(ellipse at center, #1e204a 0%, #0b0c1f 70%)"
 };
@@ -489,12 +489,12 @@ const Licensing = () => {
 
         {/* ─── 7. CTA ─── */}
         <section style={{ background: C.bgDark }}>
-          <div className="max-w-7xl mx-auto px-8 md:px-16 lg:px-20 py-20 md:py-28 text-center">
+          <div className="max-w-7xl mx-auto px-8 md:px-16 lg:px-20 py-20 md:py-28">
             <TwoToneHeading
               white="Licensing the Uniti Platform"
               muted="— Let's build your stack."
             />
-            <Body className="max-w-2xl mx-auto mb-8">
+            <Body className="max-w-3xl mb-8">
               Every market is different. The conversation starts with
               understanding your ecosystem — who the users are, what
               distribution looks like, and which services matter most.

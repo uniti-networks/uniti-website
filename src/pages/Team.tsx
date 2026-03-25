@@ -148,7 +148,7 @@ const Team = () => {
         <section className="section-padding" style={{ background: "#0b0c1f" }}>
           <div className="max-w-7xl mx-auto">
             <h2
-              className="text-3xl md:text-4xl font-medium text-white mb-14"
+              className="text-3xl md:text-4xl font-medium text-white mb-14 text-center"
               style={{ fontFamily: "'Visby CF', 'Euclid Circular A', 'Plus Jakarta Sans', sans-serif", letterSpacing: "-0.02em" }}>
               Our Team
             </h2>

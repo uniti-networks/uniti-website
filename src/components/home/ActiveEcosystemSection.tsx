@@ -210,7 +210,7 @@ const RADIUS = 199; // 234 * 0.85 = 199 (15% closer)
 const ANGLES_DEG = [90, 162, 234, 306, 18];
 
 // Per-node radius: MNO (index 0) is 5% closer to center
-const NODE_RADII = [RADIUS * 0.95, RADIUS, RADIUS, RADIUS, RADIUS];
+const NODE_RADII = [RADIUS * 0.90, RADIUS, RADIUS, RADIUS, RADIUS];
 
 const NODE_POSITIONS = ANGLES_DEG.map((deg, i) => {
   const rad = (deg * Math.PI) / 180;

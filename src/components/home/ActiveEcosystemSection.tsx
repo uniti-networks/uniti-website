@@ -209,13 +209,16 @@ const RADIUS = 199; // 234 * 0.85 = 199 (15% closer)
 // Pentagonal: 90° (top), 162°, 234°, 306°, 18°
 const ANGLES_DEG = [90, 162, 234, 306, 18];
 
-// Per-node radius: MNO (index 0) 15% closer, Device Financers (1) and Governments (4) 10% closer
-const NODE_RADII = [RADIUS * 0.85, RADIUS * 0.90, RADIUS, RADIUS, RADIUS * 0.90];
+// Per-node radius: MNO (index 0) 15% closer
+const NODE_RADII = [RADIUS * 0.85, RADIUS, RADIUS, RADIUS, RADIUS];
+
+// Per-node vertical offset: Device Financers (1) and Governments (4) shifted up
+const NODE_Y_OFFSETS = [0, -26, 0, 0, -26];
 
 const NODE_POSITIONS = ANGLES_DEG.map((deg, i) => {
   const rad = (deg * Math.PI) / 180;
   const r = NODE_RADII[i];
-  return { x: CX + r * Math.cos(rad), y: CY - r * Math.sin(rad) };
+  return { x: CX + r * Math.cos(rad), y: CY - r * Math.sin(rad) + NODE_Y_OFFSETS[i] };
 });
 
 // Left-side (deg 90-270) = right-aligned text, right-side = left-aligned

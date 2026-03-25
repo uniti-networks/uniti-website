@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import heroLicensing from "@/assets/hero-licensing.png";
+import SectionDivider from "@/components/home/SectionDivider";
 import { usePageMetadata } from "@/hooks/use-page-metadata";
 
 /* ── Color tokens ── */
@@ -15,67 +16,44 @@ const C = {
   warmWhite: "#fdfcfa",
   white: "#ffffff",
   muted: "#94A3B8",
+  mutedBlue: "#5A67D8",
   bgDark: "#0b0c1f",
   bgGrad: "radial-gradient(ellipse at center, #1e204a 0%, #0b0c1f 70%)"
 };
-
-/* ── Reusable label ── */
-const GoldLabel = ({ children }: {children: string;}) =>
-<p
-  className="text-sm font-semibold tracking-[0.15em] uppercase mb-4"
-  style={{ fontFamily: "'Europa', 'Inter', sans-serif", color: C.gold }}>
-  
-    {children}
-  </p>;
-
-
-/* ── Serif heading ── */
-const SerifHeading = ({
-  children,
-  className = ""
-
-
-
-}: {children: React.ReactNode;className?: string;}) =>
-<h2
-  className={`text-3xl md:text-4xl lg:text-5xl font-medium leading-tight mb-6 text-white ${className}`}
-  style={{ fontFamily: "'Visby CF', 'Euclid Circular A', 'Plus Jakarta Sans', sans-serif", letterSpacing: "-0.02em" }}>
-  
-    {children}
-  </h2>;
-
 
 /* ── Body text ── */
 const Body = ({
   children,
   className = ""
-
-
-
 }: {children: React.ReactNode;className?: string;}) =>
 <p
   className={`text-base md:text-lg leading-relaxed ${className}`}
   style={{ fontFamily: "'Euclid Circular A', 'Europa', 'Inter', sans-serif", color: C.white }}>
-  
-    {children}
-  </p>;
+  {children}
+</p>;
 
+/* ── Two-tone section heading ── */
+const TwoToneHeading = ({
+  white,
+  muted,
+}: {white: string; muted: string;}) =>
+<h2
+  className="text-3xl md:text-4xl lg:text-5xl font-medium leading-tight mb-6"
+  style={{ fontFamily: "'Visby CF', 'Euclid Circular A', 'Plus Jakarta Sans', sans-serif", letterSpacing: "-0.02em" }}>
+  <span style={{ color: C.white }}>{white}</span>
+  <span style={{ color: C.mutedBlue }}>{" "}{muted}</span>
+</h2>;
 
 /* ── Ownership pill ── */
 const OwnershipPill = ({
   label,
   color
-
-
-
 }: {label: string;color: string;}) =>
 <span
   className="inline-block rounded-full px-3 py-1 text-xs font-medium text-white mr-2 mb-1"
   style={{ background: color, fontFamily: "'Europa', 'Inter', sans-serif" }}>
-  
-    {label}
-  </span>;
-
+  {label}
+</span>;
 
 /* ── Deployment stack data ── */
 const stackRows = [
@@ -92,7 +70,6 @@ const stackRows = [
   tags: [
   { label: "Uniti", color: C.cobalt },
   { label: "Partner input", color: C.teal }]
-
 },
 {
   num: 3,
@@ -125,9 +102,7 @@ const stackRows = [
   tags: [
   { label: "Partner", color: C.gold },
   { label: "Uniti support", color: C.cobalt }]
-
 }];
-
 
 /* ── Value items ── */
 const youGet = [
@@ -142,7 +117,6 @@ const youGet = [
   title: "Ongoing platform support",
   desc: "Product updates, quarterly reviews"
 }];
-
 
 const unitiBrings = [
 {
@@ -166,7 +140,6 @@ const unitiBrings = [
   desc: "App developers, MNOs, device financers, development organisations"
 }];
 
-
 /* ── Partner profile cards ── */
 const partnerCards = [
 {
@@ -186,14 +159,12 @@ const partnerCards = [
   desc: "A genuine commitment to digital inclusion — not just market share."
 }];
 
-
 /* ── Stats ── */
 const stats = [
 { value: "MTN Ghana", label: "MOU signed, 1M-user pathway" },
 { value: "6", label: "Committed app partners across finance, health & education" },
 { value: "6–8×", label: "Industry engagement norms" },
 { value: "5", label: "Markets in active conversation" }];
-
 
 const Licensing = () => {
   usePageMetadata({
@@ -213,7 +184,6 @@ const Licensing = () => {
         <section
           className="relative overflow-hidden h-[420px] flex items-center"
           style={{ background: C.bgDark }}>
-          
           <img
             src={heroLicensing}
             alt="Busy market street with mobile commerce — emerging market infrastructure"
@@ -226,39 +196,35 @@ const Licensing = () => {
               background: "linear-gradient(180deg, hsla(239,46%,8%,0.72) 0%, hsla(239,46%,12%,0.65) 100%)",
             }}
           />
-          
-          <div className="relative z-10 max-w-6xl mx-auto px-6 md:px-12 lg:px-20 py-24 md:py-32 lg:py-40">
-            <GoldLabel>Licensing the Uniti Platform</GoldLabel>
-             <h1
-              className="text-4xl md:text-5xl lg:text-[3.5rem] font-extrabold leading-[1.08] mb-8"
-              style={{
-                fontFamily: "'Visby CF', 'Euclid Circular A', 'Plus Jakarta Sans', sans-serif",
-                letterSpacing: "-0.02em",
-                maxWidth: "720px"
-              }}>
-              
-               <span style={{ color: C.white }}>We built the activation stack.</span>
-               <br />
-               <span style={{ color: C.muted }}>You own the market.</span>
-             </h1>
-            <Body className="max-w-xl">
-              Uniti licenses its digital activation platform to operators,
-              organisations, and implementers who want to turn first-time
-              smartphone users into productive digital citizens — in their
-              market, on their terms.
-            </Body>
+          <div className="relative z-10 w-full max-w-7xl mx-auto px-8 md:px-16 lg:px-20 py-24 md:py-32 lg:py-40">
+            <div className="max-w-xl">
+              <h1
+                className="text-4xl md:text-5xl lg:text-[3.5rem] font-extrabold leading-[1.08] mb-6 text-white"
+                style={{
+                  fontFamily: "'Visby CF', 'Euclid Circular A', 'Plus Jakarta Sans', sans-serif",
+                  letterSpacing: "-0.02em",
+                }}>
+                We built the activation stack. You own the market.
+              </h1>
+              <p
+                className="text-white/75 text-base md:text-lg leading-relaxed max-w-md"
+                style={{ fontFamily: "'Europa', 'Inter', sans-serif" }}>
+                Uniti licenses its digital activation platform to operators,
+                organisations, and implementers who want to turn first-time
+                smartphone users into productive digital citizens — in their
+                market, on their terms.
+              </p>
+            </div>
           </div>
         </section>
 
         {/* ─── 2. Philosophy ─── */}
         <section style={{ background: C.bgGrad }}>
-          <div className="max-w-6xl mx-auto px-6 md:px-12 lg:px-20 py-20 md:py-28">
-            <GoldLabel>Our Approach</GoldLabel>
-            <SerifHeading>
-               <span style={{ color: C.white }}>Local partners. Local ownership.</span>
-               <br className="hidden md:block" />
-               <span style={{ color: C.muted }}>That's the architecture.</span>
-             </SerifHeading>
+          <div className="max-w-7xl mx-auto px-8 md:px-16 lg:px-20 py-20 md:py-28">
+            <TwoToneHeading
+              white="Our Approach"
+              muted="— Local partners, local ownership. That's the architecture."
+            />
             <div className="max-w-3xl space-y-6 mb-16">
               <Body>
                 Digital activation doesn't scale from a headquarters thousands
@@ -299,11 +265,9 @@ const Licensing = () => {
                   background: "rgba(255,255,255,0.04)",
                   borderLeft: `3px solid ${C.gold}`
                 }}>
-                
                    <h3
                   className="text-lg font-semibold mb-3"
                   style={{ fontFamily: "'Euclid Circular A', 'Europa', 'Inter', sans-serif", color: C.muted }}>
-                  
                      {card.title}
                    </h3>
                    <Body>{card.text}</Body>
@@ -313,20 +277,15 @@ const Licensing = () => {
           </div>
         </section>
 
+        <SectionDivider />
+
         {/* ─── 3. Deployment Stack ─── */}
         <section style={{ background: C.bgDark }}>
-          <div className="max-w-6xl mx-auto px-6 md:px-12 lg:px-20 py-20 md:py-28">
-            <GoldLabel>How a Deployment Works</GoldLabel>
-            <SerifHeading>
-               <span style={{ color: C.white }}>Seven components.</span>{" "}
-               <span style={{ color: C.muted }}>Clear ownership.</span>
-             </SerifHeading>
-             <Body className="max-w-3xl mb-10">
-               Activation isn't a single product — it's a stack. Seven components
-              have to work in concert for a first-time smartphone user to become
-              a productive digital citizen. Most programmes get distribution
-              right. Uniti was built to orchestrate the rest.
-            </Body>
+          <div className="max-w-7xl mx-auto px-8 md:px-16 lg:px-20 py-20 md:py-28">
+            <TwoToneHeading
+              white="How a Deployment Works"
+              muted="— Activation isn't a single product, it's a stack of seven components with clear ownership."
+            />
 
             {/* Legend */}
             <div className="flex flex-wrap gap-4 mb-8">
@@ -357,26 +316,22 @@ const Licensing = () => {
                 key={row.num}
                 className="grid grid-cols-[2.5rem_1fr] md:grid-cols-[2.5rem_10rem_1fr_auto] items-start md:items-center gap-x-4 py-5 transition-colors duration-200"
                 style={{ borderBottom: "1px solid rgba(255,255,255,0.08)" }}>
-                
                   <span
                   className="text-2xl font-light"
                   style={{
                     fontFamily: "'Visby CF', 'Euclid Circular A', 'Plus Jakarta Sans', sans-serif",
                     color: C.gold
                   }}>
-                  
                     {row.num}
                   </span>
                   <h3
                   className="text-base font-semibold col-span-1 md:col-span-1 text-white"
                   style={{ fontFamily: "'Euclid Circular A', 'Europa', 'Inter', sans-serif" }}>
-                  
                     {row.name}
                   </h3>
                    <p
                   className="hidden md:block text-base"
                   style={{ fontFamily: "'Euclid Circular A', 'Europa', 'Inter', sans-serif", color: C.white }}>
-                  
                     {row.desc}
                   </p>
                   <div className="col-span-2 md:col-span-1 mt-2 md:mt-0 flex flex-wrap">
@@ -390,11 +345,15 @@ const Licensing = () => {
           </div>
         </section>
 
+        <SectionDivider />
+
         {/* ─── 4. Value Split ─── */}
         <section style={{ background: C.bgGrad }}>
-          <div className="max-w-6xl mx-auto px-6 md:px-12 lg:px-20 py-20 md:py-28">
-            <GoldLabel>The Partnership</GoldLabel>
-            <SerifHeading>Clear roles. Shared outcomes.</SerifHeading>
+          <div className="max-w-7xl mx-auto px-8 md:px-16 lg:px-20 py-20 md:py-28">
+            <TwoToneHeading
+              white="The Partnership"
+              muted="— Clear roles. Shared outcomes."
+            />
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mt-12">
               {/* Left */}
               <div>
@@ -404,8 +363,6 @@ const Licensing = () => {
                     fontFamily: "'Euclid Circular A', 'Europa', 'Inter', sans-serif",
                     borderBottom: `2px solid ${C.gold}`
                   }}>Your market
-
-
                 </h3>
                 <div className="space-y-6">
                   {youGet.map((item) =>
@@ -413,14 +370,12 @@ const Licensing = () => {
                        <p
                       className="text-base font-semibold"
                       style={{ fontFamily: "'Euclid Circular A', 'Europa', 'Inter', sans-serif", color: C.muted }}>
-                      
                          {item.title}
                        </p>
                        {item.desc &&
                     <p
                       className="text-base mt-1"
                       style={{ fontFamily: "'Euclid Circular A', 'Europa', 'Inter', sans-serif", color: C.white }}>
-                      
                            {item.desc}
                          </p>
                     }
@@ -436,8 +391,6 @@ const Licensing = () => {
                     fontFamily: "'Euclid Circular A', 'Europa', 'Inter', sans-serif",
                     borderBottom: `2px solid ${C.gold}`
                   }}>Our engine
-
-
                 </h3>
                  <div className="space-y-6">
                    {unitiBrings.map((item) =>
@@ -445,14 +398,12 @@ const Licensing = () => {
                        <p
                       className="text-base font-semibold"
                       style={{ fontFamily: "'Euclid Circular A', 'Europa', 'Inter', sans-serif", color: C.muted }}>
-                      
                          {item.title}
                        </p>
                        {item.desc &&
                     <p
                       className="text-base mt-1"
                       style={{ fontFamily: "'Euclid Circular A', 'Europa', 'Inter', sans-serif", color: C.white }}>
-                      
                            {item.desc}
                          </p>
                     }
@@ -464,16 +415,15 @@ const Licensing = () => {
           </div>
         </section>
 
+        <SectionDivider />
+
         {/* ─── 5. Partner Profile ─── */}
         <section style={{ background: C.bgDark }}>
-          <div className="max-w-6xl mx-auto px-6 md:px-12 lg:px-20 py-20 md:py-28">
-            <GoldLabel>Who We Work With</GoldLabel>
-            <SerifHeading>Ideal licensing partner</SerifHeading>
-            <Body className="max-w-3xl mb-12">
-              We're looking for organisations that have the infrastructure,
-              capital, and conviction to deploy digital activation in their
-              market.
-            </Body>
+          <div className="max-w-7xl mx-auto px-8 md:px-16 lg:px-20 py-20 md:py-28">
+            <TwoToneHeading
+              white="Ideal licensing partner"
+              muted="— We're looking for organisations that have the infrastructure, capital, and conviction to deploy digital activation in their market."
+            />
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {partnerCards.map((card) =>
               <div
@@ -483,11 +433,9 @@ const Licensing = () => {
                   background: "rgba(255,255,255,0.04)",
                   border: "1px solid rgba(255,255,255,0.08)"
                 }}>
-                
                    <h3
                   className="text-lg font-semibold mb-3"
                   style={{ fontFamily: "'Euclid Circular A', 'Europa', 'Inter', sans-serif", color: C.muted }}>
-                  
                      {card.title}
                    </h3>
                    <Body>{card.desc}</Body>
@@ -497,13 +445,15 @@ const Licensing = () => {
           </div>
         </section>
 
+        <SectionDivider />
+
         {/* ─── 6. Proof — Ghana ─── */}
         <section style={{ background: C.bgGrad }}>
-          <div className="max-w-6xl mx-auto px-6 md:px-12 lg:px-20 py-20 md:py-28">
-            <GoldLabel>Live Deployment</GoldLabel>
-            <SerifHeading>
-              Ghana: the reference model
-            </SerifHeading>
+          <div className="max-w-7xl mx-auto px-8 md:px-16 lg:px-20 py-20 md:py-28">
+            <TwoToneHeading
+              white="Live Deployment"
+              muted="— Ghana: The reference model."
+            />
             <Body className="max-w-3xl mb-14">
               Ghana is proof-of-concept for the licensing model. Uniti operates
               Ghana directly — all future markets are licensed. The deployment
@@ -519,7 +469,6 @@ const Licensing = () => {
                     fontFamily: "'Visby CF', 'Euclid Circular A', 'Plus Jakarta Sans', sans-serif",
                     color: C.gold
                   }}>
-                  
                     {s.value}
                   </p>
                    <p
@@ -528,7 +477,6 @@ const Licensing = () => {
                     fontFamily: "'Euclid Circular A', 'Europa', 'Inter', sans-serif",
                     color: C.white
                   }}>
-                  
                     {s.label}
                   </p>
                 </div>
@@ -537,10 +485,15 @@ const Licensing = () => {
           </div>
         </section>
 
+        <SectionDivider />
+
         {/* ─── 7. CTA ─── */}
         <section style={{ background: C.bgDark }}>
-          <div className="max-w-6xl mx-auto px-6 md:px-12 lg:px-20 py-20 md:py-28 text-center">
-            <SerifHeading>Let's build your stack</SerifHeading>
+          <div className="max-w-7xl mx-auto px-8 md:px-16 lg:px-20 py-20 md:py-28 text-center">
+            <TwoToneHeading
+              white="Licensing the Uniti Platform"
+              muted="— Let's build your stack."
+            />
             <Body className="max-w-2xl mx-auto mb-8">
               Every market is different. The conversation starts with
               understanding your ecosystem — who the users are, what
@@ -549,13 +502,11 @@ const Licensing = () => {
              <p
               className="text-base"
               style={{ fontFamily: "'Euclid Circular A', 'Europa', 'Inter', sans-serif", color: C.white }}>
-              
               For inquiries, write to us at{" "}
               <a
                 href="mailto:licensing@unitinetworks.com"
                 className="font-bold transition-opacity duration-200 hover:opacity-80"
                 style={{ color: C.sky }}>
-                
                 licensing@unitinetworks.com
               </a>
             </p>
@@ -564,7 +515,6 @@ const Licensing = () => {
       </main>
       <Footer />
     </>);
-
 };
 
 export default Licensing;

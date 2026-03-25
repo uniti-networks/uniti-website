@@ -197,9 +197,9 @@ const Licensing = () => {
             }}
           />
           <div className="relative z-10 w-full max-w-7xl mx-auto px-8 md:px-16 lg:px-20 py-24 md:py-32 lg:py-40">
-            <div className="max-w-xl">
+            <div>
               <h1
-                className="text-4xl md:text-5xl lg:text-[3.5rem] font-extrabold leading-[1.08] mb-6 text-white"
+                className="text-4xl md:text-5xl lg:text-[3.5rem] font-extrabold leading-[1.08] mb-6 text-white max-w-2xl"
                 style={{
                   fontFamily: "'Visby CF', 'Euclid Circular A', 'Plus Jakarta Sans', sans-serif",
                   letterSpacing: "-0.02em",
@@ -207,7 +207,7 @@ const Licensing = () => {
                 We built the activation stack. You own the market.
               </h1>
               <p
-                className="text-white/75 text-base md:text-lg leading-relaxed max-w-md"
+                className="text-white/75 text-base md:text-lg leading-relaxed max-w-2xl"
                 style={{ fontFamily: "'Europa', 'Inter', sans-serif" }}>
                 Uniti licenses its digital activation platform to operators,
                 organisations, and implementers who want to turn first-time
@@ -225,7 +225,7 @@ const Licensing = () => {
               white="Our Approach"
               muted="— Local partners, local ownership. That's the architecture."
             />
-            <div className="max-w-3xl space-y-6 mb-16">
+            <div className="space-y-6 mb-16">
               <Body>
                 Digital activation doesn't scale from a headquarters thousands
                 of miles away. It scales when local operators — people who know
@@ -454,7 +454,7 @@ const Licensing = () => {
               white="Live Deployment"
               muted="— Ghana: The reference model."
             />
-            <Body className="max-w-3xl mb-14">
+            <Body className="mb-14">
               Ghana is proof-of-concept for the licensing model. Uniti operates
               Ghana directly — all future markets are licensed. The deployment
               validates unit economics, the app partner model, distribution
@@ -494,7 +494,7 @@ const Licensing = () => {
               white="Licensing the Uniti Platform"
               muted="— Let's build your stack."
             />
-            <Body className="max-w-3xl mb-8">
+            <Body className="mb-8">
               Every market is different. The conversation starts with
               understanding your ecosystem — who the users are, what
               distribution looks like, and which services matter most.

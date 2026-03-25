@@ -220,7 +220,7 @@ const Licensing = () => {
 
         {/* ─── 2. Philosophy ─── */}
         <section style={{ background: C.bgGrad }}>
-          <div className="max-w-7xl mx-auto px-8 md:px-16 lg:px-20 py-20 md:py-28">
+          <div className="max-w-7xl mx-auto px-8 md:px-16 lg:px-20 pt-12 pb-12 md:pt-20 md:pb-16 lg:pt-24 lg:pb-20">
             <TwoToneHeading
               white="Our Approach"
               muted="— Local partners, local ownership. That's the architecture."
@@ -281,7 +281,7 @@ const Licensing = () => {
 
         {/* ─── 3. Deployment Stack ─── */}
         <section style={{ background: C.bgDark }}>
-          <div className="max-w-7xl mx-auto px-8 md:px-16 lg:px-20 py-20 md:py-28">
+          <div className="max-w-7xl mx-auto px-8 md:px-16 lg:px-20 pt-12 pb-12 md:pt-20 md:pb-16 lg:pt-24 lg:pb-20">
             <TwoToneHeading
               white="How a Deployment Works"
               muted="— Activation isn't a single product, it's a stack of seven components with clear ownership."
@@ -349,7 +349,7 @@ const Licensing = () => {
 
         {/* ─── 4. Value Split ─── */}
         <section style={{ background: C.bgGrad }}>
-          <div className="max-w-7xl mx-auto px-8 md:px-16 lg:px-20 py-20 md:py-28">
+          <div className="max-w-7xl mx-auto px-8 md:px-16 lg:px-20 pt-12 pb-12 md:pt-20 md:pb-16 lg:pt-24 lg:pb-20">
             <TwoToneHeading
               white="The Partnership"
               muted="— Clear roles. Shared outcomes."
@@ -419,7 +419,7 @@ const Licensing = () => {
 
         {/* ─── 5. Partner Profile ─── */}
         <section style={{ background: C.bgDark }}>
-          <div className="max-w-7xl mx-auto px-8 md:px-16 lg:px-20 py-20 md:py-28">
+          <div className="max-w-7xl mx-auto px-8 md:px-16 lg:px-20 pt-12 pb-12 md:pt-20 md:pb-16 lg:pt-24 lg:pb-20">
             <TwoToneHeading
               white="Ideal licensing partner"
               muted="— We're looking for organisations that have the infrastructure, capital, and conviction to deploy digital activation in their market."
@@ -449,7 +449,7 @@ const Licensing = () => {
 
         {/* ─── 6. Proof — Ghana ─── */}
         <section style={{ background: C.bgGrad }}>
-          <div className="max-w-7xl mx-auto px-8 md:px-16 lg:px-20 py-20 md:py-28">
+          <div className="max-w-7xl mx-auto px-8 md:px-16 lg:px-20 pt-12 pb-12 md:pt-20 md:pb-16 lg:pt-24 lg:pb-20">
             <TwoToneHeading
               white="Live Deployment"
               muted="— Ghana: The reference model."
@@ -489,7 +489,7 @@ const Licensing = () => {
 
         {/* ─── 7. CTA ─── */}
         <section style={{ background: C.bgDark }}>
-          <div className="max-w-7xl mx-auto px-8 md:px-16 lg:px-20 py-20 md:py-28">
+          <div className="max-w-7xl mx-auto px-8 md:px-16 lg:px-20 pt-12 pb-12 md:pt-20 md:pb-16 lg:pt-24 lg:pb-20">
             <TwoToneHeading
               white="Licensing the Uniti Platform"
               muted="— Let's build your stack."

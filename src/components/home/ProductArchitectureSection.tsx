@@ -23,7 +23,7 @@ const pillars = [
   {
     icon: Volume2,
     label: "ACCESS",
-    title: "Adaptive\nAudio",
+    title: "Adaptive Audio",
     text: "Voice guidance in local languages ensures comprehension never limits utility.",
   },
 ];
@@ -49,7 +49,7 @@ const ProductArchitectureSection = () => (
         >
           <span className="text-white">The Uniti app is powered by Uniti Beat</span>
           <span style={{ color: "#94A3B8" }}>
-            {" "}— a dynamic intervention engine serving as the primary infrastructure for digital transition.
+            {" "}— a dynamic intervention & intelligence engine serving as infrastructure for digital transition.
           </span>
         </h2>
 

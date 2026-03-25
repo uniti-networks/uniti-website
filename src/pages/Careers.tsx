@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 import NodeCanvas from "@/components/NodeCanvas";
 import heroImg from "@/assets/hero-careers.png";
 import JuniorDeveloperContent from "@/components/careers/JuniorDeveloperContent";
+import { usePageMetadata } from "@/hooks/use-page-metadata";
 
 interface JobOpening {
   title: string;
@@ -199,6 +200,15 @@ const jobOpenings: JobOpening[] = [
 ];
 
 const Careers = () => {
+  usePageMetadata({
+    title: "Careers — Uniti Networks",
+    description: "Join the team building digital activation infrastructure for first-time smartphone users across Africa.",
+    ogTitle: "Careers at Uniti Networks",
+    ogDescription: "Join the team building digital activation infrastructure for first-time smartphone users across Africa.",
+    ogUrl: "https://unitinetworks.com/careers",
+    twitterTitle: "Careers at Uniti Networks",
+    twitterDescription: "Join the team building digital activation infrastructure for first-time smartphone users across Africa.",
+  });
   const [openJob, setOpenJob] = useState<number | null>(null);
   const sectionRef = useRef<HTMLElement>(null);
   const [offset, setOffset] = useState(0);

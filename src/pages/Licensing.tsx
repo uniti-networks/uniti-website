@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import heroLicensing from "@/assets/hero-licensing.png";
+import { usePageMetadata } from "@/hooks/use-page-metadata";
 
 /* ── Color tokens ── */
 const C = {
@@ -37,7 +38,7 @@ const SerifHeading = ({
 
 }: {children: React.ReactNode;className?: string;}) =>
 <h2
-  className={`text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight mb-6 text-white ${className}`}
+  className={`text-3xl md:text-4xl lg:text-5xl font-medium leading-tight mb-6 text-white ${className}`}
   style={{ fontFamily: "'Visby CF', 'Euclid Circular A', 'Plus Jakarta Sans', sans-serif", letterSpacing: "-0.02em" }}>
   
     {children}
@@ -195,6 +196,15 @@ const stats = [
 
 
 const Licensing = () => {
+  usePageMetadata({
+    title: "Licensing — Uniti Networks",
+    description: "License the Uniti platform to activate first-time smartphone users in your market. Local ownership, proven technology, 6–8x industry engagement.",
+    ogTitle: "License the Uniti Platform",
+    ogDescription: "We built the activation stack. You own the market. Local partners, local ownership — that's the architecture.",
+    ogUrl: "https://unitinetworks.com/licensing",
+    twitterTitle: "License the Uniti Platform",
+    twitterDescription: "We built the activation stack. You own the market. Local partners, local ownership — that's the architecture.",
+  });
   return (
     <>
       <Navbar />

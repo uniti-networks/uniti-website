@@ -7,7 +7,7 @@ const testimonials = [
 
 const TestimonialsSection = () => (
   <section
-    className="px-6 py-10 md:px-12 md:py-16 lg:px-20 lg:py-20"
+    className="px-6 pt-12 pb-12 md:px-12 md:pt-20 md:pb-16 lg:px-20 lg:pt-24 lg:pb-20"
     style={{ background: "#0b0c1f" }}
   >
     <div className="container-wide">

@@ -209,8 +209,8 @@ const RADIUS = 199; // 234 * 0.85 = 199 (15% closer)
 // Pentagonal: 90° (top), 162°, 234°, 306°, 18°
 const ANGLES_DEG = [90, 162, 234, 306, 18];
 
-// Per-node radius: MNO (index 0) is 15% closer to center
-const NODE_RADII = [RADIUS * 0.85, RADIUS, RADIUS, RADIUS, RADIUS];
+// Per-node radius: MNO (index 0) 15% closer, Device Financers (1) and Governments (4) 10% closer
+const NODE_RADII = [RADIUS * 0.85, RADIUS * 0.90, RADIUS, RADIUS, RADIUS * 0.90];
 
 const NODE_POSITIONS = ANGLES_DEG.map((deg, i) => {
   const rad = (deg * Math.PI) / 180;
@@ -248,7 +248,7 @@ const DesktopHub = () => {
   const [hoveredIdx, setHoveredIdx] = useState<number | null>(null);
 
   return (
-    <div className="hidden lg:flex justify-center relative z-10 pb-20 lg:pb-28" style={{ marginTop: 120 }}>
+    <div className="hidden lg:flex justify-center relative z-10 pb-20" style={{ marginTop: 120 }}>
       <div className="relative" style={{ width: W, height: H }}>
         <ConstellationCanvas />
 

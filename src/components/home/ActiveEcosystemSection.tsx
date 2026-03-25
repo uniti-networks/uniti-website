@@ -232,9 +232,9 @@ const getTranslate = (align: "center" | "right" | "left") => {
 };
 
 const getOffset = (align: "center" | "right" | "left") => {
-  if (align === "center") return { marginLeft: 0, marginRight: 0, marginTop: -12 };
-  if (align === "right") return { marginLeft: 0, marginRight: 24, marginTop: 0 };
-  return { marginLeft: 24, marginRight: 0, marginTop: 0 };
+  if (align === "center") return { paddingLeft: 0, paddingRight: 0, marginTop: -12 };
+  if (align === "right") return { paddingLeft: 0, paddingRight: 24 };
+  return { paddingLeft: 24, paddingRight: 0 };
 };
 
 // Icon alignment helper: right-aligned nodes get icon on the right, left-aligned on the left

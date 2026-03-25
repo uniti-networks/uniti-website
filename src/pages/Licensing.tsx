@@ -197,6 +197,7 @@ const Licensing = () => {
               background: "linear-gradient(180deg, hsla(239,46%,8%,0.72) 0%, hsla(239,46%,12%,0.65) 100%)",
             }}
           />
+          <NodeCanvas />
           <div className="relative z-10 w-full max-w-7xl mx-auto px-8 md:px-16 lg:px-20 py-24 md:py-32 lg:py-40">
             <div>
               <h1

@@ -210,7 +210,7 @@ const RADIUS = 199; // 234 * 0.85 = 199 (15% closer)
 const ANGLES_DEG = [90, 162, 234, 306, 18];
 
 // Per-node radius: MNO (index 0) is 5% closer to center
-const NODE_RADII = [RADIUS * 0.95, RADIUS, RADIUS, RADIUS, RADIUS];
+const NODE_RADII = [RADIUS * 0.90, RADIUS, RADIUS, RADIUS, RADIUS];
 
 const NODE_POSITIONS = ANGLES_DEG.map((deg, i) => {
   const rad = (deg * Math.PI) / 180;
@@ -232,9 +232,9 @@ const getTranslate = (align: "center" | "right" | "left") => {
 };
 
 const getOffset = (align: "center" | "right" | "left") => {
-  if (align === "center") return { marginLeft: 0, marginRight: 0, marginTop: -12 };
-  if (align === "right") return { marginLeft: 0, marginRight: 24, marginTop: 0 };
-  return { marginLeft: 24, marginRight: 0, marginTop: 0 };
+  if (align === "center") return { paddingLeft: 0, paddingRight: 0, marginTop: -12 };
+  if (align === "right") return { paddingLeft: 0, paddingRight: 24 };
+  return { paddingLeft: 24, paddingRight: 0 };
 };
 
 // Icon alignment helper: right-aligned nodes get icon on the right, left-aligned on the left

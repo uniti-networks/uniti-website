@@ -1,5 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import NodeCanvas from "@/components/NodeCanvas";
 import heroLicensing from "@/assets/hero-licensing.png";
 import SectionDivider from "@/components/home/SectionDivider";
 import { usePageMetadata } from "@/hooks/use-page-metadata";

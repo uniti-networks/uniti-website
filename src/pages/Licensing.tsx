@@ -1,5 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import NodeCanvas from "@/components/NodeCanvas";
 import heroLicensing from "@/assets/hero-licensing.png";
 import SectionDivider from "@/components/home/SectionDivider";
 import { usePageMetadata } from "@/hooks/use-page-metadata";
@@ -16,7 +17,7 @@ const C = {
   warmWhite: "#fdfcfa",
   white: "#ffffff",
   muted: "#94A3B8",
-  mutedBlue: "#5A67D8",
+  mutedBlue: "#94A3B8",
   bgDark: "#0b0c1f",
   bgGrad: "radial-gradient(ellipse at center, #1e204a 0%, #0b0c1f 70%)"
 };
@@ -196,10 +197,11 @@ const Licensing = () => {
               background: "linear-gradient(180deg, hsla(239,46%,8%,0.72) 0%, hsla(239,46%,12%,0.65) 100%)",
             }}
           />
+          <NodeCanvas />
           <div className="relative z-10 w-full max-w-7xl mx-auto px-8 md:px-16 lg:px-20 py-24 md:py-32 lg:py-40">
-            <div className="max-w-xl">
+            <div>
               <h1
-                className="text-4xl md:text-5xl lg:text-[3.5rem] font-extrabold leading-[1.08] mb-6 text-white"
+                className="text-4xl md:text-5xl lg:text-[3.5rem] font-extrabold leading-[1.08] mb-6 text-white max-w-2xl"
                 style={{
                   fontFamily: "'Visby CF', 'Euclid Circular A', 'Plus Jakarta Sans', sans-serif",
                   letterSpacing: "-0.02em",
@@ -207,7 +209,7 @@ const Licensing = () => {
                 We built the activation stack. You own the market.
               </h1>
               <p
-                className="text-white/75 text-base md:text-lg leading-relaxed max-w-md"
+                className="text-white/75 text-base md:text-lg leading-relaxed max-w-2xl"
                 style={{ fontFamily: "'Europa', 'Inter', sans-serif" }}>
                 Uniti licenses its digital activation platform to operators,
                 organisations, and implementers who want to turn first-time
@@ -220,12 +222,12 @@ const Licensing = () => {
 
         {/* ─── 2. Philosophy ─── */}
         <section style={{ background: C.bgGrad }}>
-          <div className="max-w-7xl mx-auto px-8 md:px-16 lg:px-20 py-20 md:py-28">
+          <div className="max-w-7xl mx-auto px-8 md:px-16 lg:px-20 pt-12 pb-12 md:pt-20 md:pb-16 lg:pt-24 lg:pb-20">
             <TwoToneHeading
               white="Our Approach"
               muted="— Local partners, local ownership. That's the architecture."
             />
-            <div className="max-w-3xl space-y-6 mb-16">
+            <div className="space-y-6 mb-16">
               <Body>
                 Digital activation doesn't scale from a headquarters thousands
                 of miles away. It scales when local operators — people who know
@@ -281,7 +283,7 @@ const Licensing = () => {
 
         {/* ─── 3. Deployment Stack ─── */}
         <section style={{ background: C.bgDark }}>
-          <div className="max-w-7xl mx-auto px-8 md:px-16 lg:px-20 py-20 md:py-28">
+          <div className="max-w-7xl mx-auto px-8 md:px-16 lg:px-20 pt-12 pb-12 md:pt-20 md:pb-16 lg:pt-24 lg:pb-20">
             <TwoToneHeading
               white="How a Deployment Works"
               muted="— Activation isn't a single product, it's a stack of seven components with clear ownership."
@@ -349,7 +351,7 @@ const Licensing = () => {
 
         {/* ─── 4. Value Split ─── */}
         <section style={{ background: C.bgGrad }}>
-          <div className="max-w-7xl mx-auto px-8 md:px-16 lg:px-20 py-20 md:py-28">
+          <div className="max-w-7xl mx-auto px-8 md:px-16 lg:px-20 pt-12 pb-12 md:pt-20 md:pb-16 lg:pt-24 lg:pb-20">
             <TwoToneHeading
               white="The Partnership"
               muted="— Clear roles. Shared outcomes."
@@ -419,7 +421,7 @@ const Licensing = () => {
 
         {/* ─── 5. Partner Profile ─── */}
         <section style={{ background: C.bgDark }}>
-          <div className="max-w-7xl mx-auto px-8 md:px-16 lg:px-20 py-20 md:py-28">
+          <div className="max-w-7xl mx-auto px-8 md:px-16 lg:px-20 pt-12 pb-12 md:pt-20 md:pb-16 lg:pt-24 lg:pb-20">
             <TwoToneHeading
               white="Ideal licensing partner"
               muted="— We're looking for organisations that have the infrastructure, capital, and conviction to deploy digital activation in their market."
@@ -449,12 +451,12 @@ const Licensing = () => {
 
         {/* ─── 6. Proof — Ghana ─── */}
         <section style={{ background: C.bgGrad }}>
-          <div className="max-w-7xl mx-auto px-8 md:px-16 lg:px-20 py-20 md:py-28">
+          <div className="max-w-7xl mx-auto px-8 md:px-16 lg:px-20 pt-12 pb-12 md:pt-20 md:pb-16 lg:pt-24 lg:pb-20">
             <TwoToneHeading
               white="Live Deployment"
               muted="— Ghana: The reference model."
             />
-            <Body className="max-w-3xl mb-14">
+            <Body className="mb-14">
               Ghana is proof-of-concept for the licensing model. Uniti operates
               Ghana directly — all future markets are licensed. The deployment
               validates unit economics, the app partner model, distribution
@@ -489,12 +491,12 @@ const Licensing = () => {
 
         {/* ─── 7. CTA ─── */}
         <section style={{ background: C.bgDark }}>
-          <div className="max-w-7xl mx-auto px-8 md:px-16 lg:px-20 py-20 md:py-28 text-center">
+          <div className="max-w-7xl mx-auto px-8 md:px-16 lg:px-20 pt-12 pb-12 md:pt-20 md:pb-16 lg:pt-24 lg:pb-20">
             <TwoToneHeading
               white="Licensing the Uniti Platform"
               muted="— Let's build your stack."
             />
-            <Body className="max-w-2xl mx-auto mb-8">
+            <Body className="mb-8">
               Every market is different. The conversation starts with
               understanding your ecosystem — who the users are, what
               distribution looks like, and which services matter most.

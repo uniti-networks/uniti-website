@@ -1,7 +1,7 @@
 import { Box, Settings, Puzzle, UserCheck } from "lucide-react";
 import logoMtn from "@/assets/logo-mtn-white.png";
 import logoEsoko from "@/assets/logo-esoko.png";
-import logoUniti from "@/assets/uniti-masterbrand-tricolor.svg";
+import logoUniti from "@/assets/uniti-masterbrand-white.svg";
 
 /* ── Data ── */
 
@@ -59,7 +59,7 @@ const ActivitiesSection = () => (
       }}
     />
 
-    <div className="relative z-10 px-6 pt-10 pb-10 md:px-12 md:pt-16 md:pb-16 lg:px-20 lg:pt-20 lg:pb-20">
+    <div className="relative z-10 px-6 pt-12 pb-12 md:px-12 md:pt-20 md:pb-16 lg:px-20 lg:pt-24 lg:pb-20">
       <div className="max-w-7xl mx-auto">
         {/* ── Headline ── */}
         <h2
@@ -198,7 +198,7 @@ const ActivitiesSection = () => (
                 <img
                   src={logoMtn}
                   alt="MTN logo"
-                  className="h-8 md:h-12 w-auto object-contain"
+                  className="h-10 md:h-14 w-auto object-contain"
                   style={{ filter: "brightness(0) invert(1)", opacity: 0.85 }}
                 />
                 <img
@@ -210,7 +210,8 @@ const ActivitiesSection = () => (
                 <img
                   src={logoUniti}
                   alt="Uniti logo"
-                  className="h-6 md:h-8 w-auto object-contain"
+                  className="h-5 md:h-7 w-auto object-contain"
+                  style={{ opacity: 0.85 }}
                 />
               </div>
             </div>

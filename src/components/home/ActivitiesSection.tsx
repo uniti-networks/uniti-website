@@ -198,7 +198,7 @@ const ActivitiesSection = () => (
                 <img
                   src={logoMtn}
                   alt="MTN logo"
-                  className="h-8 md:h-12 w-auto object-contain"
+                  className="h-10 md:h-14 w-auto object-contain"
                   style={{ filter: "brightness(0) invert(1)", opacity: 0.85 }}
                 />
                 <img
@@ -210,7 +210,7 @@ const ActivitiesSection = () => (
                 <img
                   src={logoUniti}
                   alt="Uniti logo"
-                  className="h-4 md:h-5 w-auto object-contain"
+                  className="h-5 md:h-7 w-auto object-contain"
                   style={{ opacity: 0.85 }}
                 />
               </div>

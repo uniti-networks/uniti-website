@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { useParams } from "react-router-dom";
-import { ChevronDown } from "lucide-react";
+import { ChevronDown, Share2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -222,6 +222,7 @@ const Careers = () => {
   const sectionRef = useRef<HTMLElement>(null);
   const jobRefs = useRef<(HTMLDivElement | null)[]>([]);
   const [offset, setOffset] = useState(0);
+  const [copiedSlug, setCopiedSlug] = useState<string | null>(null);
 
   useEffect(() => {
     if (slug && initialIndex !== null && initialIndex >= 0) {
@@ -301,7 +302,35 @@ const Careers = () => {
                     className="w-full flex items-center justify-between p-6 text-left hover:bg-white/5 transition-colors"
                   >
                     <div>
-                      <h3 className="font-heading text-lg font-bold text-white">{job.title}</h3>
+                      <h3 className="font-heading text-lg font-bold text-white flex items-center gap-2">
+                        {job.title}
+                        <span
+                          role="button"
+                          tabIndex={0}
+                          className="relative inline-flex items-center justify-center p-1 rounded hover:bg-white/10 transition-colors"
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            navigator.clipboard.writeText(`https://unitinetworks.com/careers/${job.slug}`);
+                            setCopiedSlug(job.slug);
+                            setTimeout(() => setCopiedSlug(null), 2000);
+                          }}
+                          onKeyDown={(e) => {
+                            if (e.key === 'Enter') {
+                              e.stopPropagation();
+                              navigator.clipboard.writeText(`https://unitinetworks.com/careers/${job.slug}`);
+                              setCopiedSlug(job.slug);
+                              setTimeout(() => setCopiedSlug(null), 2000);
+                            }
+                          }}
+                        >
+                          <Share2 className="w-4 h-4 text-white/40 hover:text-white/70 transition-colors" />
+                          {copiedSlug === job.slug && (
+                            <span className="absolute -top-8 left-1/2 -translate-x-1/2 bg-white text-black text-xs px-2 py-1 rounded whitespace-nowrap shadow-lg animate-[fadeInUp_0.2s_ease-out]">
+                              Link copied!
+                            </span>
+                          )}
+                        </span>
+                      </h3>
                       <p className="text-base text-white/50 mt-1">{job.location} · {job.type}</p>
                     </div>
                     <ChevronDown className={`w-5 h-5 text-white/50 transition-transform duration-200 ${openJob === i ? "rotate-180" : ""}`} />

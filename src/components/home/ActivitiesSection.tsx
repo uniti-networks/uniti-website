@@ -1,7 +1,7 @@
 import { Box, Settings, Puzzle, UserCheck } from "lucide-react";
 import logoMtn from "@/assets/logo-mtn-white.png";
 import logoEsoko from "@/assets/logo-esoko.png";
-import logoUniti from "@/assets/uniti-masterbrand-tricolor.svg";
+import logoUniti from "@/assets/uniti-masterbrand-white.svg";
 
 /* ── Data ── */
 
@@ -210,7 +210,8 @@ const ActivitiesSection = () => (
                 <img
                   src={logoUniti}
                   alt="Uniti logo"
-                  className="h-6 md:h-8 w-auto object-contain"
+                  className="h-4 md:h-5 w-auto object-contain"
+                  style={{ opacity: 0.85 }}
                 />
               </div>
             </div>

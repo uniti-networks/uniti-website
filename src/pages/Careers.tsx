@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from "react";
+import { useParams } from "react-router-dom";
 import { ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Navbar from "@/components/Navbar";
@@ -10,6 +11,7 @@ import { usePageMetadata } from "@/hooks/use-page-metadata";
 
 interface JobOpening {
   title: string;
+  slug: string;
   location: string;
   type: string;
   description: React.ReactNode;
@@ -175,24 +177,28 @@ const IndependentBoardMemberContent = () => (
 const jobOpenings: JobOpening[] = [
   {
     title: "Behavioral Science Advisor",
+    slug: "behavioral-science-advisor",
     location: "Remote",
     type: "Part-time",
     description: <BehavioralScienceContent />,
   },
   {
     title: "Operations Manager",
+    slug: "operations-manager",
     location: "Remote",
     type: "Full-time",
     description: <OperationsManagerContent />,
   },
   {
     title: "Independent Board Member",
+    slug: "independent-board-member",
     location: "Remote",
     type: "Board",
     description: <IndependentBoardMemberContent />,
   },
   {
     title: "Junior Developer & Data Operations",
+    slug: "junior-developer",
     location: "Remote",
     type: "Part-time",
     description: <JuniorDeveloperContent />,
@@ -200,6 +206,7 @@ const jobOpenings: JobOpening[] = [
 ];
 
 const Careers = () => {
+  const { slug } = useParams<{ slug?: string }>();
   usePageMetadata({
     title: "Careers — Uniti Networks",
     description: "Join the team building digital activation infrastructure for first-time smartphone users across Africa.",
@@ -209,9 +216,20 @@ const Careers = () => {
     twitterTitle: "Careers at Uniti Networks",
     twitterDescription: "Join the team building digital activation infrastructure for first-time smartphone users across Africa.",
   });
-  const [openJob, setOpenJob] = useState<number | null>(null);
+
+  const initialIndex = slug ? jobOpenings.findIndex((j) => j.slug === slug) : null;
+  const [openJob, setOpenJob] = useState<number | null>(initialIndex !== -1 ? initialIndex : null);
   const sectionRef = useRef<HTMLElement>(null);
+  const jobRefs = useRef<(HTMLDivElement | null)[]>([]);
   const [offset, setOffset] = useState(0);
+
+  useEffect(() => {
+    if (slug && initialIndex !== null && initialIndex >= 0) {
+      setTimeout(() => {
+        jobRefs.current[initialIndex]?.scrollIntoView({ behavior: "smooth", block: "start" });
+      }, 300);
+    }
+  }, [slug, initialIndex]);
 
   useEffect(() => {
     const onScroll = () => {
@@ -277,7 +295,7 @@ const Careers = () => {
           <div className="max-w-4xl mx-auto">
             <div className="space-y-4">
               {jobOpenings.map((job, i) => (
-                <div key={i} className="border border-white/10 rounded-xl overflow-hidden">
+                <div key={i} ref={(el) => { jobRefs.current[i] = el; }} className="border border-white/10 rounded-xl overflow-hidden">
                   <button
                     onClick={() => setOpenJob(openJob === i ? null : i)}
                     className="w-full flex items-center justify-between p-6 text-left hover:bg-white/5 transition-colors"

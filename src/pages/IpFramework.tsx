@@ -424,8 +424,12 @@ const IpFramework = () => {
                   </span>
                   <div>
                     <h3
-                      className="text-lg md:text-xl font-semibold mb-3 text-white"
-                      style={{ fontFamily: FONT_BODY }}
+                      className="text-xl md:text-2xl font-semibold mb-4 leading-tight"
+                      style={{
+                        fontFamily: FONT_HEAD,
+                        color: C.white,
+                        letterSpacing: "-0.01em",
+                      }}
                     >
                       {r.title}
                     </h3>

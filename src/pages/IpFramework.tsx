@@ -188,15 +188,24 @@ const roadmap: { num: string; title: string; desc: string; label: string }[] = [
 
 const ItemCard = ({ item }: { item: Item }) => (
   <div
-    className="p-6 rounded-lg"
+    className="p-6 md:p-7 rounded-lg transition-colors duration-200"
     style={{
       background: "rgba(255,255,255,0.04)",
       border: "1px solid rgba(255,255,255,0.08)",
     }}
   >
+    <span
+      className="block h-px w-10 mb-4"
+      style={{ background: C.gold, opacity: 0.85 }}
+      aria-hidden
+    />
     <h3
-      className="text-lg font-semibold mb-3 text-white"
-      style={{ fontFamily: FONT_BODY }}
+      className="text-xl md:text-2xl font-semibold mb-4 leading-tight"
+      style={{
+        fontFamily: FONT_HEAD,
+        color: C.white,
+        letterSpacing: "-0.01em",
+      }}
     >
       {item.title}
     </h3>
@@ -240,12 +249,6 @@ const IpFramework = () => {
           />
           <NodeCanvas />
           <div className="relative z-10 w-full max-w-7xl mx-auto px-6 md:px-16 lg:px-20 py-20 md:py-28 lg:py-32">
-            <p
-              className="text-xs md:text-sm tracking-[0.25em] mb-6"
-              style={{ fontFamily: FONT_BODY, color: C.gold }}
-            >
-              DISCUSSION DOCUMENT · MAY 2026
-            </p>
             <h1
               className="text-4xl md:text-5xl lg:text-[3.5rem] font-extrabold leading-[1.08] mb-6 text-white max-w-3xl"
               style={{ fontFamily: FONT_HEAD, letterSpacing: "-0.02em" }}
@@ -421,8 +424,12 @@ const IpFramework = () => {
                   </span>
                   <div>
                     <h3
-                      className="text-lg md:text-xl font-semibold mb-3 text-white"
-                      style={{ fontFamily: FONT_BODY }}
+                      className="text-xl md:text-2xl font-semibold mb-4 leading-tight"
+                      style={{
+                        fontFamily: FONT_HEAD,
+                        color: C.white,
+                        letterSpacing: "-0.01em",
+                      }}
                     >
                       {r.title}
                     </h3>

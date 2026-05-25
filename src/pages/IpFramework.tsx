@@ -188,15 +188,24 @@ const roadmap: { num: string; title: string; desc: string; label: string }[] = [
 
 const ItemCard = ({ item }: { item: Item }) => (
   <div
-    className="p-6 rounded-lg"
+    className="p-6 md:p-7 rounded-lg transition-colors duration-200"
     style={{
       background: "rgba(255,255,255,0.04)",
       border: "1px solid rgba(255,255,255,0.08)",
     }}
   >
+    <span
+      className="block h-px w-10 mb-4"
+      style={{ background: C.gold, opacity: 0.85 }}
+      aria-hidden
+    />
     <h3
-      className="text-lg font-semibold mb-3 text-white"
-      style={{ fontFamily: FONT_BODY }}
+      className="text-xl md:text-2xl font-semibold mb-4 leading-tight"
+      style={{
+        fontFamily: FONT_HEAD,
+        color: C.white,
+        letterSpacing: "-0.01em",
+      }}
     >
       {item.title}
     </h3>

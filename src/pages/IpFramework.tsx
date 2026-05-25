@@ -240,12 +240,6 @@ const IpFramework = () => {
           />
           <NodeCanvas />
           <div className="relative z-10 w-full max-w-7xl mx-auto px-6 md:px-16 lg:px-20 py-20 md:py-28 lg:py-32">
-            <p
-              className="text-xs md:text-sm tracking-[0.25em] mb-6"
-              style={{ fontFamily: FONT_BODY, color: C.gold }}
-            >
-              DISCUSSION DOCUMENT · MAY 2026
-            </p>
             <h1
               className="text-4xl md:text-5xl lg:text-[3.5rem] font-extrabold leading-[1.08] mb-6 text-white max-w-3xl"
               style={{ fontFamily: FONT_HEAD, letterSpacing: "-0.02em" }}

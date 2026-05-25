@@ -8,6 +8,7 @@ import Team from "./pages/Team.tsx";
 import Careers from "./pages/Careers.tsx";
 import LearnWithUniti from "./pages/LearnWithUniti.tsx";
 import Licensing from "./pages/Licensing.tsx";
+import IpFramework from "./pages/IpFramework.tsx";
 import NotFound from "./pages/NotFound.tsx";
 import ScrollToTop from "./components/ScrollToTop";
 
@@ -27,6 +28,7 @@ const App = () => (
           <Route path="/careers/:slug" element={<Careers />} />
           <Route path="/learn" element={<LearnWithUniti />} />
           <Route path="/licensing" element={<Licensing />} />
+          <Route path="/ip-framework" element={<IpFramework />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

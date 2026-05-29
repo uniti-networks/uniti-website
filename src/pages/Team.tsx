@@ -105,7 +105,7 @@ const PersonCard = ({ person }: {person: TeamMember;}) =>
       {person.name}
     </h3>
     <p className="text-base text-accent font-medium mb-2">{person.role}</p>
-    <p className="text-sm text-white leading-relaxed max-w-sm mx-auto">{person.bio}</p>
+    <p className="text-sm text-white leading-relaxed max-w-md mx-auto">{person.bio}</p>
   </div>;
 
 
@@ -166,37 +166,20 @@ const Team = () => {
               style={{ fontFamily: "'Visby CF', 'Euclid Circular A', 'Plus Jakarta Sans', sans-serif", letterSpacing: "-0.02em" }}>
               Our Team
             </h2>
-            <div className="mx-auto" style={{ maxWidth: "65%" }}>
+            <div className="mx-auto" style={{ maxWidth: "95%" }}>
               {/* Rows 1 & 2 — 3 columns on desktop, 1 on mobile */}
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-x-16 lg:gap-x-24 gap-y-16">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-x-24 lg:gap-x-40 gap-y-16">
                 {["Kami Dar", "Max Giacomelli", "Anna Montanes", "Samuel Alomenu", "Rita Quansah", "Karan Vir Arya"].map((name) => {
                   const m = allTeam.find((p) => p.name === name)!;
                   return <PersonCard key={m.name} person={m} />;
                 })}
               </div>
-              {/* Row 3 — 2 profiles offset between cols 1-2 and 2-3 (desktop) */}
-              <div className="hidden md:grid grid-cols-6 gap-x-16 lg:gap-x-24 gap-y-16 mt-16">
-                {["Frederick Peter Plange", "Victor Ochieng"].map((name, i) => {
-                  const m = allTeam.find((p) => p.name === name)!;
-                  return (
-                    <div key={m.name} className={i === 0 ? "col-span-2 col-start-2" : "col-span-2 col-start-4"}>
-                      <PersonCard person={m} />
-                    </div>
-                  );
-                })}
-              </div>
-              {/* Mobile — single column for row 3 */}
-              <div className="md:hidden grid grid-cols-1 gap-y-16 mt-16">
-                {["Frederick Peter Plange", "Victor Ochieng"].map((name) => {
+              {/* Row 3 — Frederick, Victor, Rosa */}
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-x-24 lg:gap-x-40 gap-y-16 mt-16">
+                {["Frederick Peter Plange", "Victor Ochieng", "Rosa Wang"].map((name) => {
                   const m = allTeam.find((p) => p.name === name)!;
                   return <PersonCard key={m.name} person={m} />;
                 })}
-              </div>
-              {/* Rosa Wang — centered advisor */}
-              <div className="mt-16 flex justify-center">
-                <div className="w-full max-w-sm">
-                  <PersonCard person={allTeam.find((p) => p.name === "Rosa Wang")!} />
-                </div>
               </div>
             </div>
           </div>

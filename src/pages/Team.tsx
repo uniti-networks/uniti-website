@@ -167,15 +167,35 @@ const Team = () => {
               Our Team
             </h2>
             <div className="mx-auto" style={{ maxWidth: "65%" }}>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-32 gap-y-16">
-                {allTeam.slice(0, 6).map((m) =>
-                <PersonCard key={m.name} person={m} />
-                )}
+              {/* Rows 1 & 2 — 3 columns on desktop, 1 on mobile */}
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-x-16 lg:gap-x-24 gap-y-16">
+                {["Kami Dar", "Max Giacomelli", "Anna Montanes", "Samuel Alomenu", "Rita Quansah", "Karan Vir Arya"].map((name) => {
+                  const m = allTeam.find((p) => p.name === name)!;
+                  return <PersonCard key={m.name} person={m} />;
+                })}
               </div>
-              {/* Rosa Wang — centered */}
+              {/* Row 3 — 2 profiles offset between cols 1-2 and 2-3 (desktop) */}
+              <div className="hidden md:grid grid-cols-6 gap-x-16 lg:gap-x-24 gap-y-16 mt-16">
+                {["Frederick Peter Plange", "Victor Ochieng"].map((name, i) => {
+                  const m = allTeam.find((p) => p.name === name)!;
+                  return (
+                    <div key={m.name} className={i === 0 ? "col-span-2 col-start-2" : "col-span-2 col-start-4"}>
+                      <PersonCard person={m} />
+                    </div>
+                  );
+                })}
+              </div>
+              {/* Mobile — single column for row 3 */}
+              <div className="md:hidden grid grid-cols-1 gap-y-16 mt-16">
+                {["Frederick Peter Plange", "Victor Ochieng"].map((name) => {
+                  const m = allTeam.find((p) => p.name === name)!;
+                  return <PersonCard key={m.name} person={m} />;
+                })}
+              </div>
+              {/* Rosa Wang — centered advisor */}
               <div className="mt-16 flex justify-center">
                 <div className="w-full max-w-sm">
-                  <PersonCard person={allTeam[6]} />
+                  <PersonCard person={allTeam.find((p) => p.name === "Rosa Wang")!} />
                 </div>
               </div>
             </div>

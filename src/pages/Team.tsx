@@ -41,7 +41,7 @@ const allTeam: TeamMember[] = [
 {
   name: "Karan Vir Arya",
   role: "ENGAGEMENT LEAD",
-  bio: "A former corporate lawyer, Karan leads the development of the Uniti Beat engine. Drawing on his experience at Google, where he led the Internet Saathi program, he architects the digital workflows and behavioral hooks that turn passive smartphone users into active participants. His role is to ensure that Uniti's interface is globally scalable and psychologically optimized to drive consistent user engagement for first-time owners.",
+  bio: "A former corporate lawyer, Karan leads the development of the Uniti Beat engine. Drawing on his experience at Google where he led the Internet Saathi program, he architects the digital workflows and behavioral hooks that turn passive smartphone users into active participants. His role is to ensure that Uniti's interface is globally scalable and psychologically optimized to drive consistent user engagement for first-time owners.",
   image: "/lovable-uploads/team-karan.png"
 },
 {

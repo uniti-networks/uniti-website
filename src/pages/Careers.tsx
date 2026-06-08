@@ -6,7 +6,6 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import NodeCanvas from "@/components/NodeCanvas";
 import heroImg from "@/assets/hero-careers.png";
-import JuniorDeveloperContent from "@/components/careers/JuniorDeveloperContent";
 import { usePageMetadata } from "@/hooks/use-page-metadata";
 
 interface JobOpening {
@@ -62,117 +61,6 @@ const BehavioralScienceContent = () => (
   </div>
 );
 
-const OperationsManagerContent = () => (
-   <div className="space-y-4 text-white/80 text-base leading-relaxed">
-    <p>Uniti Networks turns Africa's 300M underserved smartphone users into engaged customers for digital services. We combine device financing, AI-driven coaching, and service aggregation to make smartphones productive from day one. We've signed partnerships that give us a pathway to 1M users, locked in committed revenues from app partners, and achieved engagement rates 5-10x industry standard.</p>
-    <p>We're scaling fast. And we need someone to help us execute.</p>
-
-    <h4 className="text-white font-bold text-base md:text-lg mt-6">The Role</h4>
-    <p>You'll work directly with me to manage operations — team coordination, contracts, payments, and ground-level problem-solving across our Ghana operations. You'll build the systems that let us move faster. Over time, this has potential to grow into senior leadership as we scale across markets.</p>
-
-    <h4 className="text-white font-bold text-base md:text-lg mt-6">What You'll Do</h4>
-    <ul className="list-disc list-inside space-y-1">
-      <li>Manage team coordination across Ghana, Spain, and remote contributors</li>
-      <li>Own contract execution, vendor relationships, and payment processes</li>
-      <li>Support HR and operations (hiring, onboarding, team systems)</li>
-      <li>Troubleshoot operational gaps in Ghana (logistics, partner coordination, on-the-ground execution)</li>
-      <li>Build scalable systems as we grow from thousands to hundreds of thousands of users</li>
-    </ul>
-
-    <h4 className="text-white font-bold text-base md:text-lg mt-6">What We're Looking For</h4>
-    <ul className="list-disc list-inside space-y-1">
-      <li>Strong operations or startup experience — you've built systems from scratch</li>
-      <li>Direct, low-friction communicator who moves fast and solves problems</li>
-      <li>Networks in African tech, African telecom, or African impact ecosystems are a big plus</li>
-      <li>Curious, collaborative, and comfortable with ownership and accountability</li>
-      <li>Comfortable turning ambiguity into opportunity</li>
-      <li>Preference for time zones overlapping with Africa & Europe</li>
-    </ul>
-
-    <h4 className="text-white font-bold text-base md:text-lg mt-6">What's In It For You</h4>
-    <ul className="list-disc list-inside space-y-1">
-      <li>Competitive compensation (benchmarked to location) + equity</li>
-      <li>Real ownership of operations — you'll build your own domain</li>
-      <li>Potential to grow into senior leadership (VP/Director-level)</li>
-      <li>Chance to unlock a massive, underserved market</li>
-      <li>Mission-driven team solving real inclusion problems</li>
-    </ul>
-
-    <h4 className="text-white font-bold text-base md:text-lg mt-6">How to Apply</h4>
-    <p>Skip the CV. Send a short note (500 words max) to <a href="mailto:connect@unitinetworks.com" className="text-accent underline">connect@unitinetworks.com</a> on:</p>
-    <ul className="list-disc list-inside space-y-1">
-      <li>Why this resonates with you</li>
-      <li>One example of how you've built operational systems or solved messy problems</li>
-    </ul>
-  </div>
-);
-
-const IndependentBoardMemberContent = () => (
-  <div className="space-y-4 text-white/80 text-base leading-relaxed">
-    <p>As we celebrate our first commercial launch in Ghana and prepare to expand through licensees and raise a seed round, Uniti Networks is looking to strengthen its Board by adding its first independent Board member.</p>
-
-    <h4 className="text-white font-bold text-base md:text-lg mt-6">About Uniti Networks</h4>
-    <p>Uniti Networks builds digital activation infrastructure for first-time smartphone users in Africa. Through AI-driven coaching in local languages, curated app suites, and behavioral engagement systems, we help users derive productive economic value from their devices from day one. We're currently scaling from a pilot with MTN Ghana toward commercial deployment across multiple African markets through a licensing model that partners with mobile operators and device financiers.</p>
-
-    <h4 className="text-white font-bold text-base md:text-lg mt-6">The Opportunity</h4>
-    <p>We're building our board to support the next phase of growth: proving commercial sustainability in Ghana, closing our first licensing deals, and raising capital to accelerate geographic expansion. In this context, we're looking for an independent board member who brings strategic value in one or more of the following areas:</p>
-    <ul className="list-disc list-inside space-y-1">
-      <li>Scaling technology infrastructure across emerging markets — practical knowledge of what it takes to deploy platforms across fragmented markets with varying regulatory, technical, and commercial realities</li>
-      <li>Fundraising and investor relationships — connections to impact investors, family offices, or development finance institutions who invest in digital infrastructure and financial inclusion</li>
-      <li>African operator relationships and commercial partnerships — experience navigating telco decision-making, understanding operator economics, and structuring partnerships and licensing deals that work for both sides</li>
-      <li>Board governance experience — track record helping early-stage companies build effective governance structures and transition from founder-led to professionalized operations</li>
-    </ul>
-
-    <h4 className="text-white font-bold text-base md:text-lg mt-6">What We're Building</h4>
-    <p>Our thesis is straightforward: smartphone ownership doesn't automatically translate to productive digital participation. The gap between device ownership and sustained use of digital services (finance, health, education, work) can stretch for months or years, creating losses across the entire value chain: users don't benefit, device financiers see high NPLs, operators record low ARPU, app developers struggle with retention…</p>
-    <p>We've built the infrastructure to collapse that gap: structured onboarding, AI coaching in local languages, behavioral nudges tied to concrete goals, and curated app suites that guide users toward productive engagement. Our model has demonstrated engagement rates significantly above industry baseline in pilots with Care International and is now being validated commercially with MTN Ghana.</p>
-    <p>Our go-to-market strategy centers on licensing: we deploy the platform with operators and device financiers who pay us per activated user. This allows us to scale across multiple markets in parallel without the capital intensity of direct operations in each country.</p>
-
-    <h4 className="text-white font-bold text-base md:text-lg mt-6">Board Composition</h4>
-    <p>Our current board comprises:</p>
-    <ul className="list-disc list-inside space-y-1">
-      <li>Kami Dar — CEO & Founder</li>
-      <li>Max Cuvellier Giacomelli — Executive Chair (former Head of Mobile for Development at GSMA, co-founder of Africa: The Big Deal)</li>
-    </ul>
-    <p>We're building toward a five-person board with two independent members. This is the first independent seat and an opportunity to help shape this growing board.</p>
-
-    <h4 className="text-white font-bold text-base md:text-lg mt-6">Time Commitment</h4>
-    <ul className="list-disc list-inside space-y-1">
-      <li>Quarterly board meetings (2-3 hours each, remote-friendly)</li>
-      <li>Ad-hoc strategic conversations as needed (estimated 5-10 hours per quarter)</li>
-      <li>Active support on specific initiatives where your expertise is most relevant (e.g. licensing negotiations, fundraising introductions, operator relationships)</li>
-    </ul>
-
-    <h4 className="text-white font-bold text-base md:text-lg mt-6">Compensation</h4>
-    <ul className="list-disc list-inside space-y-1">
-      <li>Equity grant: 0.5-1% depending on experience, with standard 4-year vesting</li>
-    </ul>
-
-    <h4 className="text-white font-bold text-base md:text-lg mt-6">Ideal Candidate Profile</h4>
-    <p>We're looking for someone who:</p>
-    <ul className="list-disc list-inside space-y-1">
-      <li>Has operated in African markets and understands the commercial realities of building technology businesses across the continent</li>
-      <li>Brings a network that can open doors, whether with operators, investors, or strategic partners</li>
-      <li>Is comfortable with early-stage ambiguity and willing to roll up their sleeves when needed</li>
-      <li>Is passionate about digital inclusion and strongly believes it is only sustainable at scale if it is supported by commercially viable business models</li>
-      <li>Can provide strategic guidance without trying to run the company</li>
-    </ul>
-
-    <h4 className="text-white font-bold text-base md:text-lg mt-6">To Apply</h4>
-    <p>Email <a href="mailto:boardsearch@unitinetworks.com" className="text-accent underline">boardsearch@unitinetworks.com</a> (subject: Independent Board member - YourName) with:</p>
-    <ul className="list-disc list-inside space-y-1">
-      <li>Your CV</li>
-      <li>A short statement (maximum 400 words) covering:
-        <ul className="list-disc list-inside ml-4 space-y-1 mt-1">
-          <li>Why you're interested in Uniti Networks' approach</li>
-          <li>Which of the strategic areas above you'd bring most value to</li>
-          <li>2 or 3 relevant connections or experiences that would be most useful to us</li>
-        </ul>
-      </li>
-    </ul>
-    <p className="text-white/50 text-base mt-4">Applications will remain open until we identify the right candidate, but we encourage you to submit yours sooner rather than later. We aim to respond to all serious inquiries within one week.</p>
-  </div>
-);
 
 const jobOpenings: JobOpening[] = [
   {
@@ -181,27 +69,6 @@ const jobOpenings: JobOpening[] = [
     location: "Remote",
     type: "Part-time",
     description: <BehavioralScienceContent />,
-  },
-  {
-    title: "Operations Manager",
-    slug: "operations-manager",
-    location: "Remote",
-    type: "Full-time",
-    description: <OperationsManagerContent />,
-  },
-  {
-    title: "Independent Board Member",
-    slug: "independent-board-member",
-    location: "Remote",
-    type: "Board",
-    description: <IndependentBoardMemberContent />,
-  },
-  {
-    title: "Junior Developer & Data Operations",
-    slug: "junior-developer",
-    location: "Remote",
-    type: "Part-time",
-    description: <JuniorDeveloperContent />,
   },
 ];
 

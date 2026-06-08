@@ -41,7 +41,7 @@ const allTeam: TeamMember[] = [
 {
   name: "Karan Vir Arya",
   role: "ENGAGEMENT LEAD",
-  bio: "A former corporate lawyer, Karan leads the development of the Uniti Beat engine. Drawing on his experience at Google, where he led the Internet Saathi program, he architects the digital workflows and behavioral hooks that turn passive smartphone users into active participants. His role is to ensure that Uniti's interface is globally scalable and psychologically optimized to drive consistent user engagement for first-time owners.",
+  bio: "A former corporate lawyer, Karan leads the development of the Uniti Beat engine. Drawing on his experience at Google where he led the Internet Saathi program, he architects the digital workflows and behavioral hooks that turn passive smartphone users into active participants. His role is to ensure that Uniti's interface is globally scalable and psychologically optimized to drive consistent user engagement for first-time owners.",
   image: "/lovable-uploads/team-karan.png"
 },
 {
@@ -50,6 +50,20 @@ const allTeam: TeamMember[] = [
   bio: "Based in Accra, Rita oversees the physical execution of Uniti's mission in Ghana, managing the localized Induction Layer. She leads the regional call centers and support infrastructure, ensuring that user activation and partner support are tailored to the specific logistical realities of the West African market. With a background in managing large-scale initiatives for organizations like Jhpiego, Rita ensures Uniti's global technology is effectively adapted to the Ghanaian landscape.",
   image: "/lovable-uploads/team-rita.png",
   imagePosition: "center 30%"
+},
+{
+  name: "Frederick Peter Plange",
+  role: "JUNIOR DEVELOPER & DATA OPERATIONS",
+  bio: "Frederick is a software engineer with a strong focus on backend systems and scalable application development. At Uniti, he works across the stack to build and maintain product features, improve backend systems, and leads data operations. His work includes contributing to the application stack, identifying and fixing bugs, writing tests, and maintaining Metabase dashboards that help track user engagement and service adoption.",
+  image: "/lovable-uploads/team-frederick.jpg",
+  imagePosition: "center 20%"
+},
+{
+  name: "Victor Ochieng",
+  role: "OPERATIONS LEAD",
+  bio: "Victor leads operations and market expansion at Uniti, with a track record of building the systems that let small teams execute at scale across complex, multi-country environments. He has spent nine years at the intersection of technology and emerging markets — structuring blended funding models for digital inclusion programs, building B2B pipelines across EMEA, and launching products in six African markets. Based in Nairobi, he is building the operational infrastructure for Uniti's pilots and East Africa expansion.",
+  image: "/lovable-uploads/team-victor.png",
+  imagePosition: "center 25%"
 },
 {
   name: "Rosa Wang",
@@ -91,7 +105,7 @@ const PersonCard = ({ person }: {person: TeamMember;}) =>
       {person.name}
     </h3>
     <p className="text-base text-accent font-medium mb-2">{person.role}</p>
-    <p className="text-sm text-white leading-relaxed max-w-sm mx-auto">{person.bio}</p>
+    <p className="text-sm text-white leading-relaxed max-w-md mx-auto">{person.bio}</p>
   </div>;
 
 
@@ -152,17 +166,20 @@ const Team = () => {
               style={{ fontFamily: "'Visby CF', 'Euclid Circular A', 'Plus Jakarta Sans', sans-serif", letterSpacing: "-0.02em" }}>
               Our Team
             </h2>
-            <div className="mx-auto" style={{ maxWidth: "65%" }}>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-32 gap-y-16">
-                {allTeam.slice(0, 6).map((m) =>
-                <PersonCard key={m.name} person={m} />
-                )}
+            <div className="mx-auto" style={{ maxWidth: "95%" }}>
+              {/* Rows 1 & 2 — 3 columns on desktop, 1 on mobile */}
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-x-24 lg:gap-x-40 gap-y-16">
+                {["Kami Dar", "Max Giacomelli", "Anna Montanes", "Samuel Alomenu", "Rita Quansah", "Karan Vir Arya"].map((name) => {
+                  const m = allTeam.find((p) => p.name === name)!;
+                  return <PersonCard key={m.name} person={m} />;
+                })}
               </div>
-              {/* Rosa Wang — centered */}
-              <div className="mt-16 flex justify-center">
-                <div className="w-full max-w-sm">
-                  <PersonCard person={allTeam[6]} />
-                </div>
+              {/* Row 3 — Frederick, Victor, Rosa */}
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-x-24 lg:gap-x-40 gap-y-16 mt-16">
+                {["Frederick Peter Plange", "Victor Ochieng", "Rosa Wang"].map((name) => {
+                  const m = allTeam.find((p) => p.name === name)!;
+                  return <PersonCard key={m.name} person={m} />;
+                })}
               </div>
             </div>
           </div>

@@ -7,6 +7,7 @@ export interface LegalSection {
 }
 
 export interface LegalDocument {
+  status: "draft" | "final";
   title: string;
   country: string;
   path: string;
@@ -15,3 +16,5 @@ export interface LegalDocument {
   intro: ReactNode;
   sections: LegalSection[];
 }
+
+export const isLegalDraft = (document?: Pick<LegalDocument, "status">) => document?.status === "draft";

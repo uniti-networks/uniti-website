@@ -114,6 +114,9 @@ html {
     --brand-cream: 45 48% 83%;
     --brand-royal: 228 71% 35%;
     --legal-navy: #283b8d;
+    --legal-draft-notice: #fef3c7;
+    --legal-draft-ink: #78350f;
+    --legal-draft-watermark: rgba(40,59,141,0.07);
     --footer-muted: rgba(255,255,255,0.4);
 
     --sidebar-background: 0 0% 98%;
@@ -219,6 +222,15 @@ html {
 
 .legal-hero {
   background: var(--legal-navy);
+}
+
+.legal-draft-notice {
+  background: var(--legal-draft-notice);
+  color: var(--legal-draft-ink);
+}
+
+.legal-draft-watermark {
+  color: var(--legal-draft-watermark);
 }
 
 .legal-body h2, .legal-body h3, .legal-body a {

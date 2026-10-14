@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import type { LegalDocument } from "./types";
 
 const kenyaTerms: LegalDocument = {
+  status: "draft",
   title: "Terms and Conditions",
   country: "Kenya",
   path: "/terms/kenya",

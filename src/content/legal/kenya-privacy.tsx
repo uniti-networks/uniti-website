@@ -1,6 +1,7 @@
 import type { LegalDocument } from "./types";
 
 const kenyaPrivacy: LegalDocument = {
+  status: "draft",
   title: "Privacy Policy",
   country: "Kenya",
   path: "/privacy/kenya",

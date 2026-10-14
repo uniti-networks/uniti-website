@@ -3,6 +3,8 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { usePageMetadata } from "@/hooks/use-page-metadata";
 import type { LegalDocument } from "@/content/legal/types";
+import { isLegalDraft } from "@/content/legal/types";
+import LegalDraftWatermark from "@/components/LegalDraftWatermark";
 
 interface LegalPageProps {
   document?: LegalDocument;
@@ -10,6 +12,7 @@ interface LegalPageProps {
 }
 
 export default function LegalPage({ document, children }: LegalPageProps) {
+  const draft = isLegalDraft(document);
   const title = document?.title ?? "Legal";
   const description = document?.description ?? "Terms and privacy policies for Uniti-powered programmes, by country.";
   usePageMetadata({
@@ -33,7 +36,12 @@ export default function LegalPage({ document, children }: LegalPageProps) {
             </> : <p className="mt-4 text-primary-foreground/80 text-base">{description}</p>}
           </div>
         </header>
-        <div className="legal-body mx-auto max-w-[808px] px-6 py-12 md:py-16">
+        {draft && <div className="mx-auto max-w-[808px] px-6">
+          <p className="legal-draft-notice px-4 py-3 text-sm leading-relaxed">Draft for legal review. This document is not yet in force.</p>
+        </div>}
+        <div className="legal-body relative isolate mx-auto max-w-[808px] px-6 py-12 md:py-16">
+          {draft && <LegalDraftWatermark />}
+          <div className="relative z-10">
           {document ? <>
             <nav aria-label="Table of contents" className="border-b border-border pb-8 mb-8">
               <h2 className="font-bold text-2xl mb-4">Contents</h2>
@@ -49,6 +57,7 @@ export default function LegalPage({ document, children }: LegalPageProps) {
               </section>
             ))}
           </> : children}
+          </div>
         </div>
       </main>
       <Footer />

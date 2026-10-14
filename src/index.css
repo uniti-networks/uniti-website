@@ -113,6 +113,8 @@ html {
     --brand-orange: 25 82% 59%;
     --brand-cream: 45 48% 83%;
     --brand-royal: 228 71% 35%;
+    --legal-navy: #283b8d;
+    --footer-muted: rgba(255,255,255,0.4);
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
@@ -197,6 +199,78 @@ html {
 
 .animate-float {
   animation: float 6s ease-in-out infinite;
+}
+
+.footer-legal-link {
+  color: var(--footer-muted);
+  font-size: 13px;
+}
+
+.legal-page {
+  font-family: 'Visby CF', sans-serif;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.legal-page h1, .legal-page h2, .legal-page h3 {
+  font-family: 'Visby CF', sans-serif;
+  letter-spacing: 0;
+}
+
+.legal-hero {
+  background: var(--legal-navy);
+}
+
+.legal-body h2, .legal-body h3, .legal-body a {
+  color: var(--legal-navy);
+}
+
+.legal-body p + p, .legal-body ul, .legal-body .legal-table {
+  margin-top: 1rem;
+}
+
+.legal-body ul {
+  list-style: disc;
+  padding-left: 1.5rem;
+}
+
+.legal-body li + li {
+  margin-top: 0.65rem;
+}
+
+.legal-body li > ul {
+  margin-top: 0.65rem;
+}
+
+.legal-body a {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.legal-table {
+  overflow-x: auto;
+  border: 1px solid hsl(var(--border));
+  border-radius: 4px;
+}
+
+.legal-table table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.legal-table th, .legal-table td {
+  padding: 12px;
+  vertical-align: top;
+  border: 1px solid hsl(var(--border));
+  overflow-wrap: anywhere;
+  min-width: 110px;
+}
+
+.legal-table th {
+  background: hsl(var(--section-alt));
+  color: var(--legal-navy);
+  font-weight: 700;
 }
 
 @keyframes fadeInUp {

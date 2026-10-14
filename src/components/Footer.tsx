@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Footer = () => (
   <footer
     className="w-full"
@@ -15,6 +17,7 @@ const Footer = () => (
         <p style={{ color: "rgba(255,255,255,0.4)", fontSize: "13px", marginTop: "6px" }}>
           © 2026 Uniti Networks Ltd. All rights reserved.
         </p>
+        <Link to="/legal" className="footer-legal-link block mt-1 w-fit hover:underline">Legal</Link>
       </div>
       <div className="flex flex-col gap-1 md:text-right">
         <p style={{ color: "rgba(255,255,255,0.7)", fontSize: "15px" }}>

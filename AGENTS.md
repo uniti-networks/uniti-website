@@ -1,0 +1,4 @@
+# Project rules
+- Store legal documents as typed JSX section data in individual country/document files and register them in a country-grouped catalog; this keeps the shared layout and hub consistent when more countries are added.
+- Use the shared LegalPage shell for legal documents and the legal hub, and use the existing page metadata hook; this keeps navigation, typography, and metadata consistent.
+- Drive legal draft decorations from the document status and measure the isolated body with ResizeObserver for watermark tiling; this covers changing document lengths without affecting content layout.

@@ -11,6 +11,12 @@ import Licensing from "./pages/Licensing.tsx";
 import IpFramework from "./pages/IpFramework.tsx";
 import NotFound from "./pages/NotFound.tsx";
 import ScrollToTop from "./components/ScrollToTop";
+import LegalPage from "./components/LegalPage";
+import Legal from "./pages/Legal";
+import kenyaPrivacy from "./content/legal/kenya-privacy";
+import kenyaTerms from "./content/legal/kenya-terms";
+import ghanaPrivacy from "./content/legal/ghana-privacy";
+import ghanaTerms from "./content/legal/ghana-terms";
 
 const queryClient = new QueryClient();
 
@@ -29,6 +35,11 @@ const App = () => (
           <Route path="/learn" element={<LearnWithUniti />} />
           <Route path="/licensing" element={<Licensing />} />
           <Route path="/ip-framework" element={<IpFramework />} />
+          <Route path="/privacy/kenya" element={<LegalPage document={kenyaPrivacy} />} />
+          <Route path="/privacy/ghana" element={<LegalPage document={ghanaPrivacy} />} />
+          <Route path="/terms/ghana" element={<LegalPage document={ghanaTerms} />} />
+          <Route path="/terms/kenya" element={<LegalPage document={kenyaTerms} />} />
+          <Route path="/legal" element={<Legal />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

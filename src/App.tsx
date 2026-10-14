@@ -15,6 +15,8 @@ import LegalPage from "./components/LegalPage";
 import Legal from "./pages/Legal";
 import kenyaPrivacy from "./content/legal/kenya-privacy";
 import kenyaTerms from "./content/legal/kenya-terms";
+import ghanaPrivacy from "./content/legal/ghana-privacy";
+import ghanaTerms from "./content/legal/ghana-terms";
 
 const queryClient = new QueryClient();
 
@@ -34,6 +36,8 @@ const App = () => (
           <Route path="/licensing" element={<Licensing />} />
           <Route path="/ip-framework" element={<IpFramework />} />
           <Route path="/privacy/kenya" element={<LegalPage document={kenyaPrivacy} />} />
+          <Route path="/privacy/ghana" element={<LegalPage document={ghanaPrivacy} />} />
+          <Route path="/terms/ghana" element={<LegalPage document={ghanaTerms} />} />
           <Route path="/terms/kenya" element={<LegalPage document={kenyaTerms} />} />
           <Route path="/legal" element={<Legal />} />
           <Route path="*" element={<NotFound />} />

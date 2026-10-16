@@ -21,13 +21,13 @@ const allTeam: TeamMember[] = [
 },
 {
   name: "Max Giacomelli",
-  role: "EXECUTIVE CHAIR",
+  role: "BOARD CHAIR",
   bio: "Max drives Uniti's global scaling strategy, mobilizing capital and building the multi-stakeholder partnerships required to deliver digital impact at scale. With 20+ years of experience across for-profit and for-impact sectors, he previously led the GSMA's Mobile for Development team, managing a $25m+ portfolio reaching 220 million people. Max is also the Co-founder of Africa: The Big Deal, the leading platform for venture investment insights across the continent.",
   image: "/lovable-uploads/team-max.png"
 },
 {
   name: "Anna Montanes",
-  role: "HEAD OF PRODUCT",
+  role: "DIRECTOR OF PRODUCT",
   bio: "Anna leads Uniti's product strategy and development, shaping the AI-powered activation framework for first-time smartphone users. She brings 16+ years of experience building technology for social impact across international development, health-tech, and community-tech, with deep expertise in data management and AI.",
   image: "/lovable-uploads/team-anna.png"
 },
@@ -46,7 +46,7 @@ const allTeam: TeamMember[] = [
 },
 {
   name: "Rita Quansah",
-  role: "COUNTRY LEAD, GHANA",
+  role: "DIRECTOR OF USER SUCCESS, GHANA",
   bio: "Based in Accra, Rita oversees the physical execution of Uniti's mission in Ghana, managing the localized Induction Layer. She leads the regional call centers and support infrastructure, ensuring that user activation and partner support are tailored to the specific logistical realities of the West African market. With a background in managing large-scale initiatives for organizations like Jhpiego, Rita ensures Uniti's global technology is effectively adapted to the Ghanaian landscape.",
   image: "/lovable-uploads/team-rita.png",
   imagePosition: "center 30%"

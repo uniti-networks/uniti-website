@@ -12,7 +12,7 @@ import InvestorCallout from "@/components/home/InvestorCallout";
 import { usePageMetadata } from "@/hooks/use-page-metadata";
 
 
-import SectionDivider from "@/components/home/SectionDivider";
+
 
 const Index = () => {
   usePageMetadata({
@@ -31,11 +31,8 @@ const Index = () => {
       <DemoSection />
       <CustomerEconomicsSection />
       <ProductArchitectureSection />
-      <SectionDivider />
       <ActiveEcosystemSection />
-      <SectionDivider />
       <ActivitiesSection />
-      <SectionDivider />
       <TestimonialsSection />
       <InvestorCallout />
     </main>

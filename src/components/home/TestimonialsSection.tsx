@@ -34,88 +34,20 @@ const testimonials = [
   },
 ];
 
-const Stars = () => (
-  <div className="flex gap-0.5">
-    {[...Array(5)].map((_, i) => (
-      <svg
-        key={i}
-        width="14"
-        height="14"
-        viewBox="0 0 24 24"
-        fill="#af9942"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-      </svg>
-    ))}
-  </div>
-);
-
 const TestimonialsSection = () => (
-  <section
-    className="px-6 pt-12 pb-12 md:px-12 md:pt-20 md:pb-16 lg:px-20 lg:pt-24 lg:pb-20"
-    style={{ background: "#0b0c1f" }}
-  >
+  <section className="bg-brand-paper px-6 py-20 md:px-12 md:py-28 lg:px-20">
     <div className="container-wide">
-      <h2
-        className="text-[28px] md:text-[36px] lg:text-[44px] font-medium leading-[1.1] text-center mb-12"
-        style={{
-          fontFamily:
-            "'Visby CF', 'Euclid Circular A', 'Plus Jakarta Sans', sans-serif",
-          letterSpacing: "-0.02em",
-          color: "#ffffff",
-        }}
-      >
-        What People Say
-      </h2>
-
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-        {testimonials.map((t, i) => (
-          <div
-            key={i}
-            className="group rounded-lg border border-white/10 p-5 transition-colors duration-300 hover:border-white/25"
-          >
-            {/* Header row */}
-            <div className="flex items-start gap-3 mb-4">
-              {/* Avatar */}
-              <div className="relative shrink-0">
-                <img
-                  src={t.photo}
-                  alt={t.name}
-                  className="relative w-11 h-11 rounded-full object-cover"
-                />
-              </div>
-
-              {/* Name / location / stars */}
-              <div className="flex flex-col gap-0.5">
-                <span
-                  className="text-sm font-semibold leading-tight"
-                  style={{ color: "#ffffff" }}
-                >
-                  {t.name}
-                </span>
-                <span
-                  className="text-xs leading-tight"
-                  style={{ color: "#5A67D8" }}
-                >
-                  {t.location}
-                </span>
-                <Stars />
-              </div>
-            </div>
-
-            {/* Quote */}
-            <p
-              className="text-sm leading-relaxed"
-              style={{ color: "rgba(255,255,255,0.85)" }}
-            >
-              "{t.quote}"
-            </p>
-          </div>
+      <p className="mb-5 text-xs font-bold uppercase tracking-[0.24em] text-brand-teal">The human return</p>
+      <h2 className="mb-14 text-4xl font-extrabold text-brand-paris md:text-6xl">What People Say</h2>
+      <div className="grid gap-x-12 gap-y-10 md:grid-cols-2">
+        {testimonials.map((t) => (
+          <figure key={t.name} className="border-t border-brand-paris/20 pt-8">
+            <blockquote className="text-xl font-medium leading-relaxed text-brand-paris">“{t.quote}”</blockquote>
+            <figcaption className="mt-6 flex items-center gap-4"><img src={t.photo} alt={t.name} className="h-14 w-14 rounded-full object-cover" loading="lazy" /><div><p className="text-base font-semibold text-brand-paris">{t.name}</p><p className="text-sm text-muted-foreground">{t.location}</p></div></figcaption>
+          </figure>
         ))}
       </div>
     </div>
   </section>
 );
-
 export default TestimonialsSection;

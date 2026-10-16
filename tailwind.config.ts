@@ -14,8 +14,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        heading: ['"Plus Jakarta Sans"', 'sans-serif'],
-        body: ['Inter', 'sans-serif'],
+        heading: ['"Visby CF"', '"Euclid Circular A"', '"Plus Jakarta Sans"', 'sans-serif'],
+        body: ['"Euclid Circular A"', 'Europa', 'Inter', 'sans-serif'],
       },
       colors: {
         border: "hsl(var(--border))",

@@ -19,7 +19,7 @@ const C = {
   muted: "#94A3B8",
   mutedBlue: "#94A3B8",
   bgDark: "#0b0c1f",
-  bgGrad: "radial-gradient(ellipse at center, #1e204a 0%, #0b0c1f 70%)"
+  bgGrad: "#0b0c1f"
 };
 
 /* ── Body text ── */

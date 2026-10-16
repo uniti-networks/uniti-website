@@ -27,8 +27,8 @@ const CustomerEconomicsSection = () => (
             <line x1="636" y1="318" x2="636" y2="345" className="stroke-brand-paris" strokeWidth="2" />
             <text x="650" y="282" className="fill-brand-paris text-[38px] font-extrabold">{e.engagementMultiplier.min}–{e.engagementMultiplier.max}×</text>
             <text x="650" y="304" className="fill-brand-paris text-[13px]">more engaged users</text>
-            <text x="245" y="315" className="fill-brand-paris text-[18px] font-bold">Shared activation cost</text>
-            <text x="245" y="335" className="fill-foreground text-[13px]">Coaching, rewards and goal matching</text>
+            <text x="330" y="110" className="fill-brand-paris text-[18px] font-bold">Shared activation cost</text>
+            <text x="330" y="132" className="fill-foreground text-[13px]">Coaching, rewards and goal matching</text>
             <text x="838" y="320" className="fill-brand-paris text-[13px] font-bold">With Uniti</text>
             <text x="838" y="350" className="fill-muted-foreground text-[13px]">On your own</text>
             {stages.map((s, i) => (

@@ -316,36 +316,19 @@ const DesktopHub = () => {
           }}
         >
           <div
-            className="absolute rounded-full animate-beat-pulse"
-            style={{
-              width: 280,
-              height: 280,
-              left: "50%",
-              top: "50%",
-              transform: "translate(-50%, -50%)",
-              background:
-                "radial-gradient(circle, rgba(82,90,166,0.3) 0%, rgba(82,90,166,0.08) 45%, transparent 70%)",
-            }}
-          />
-          <div
-            className="absolute rounded-full"
+            className="absolute rounded-full border border-white/10"
             style={{
               width: 180,
               height: 180,
               left: "50%",
               top: "50%",
               transform: "translate(-50%, -50%)",
-              background:
-                "radial-gradient(circle, rgba(82,90,166,0.2) 0%, transparent 60%)",
             }}
           />
           <img
             src={unitiU}
             alt="Uniti"
             className="relative w-[72px] h-[72px] select-none"
-            style={{
-              filter: "drop-shadow(0 0 24px rgba(82,90,166,0.45))",
-            }}
           />
         </div>
 

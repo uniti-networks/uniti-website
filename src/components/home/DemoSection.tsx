@@ -7,8 +7,8 @@ const DemoSection = () => (
   <section id="demo" className="scroll-mt-16 bg-brand-paper px-6 py-20 md:px-12 md:py-28 lg:px-20">
     <div className="container-wide grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:items-center">
       <div>
-        <p className="mb-5 text-[12px] font-bold uppercase tracking-[0.24em] text-brand-gold">See it work</p>
-        <h2 className="text-4xl font-extrabold leading-[1] text-brand-paris md:text-6xl" style={{ letterSpacing: "-0.04em" }}>
+        <p className="mb-5 text-xs font-bold uppercase tracking-[0.24em] text-brand-gold">See it work</p>
+        <h2 className="text-4xl font-extrabold leading-[1] text-brand-paris md:text-6xl">
           From first phone to first useful outcome.
         </h2>
         <p className="mt-6 max-w-lg text-base leading-relaxed text-foreground">
@@ -17,7 +17,7 @@ const DemoSection = () => (
         <ol className="mt-10 grid grid-cols-2 border-t border-brand-paris/20">
           {steps.map((step, i) => (
             <li key={step} className="border-b border-brand-paris/20 py-4 pr-4 text-base font-semibold text-brand-paris">
-              <span className="mr-3 font-mono text-[12px] text-brand-gold">0{i + 1}</span>{step}
+              <span className="mr-3 font-mono text-xs text-brand-gold">0{i + 1}</span>{step}
             </li>
           ))}
         </ol>

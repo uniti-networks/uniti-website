@@ -5,8 +5,7 @@ const SectionDivider = () => (
       style={{
         height: "0.5px",
         background:
-          "linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.3) 30%, rgba(255,255,255,0.3) 70%, rgba(255,255,255,0) 100%)",
-        boxShadow: "0 0 8px rgba(82, 90, 166, 0.4)",
+          "linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.25) 30%, rgba(255,255,255,0.25) 70%, rgba(255,255,255,0) 100%)",
       }}
     />
   </div>

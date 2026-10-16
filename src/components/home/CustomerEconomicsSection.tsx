@@ -1,22 +1,13 @@
+import { Maximize2, ArrowUpRight } from "lucide-react";
 import { customerEconomics as e } from "@/content/customer-economics";
+import { Dialog, DialogContent, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
+import { Button } from "@/components/ui/button";
+import { SALES_CONTACT_URL } from "@/lib/links";
 
 const stages = ["Download", "Registration", "First use", "Adoption", "Engagement", "Retention", "Advocacy"];
 
-const CustomerEconomicsSection = () => (
-  <section id="why-it-pays" className="bg-primary-foreground px-6 py-20 md:px-12 md:py-28 lg:px-20">
-    <div className="container-wide">
-      <p className="mb-5 text-xs font-bold uppercase tracking-[0.24em] text-brand-teal">Why it pays</p>
-      <h2 className="max-w-5xl text-4xl font-extrabold leading-[1] text-brand-paris md:text-6xl">
-        Acquisition buys the download. Shared activation buys the engaged user.
-      </h2>
-
-      <div className="mt-14 grid gap-10">
-        <div className="grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-brand-paris/20 bg-brand-paris/20 md:hidden">
-          <div className="bg-brand-paper p-5"><p className="text-4xl font-extrabold text-brand-paris">{e.engagementMultiplier.min}–{e.engagementMultiplier.max}×</p><p className="mt-2 text-base text-foreground">more engaged users</p></div>
-          <div className="bg-brand-paper p-5"><p className="text-4xl font-extrabold text-brand-paris">${e.costPerEngagedUserUsd}</p><p className="mt-2 text-base text-foreground">per engaged user on your own</p></div>
-        </div>
-        <figure className="hidden md:block">
-          <svg viewBox="0 0 960 430" className="w-full" role="img" aria-label="Illustrative funnel showing more users remain engaged with shared activation than on their own">
+const FunnelChart = () => (
+  <svg viewBox="0 0 960 430" className="w-full" role="img" aria-label="Illustrative funnel showing more users remain engaged with shared activation than on their own">
             <rect x="620" y="35" width="210" height="315" className="fill-brand-cream/45" />
             <text x="725" y="62" textAnchor="middle" className="fill-brand-gold text-[13px] font-bold tracking-[0.12em]">WHERE LIFETIME VALUE IS BUILT</text>
             <line x1="40" y1="350" x2="850" y2="350" className="stroke-brand-paris/20" />
@@ -35,23 +26,41 @@ const CustomerEconomicsSection = () => (
               <text key={s} x={[70, 205, 340, 475, 620, 735, 830][i]} y="382" textAnchor="middle" className={`text-[13px] ${s === "Engagement" || s === "Download" ? "fill-brand-paris font-bold" : "fill-foreground"}`}>{s}</text>
             ))}
           </svg>
-        </figure>
-        <div className="border-l border-brand-paris/20 pl-6">
-          <p className="text-base font-bold text-brand-paris">What providers pay for today</p>
-          <p className="mt-2 text-base text-foreground">Agents, referral fees, ads, search, radio and events.</p>
-        </div>
-      </div>
+);
 
-      <div className="mt-10 grid grid-cols-3 border-y border-brand-paris/20 py-6 text-center">
-        {["Finance", "Health", "Work"].map((service) => <div key={service} className="border-r border-brand-paris/20 last:border-r-0"><p className="text-base font-semibold text-brand-paris">{service}</p><p className="mt-2 text-sm text-muted-foreground">Shared investment</p></div>)}
+const CustomerEconomicsSection = () => (
+  <section id="why-it-pays" className="bg-primary-foreground px-6 py-20 md:px-12 md:py-28 lg:px-20">
+    <div className="container-wide">
+      <p className="mb-5 text-xs font-bold uppercase tracking-[0.24em] text-brand-teal">Why it pays</p>
+      <h2 className="max-w-5xl text-4xl font-extrabold leading-[1] text-brand-paris md:text-6xl">
+        Acquisition buys the download. Shared activation buys the engaged user.
+      </h2>
+
+      <div className="mt-14 grid gap-10">
+        <Dialog>
+          <DialogTrigger asChild>
+            <button type="button" className="group block w-full overflow-hidden rounded-2xl border border-brand-paris/20 bg-brand-paper p-3 text-left md:hidden" aria-label="Expand the funnel chart">
+              <FunnelChart />
+              <span className="mt-2 flex items-center justify-center gap-2 text-sm font-semibold text-brand-paris"><Maximize2 className="h-4 w-4" /> Tap to expand chart</span>
+            </button>
+          </DialogTrigger>
+          <DialogContent className="max-w-[95vw] bg-primary-foreground p-4">
+            <DialogTitle className="text-base text-brand-paris">Illustrative funnel</DialogTitle>
+            <div className="overflow-x-auto"><div className="min-w-[720px]"><FunnelChart /></div></div>
+            <p className="text-sm text-muted-foreground">Scroll sideways to see the full chart.</p>
+          </DialogContent>
+        </Dialog>
+        <figure className="hidden md:block">
+          <FunnelChart />
+        </figure>
       </div>
-      <p className="mt-4 text-center text-base font-semibold text-brand-teal">One shared activation layer. Value across services.</p>
 
       <div className="mt-12 grid gap-8 rounded-2xl bg-brand-paris p-8 text-primary-foreground md:grid-cols-[0.8fr_1.2fr] md:p-12">
         <h3 className="text-3xl font-extrabold leading-tight text-primary-foreground">One activation, many paying services.</h3>
         <p className="text-base leading-relaxed text-primary-foreground/80">
           Activating a user costs more than ${e.activationCostFloorUsd}. No single provider can justify that alone. Uniti shares that cost across {e.serviceCategoriesFloor}+ monetizable service categories, led by finance, then health and work.
         </p>
+        <div className="md:col-start-2"><Button asChild size="lg" variant="secondary"><a href={SALES_CONTACT_URL}>Contact sales <ArrowUpRight /></a></Button></div>
       </div>
       <p className="mt-5 text-sm text-muted-foreground">
         Illustrative. Typical funnel: about {e.lostBeforeRegistrationPercent}% lost before registration, about {e.engagementPercent}% reach engagement, about {e.retainedPercent}% of those retained. At ${e.costPerDownloadUsd} per download, that is about ${e.costPerEngagedUserUsd} per engaged user.

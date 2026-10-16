@@ -455,12 +455,6 @@ const MobileNode = ({
       >
         <div
           className="inline-block mb-2"
-          style={{
-            filter: active
-              ? "drop-shadow(0 0 6px rgba(82,90,166,0.6))"
-              : "none",
-            transition: "filter 0.5s",
-          }}
         >
           <NodeIcon type={node.icon} className="w-7 h-7 text-white/60" />
         </div>

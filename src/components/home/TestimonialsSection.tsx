@@ -73,26 +73,12 @@ const TestimonialsSection = () => (
         {testimonials.map((t, i) => (
           <div
             key={i}
-            className="group rounded-xl border p-5 transition-transform duration-300 hover:scale-[1.03]"
-            style={{
-              background: "rgba(255,255,255,0.04)",
-              borderColor: "rgba(255,255,255,0.08)",
-              backdropFilter: "blur(16px)",
-              WebkitBackdropFilter: "blur(16px)",
-            }}
+            className="group rounded-lg border border-white/10 p-5 transition-colors duration-300 hover:border-white/25"
           >
             {/* Header row */}
             <div className="flex items-start gap-3 mb-4">
-              {/* Avatar with glow */}
+              {/* Avatar */}
               <div className="relative shrink-0">
-                <div
-                  className="absolute inset-0 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                  style={{
-                    background:
-                      "radial-gradient(circle, rgba(82,90,166,0.55) 0%, transparent 70%)",
-                    transform: "scale(1.5)",
-                  }}
-                />
                 <img
                   src={t.photo}
                   alt={t.name}

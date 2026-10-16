@@ -79,7 +79,7 @@ const PersonCard = ({ person }: {person: TeamMember;}) =>
     className="w-[200px] mx-auto mb-5 rounded-xl overflow-hidden"
     style={{
       aspectRatio: "3 / 4",
-      boxShadow: "0 0 28px 6px rgba(0, 255, 255, 0.18), 0 0 60px 12px rgba(0, 255, 255, 0.08)"
+      border: "0.5px solid rgba(255,255,255,0.15)"
     }}>
     
       {person.image ?
@@ -92,7 +92,7 @@ const PersonCard = ({ person }: {person: TeamMember;}) =>
 
     <div
       className="w-full h-full flex items-center justify-center"
-      style={{ background: "radial-gradient(circle at 50% 40%, #1a1c48 0%, #0a0b1e 100%)" }}>
+      style={{ background: "#141432" }}>
       
           <span className="text-base text-white/50">Photo</span>
         </div>

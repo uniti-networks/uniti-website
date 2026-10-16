@@ -1,3 +1,6 @@
+# Licensing page call to action
+- [x] Add a top "explore the fit for your market" contact CTA in the hero, keep the bottom CTA, and verify desktop/phone.
+
 # Legal pages
 - [x] Add status-driven draft notice and repeating watermark.
 - [x] Create exact Ghana adaptations, list Ghana first, and add direct routes.

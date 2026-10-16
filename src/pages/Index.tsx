@@ -9,11 +9,20 @@ import TestimonialsSection from "@/components/home/TestimonialsSection";
 import DemoSection from "@/components/home/DemoSection";
 import CustomerEconomicsSection from "@/components/home/CustomerEconomicsSection";
 import InvestorCallout from "@/components/home/InvestorCallout";
+import { usePageMetadata } from "@/hooks/use-page-metadata";
 
 
 import SectionDivider from "@/components/home/SectionDivider";
 
-const Index = () => (
+const Index = () => {
+  usePageMetadata({
+    title: "Uniti Networks — Digital Activation That Pays",
+    description: "One activation, many paying services. Uniti shares the cost of turning first-time smartphone users into engaged digital participants.",
+    ogTitle: "Uniti Networks — Digital Activation That Pays",
+    ogDescription: "The activation layer that makes smartphones productive — for users, operators, and the services they carry.",
+    ogUrl: "https://unitinetworks.com",
+  });
+  return (
   <>
     <Navbar />
     <main className="pt-16">
@@ -32,6 +41,7 @@ const Index = () => (
     </main>
     <Footer />
   </>
-);
+  );
+};
 
 export default Index;

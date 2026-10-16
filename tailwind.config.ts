@@ -14,8 +14,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        heading: ['"Plus Jakarta Sans"', 'sans-serif'],
-        body: ['Inter', 'sans-serif'],
+        heading: ['"Visby CF"', '"Euclid Circular A"', '"Plus Jakarta Sans"', 'sans-serif'],
+        body: ['"Euclid Circular A"', 'Europa', 'Inter', 'sans-serif'],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -60,6 +60,10 @@ export default {
           cream: "hsl(var(--brand-cream))",
           gold: "hsl(var(--brand-gold))",
           royal: "hsl(var(--brand-royal))",
+          ink: "hsl(var(--brand-ink))",
+          paris: "hsl(var(--brand-paris))",
+          blush: "hsl(var(--brand-blush))",
+          paper: "hsl(var(--brand-paper))",
         },
         paris: {
           deep: "hsl(var(--paris-deep))",

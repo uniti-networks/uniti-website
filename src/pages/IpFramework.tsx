@@ -13,7 +13,7 @@ const C = {
   white: "#ffffff",
   muted: "#94A3B8",
   bgDark: "#0b0c1f",
-  bgGrad: "radial-gradient(ellipse at center, #1e204a 0%, #0b0c1f 70%)",
+  bgGrad: "#0b0c1f",
 };
 
 const FONT_HEAD = "'Visby CF', 'Euclid Circular A', 'Plus Jakarta Sans', sans-serif";

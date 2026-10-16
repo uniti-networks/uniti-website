@@ -33,7 +33,7 @@ const ProductArchitectureSection = () => (
     id="product-section"
     className="relative w-full overflow-hidden"
     style={{
-      background: "radial-gradient(ellipse at center, #1e204a 0%, #0b0c1f 70%)",
+      background: "#0b0c1f",
       margin: 0,
     }}
   >
@@ -55,13 +55,6 @@ const ProductArchitectureSection = () => (
 
         {/* ── Hero Visual ── */}
         <div className="relative flex items-center justify-center mb-4 md:mb-6">
-          {/* Spotlight glow */}
-          <div
-            className="absolute w-[400px] h-[400px] md:w-[600px] md:h-[600px] rounded-full"
-            style={{
-              background: "radial-gradient(circle, rgba(82,90,166,0.15) 0%, transparent 70%)",
-            }}
-          />
           <img
             src={phoneStack}
             alt="Uniti app phone stack"

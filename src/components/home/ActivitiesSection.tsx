@@ -50,15 +50,6 @@ const ActivitiesSection = () => (
     className="relative w-full overflow-hidden"
     style={{ background: "#0b0c1f", margin: 0 }}
   >
-    {/* Subtle low glow — NOT a centered radial to avoid seam with section above */}
-    <div
-      className="absolute inset-0 pointer-events-none"
-      style={{
-        background:
-          "radial-gradient(ellipse at 50% 80%, rgba(30,32,74,0.35) 0%, transparent 50%)",
-      }}
-    />
-
     <div className="relative z-10 px-6 pt-12 pb-12 md:px-12 md:pt-20 md:pb-16 lg:px-20 lg:pt-24 lg:pb-20">
       <div className="max-w-7xl mx-auto">
         {/* ── Headline ── */}
@@ -148,30 +139,8 @@ const ActivitiesSection = () => (
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-6">
           {/* Card A — National Deployment */}
           <div
-            className="relative p-8 lg:p-10 flex flex-col transition-all duration-500 rounded-2xl overflow-hidden"
-            style={{
-              border: "1px solid rgba(255,255,255,0.1)",
-              background: "linear-gradient(135deg, rgba(255,255,255,0.04) 0%, rgba(255,255,255,0.01) 100%)",
-              backdropFilter: "blur(16px)",
-              WebkitBackdropFilter: "blur(16px)",
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.boxShadow =
-                "0 0 50px rgba(82,90,166,0.15), inset 0 0 40px rgba(82,90,166,0.05)";
-              e.currentTarget.style.borderColor = "rgba(255,255,255,0.18)";
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.boxShadow = "none";
-              e.currentTarget.style.borderColor = "rgba(255,255,255,0.1)";
-            }}
+            className="relative p-8 lg:p-10 flex flex-col transition-colors duration-300 rounded-lg overflow-hidden border border-white/10 hover:border-white/25"
           >
-            {/* Inner radial glow */}
-            <div
-              className="absolute inset-0 pointer-events-none"
-              style={{
-                background: "radial-gradient(ellipse at 50% 50%, rgba(30,32,74,0.5) 0%, transparent 70%)",
-              }}
-            />
             <div className="relative z-10 flex flex-col flex-1">
               <h3
                 className="text-base md:text-lg font-medium mb-3"
@@ -219,30 +188,8 @@ const ActivitiesSection = () => (
 
           {/* Card B — WeGrow Project */}
           <div
-            className="relative p-8 lg:p-10 flex flex-col transition-all duration-500 rounded-2xl overflow-hidden"
-            style={{
-              border: "1px solid rgba(255,255,255,0.1)",
-              background: "linear-gradient(135deg, rgba(255,255,255,0.04) 0%, rgba(255,255,255,0.01) 100%)",
-              backdropFilter: "blur(16px)",
-              WebkitBackdropFilter: "blur(16px)",
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.boxShadow =
-                "0 0 50px rgba(82,90,166,0.15), inset 0 0 40px rgba(82,90,166,0.05)";
-              e.currentTarget.style.borderColor = "rgba(255,255,255,0.18)";
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.boxShadow = "none";
-              e.currentTarget.style.borderColor = "rgba(255,255,255,0.1)";
-            }}
+            className="relative p-8 lg:p-10 flex flex-col transition-colors duration-300 rounded-lg overflow-hidden border border-white/10 hover:border-white/25"
           >
-            {/* Inner radial glow */}
-            <div
-              className="absolute inset-0 pointer-events-none"
-              style={{
-                background: "radial-gradient(ellipse at 50% 50%, rgba(30,32,74,0.5) 0%, transparent 70%)",
-              }}
-            />
             <div className="relative z-10 flex flex-col flex-1">
               <h3
                 className="text-base md:text-lg font-medium mb-3"

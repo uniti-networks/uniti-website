@@ -194,7 +194,7 @@ const LearnWithUniti = () => {
         <section
           className="relative overflow-hidden"
           style={{
-            background: "radial-gradient(ellipse at center, #1e204a 0%, #0b0c1f 70%)",
+            background: "#0b0c1f",
           }}
         >
           <div className="relative z-10 max-w-6xl mx-auto px-6 md:px-12 lg:px-20 py-20 md:py-28 lg:py-36 text-center">

@@ -316,36 +316,19 @@ const DesktopHub = () => {
           }}
         >
           <div
-            className="absolute rounded-full animate-beat-pulse"
-            style={{
-              width: 280,
-              height: 280,
-              left: "50%",
-              top: "50%",
-              transform: "translate(-50%, -50%)",
-              background:
-                "radial-gradient(circle, rgba(82,90,166,0.3) 0%, rgba(82,90,166,0.08) 45%, transparent 70%)",
-            }}
-          />
-          <div
-            className="absolute rounded-full"
+            className="absolute rounded-full border border-white/10"
             style={{
               width: 180,
               height: 180,
               left: "50%",
               top: "50%",
               transform: "translate(-50%, -50%)",
-              background:
-                "radial-gradient(circle, rgba(82,90,166,0.2) 0%, transparent 60%)",
             }}
           />
           <img
             src={unitiU}
             alt="Uniti"
             className="relative w-[72px] h-[72px] select-none"
-            style={{
-              filter: "drop-shadow(0 0 24px rgba(82,90,166,0.45))",
-            }}
           />
         </div>
 
@@ -375,11 +358,6 @@ const DesktopHub = () => {
             >
               <div
                 className={`flex mb-2 transition-all duration-400 ${getIconJustify(align)}`}
-                style={{
-                  filter: isHovered
-                    ? "drop-shadow(0 0 10px rgba(82,90,166,0.7))"
-                    : "none",
-                }}
               >
                 <NodeIcon type={node.icon} className="w-7 h-7 text-white/60" />
               </div>
@@ -477,12 +455,6 @@ const MobileNode = ({
       >
         <div
           className="inline-block mb-2"
-          style={{
-            filter: active
-              ? "drop-shadow(0 0 6px rgba(82,90,166,0.6))"
-              : "none",
-            transition: "filter 0.5s",
-          }}
         >
           <NodeIcon type={node.icon} className="w-7 h-7 text-white/60" />
         </div>
@@ -542,9 +514,6 @@ const MobileNode = ({
               ? "#525aa6"
               : "rgba(82,90,166,0.12)",
             transition: "background 0.5s",
-            boxShadow: active
-              ? "0 0 8px rgba(82,90,166,0.4)"
-              : "none",
           }}
         />
       </div>
@@ -561,8 +530,7 @@ const ActiveEcosystemSection = () => (
     id="ecosystem-section"
     className="relative w-full overflow-hidden"
     style={{
-      background:
-        "radial-gradient(ellipse at center, #1e204a 0%, #0b0c1f 70%)",
+      background: "#0b0c1f",
     }}
   >
     {/* ── Headline ── */}
@@ -593,27 +561,12 @@ const ActiveEcosystemSection = () => (
 
     {/* ── Mobile / Tablet: Vertical Timeline (<1024px) ── */}
     <div className="lg:hidden relative z-10 px-6 pb-20">
-      {/* Central U with halo */}
+      {/* Central U */}
       <div className="flex justify-center mb-14 relative">
-        <div
-          className="absolute rounded-full animate-beat-pulse"
-          style={{
-            width: 200,
-            height: 200,
-            left: "50%",
-            top: "50%",
-            transform: "translate(-50%, -50%)",
-            background:
-              "radial-gradient(circle, rgba(82,90,166,0.3) 0%, rgba(82,90,166,0.08) 45%, transparent 70%)",
-          }}
-        />
         <img
           src={unitiU}
           alt="Uniti"
           className="relative w-[56px] h-[56px] select-none"
-          style={{
-            filter: "drop-shadow(0 0 20px rgba(82,90,166,0.45))",
-          }}
         />
       </div>
 

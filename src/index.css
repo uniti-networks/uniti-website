@@ -78,7 +78,7 @@ html {
     --popover: 0 0% 100%;
     --popover-foreground: 230 10% 30%;
 
-    /* Paris — deep navy */
+    /* Paris — deep navy (brand guide #22235b) */
     --primary: 238 62% 35%;
     --primary-foreground: 0 0% 100%;
 
@@ -109,11 +109,13 @@ html {
     --blush-btn: 234 34% 49%;
     --paris-glass: 239 46% 40%;
 
-    /* Secondary brand colors */
-    --brand-teal: 186 66% 43%;
-    --brand-orange: 25 82% 59%;
+    /* Secondary brand colors (brand guide) */
+    --brand-teal: 186 50% 43%;
+    --brand-steel: 218 47% 56%;
+    --brand-orange: 24 72% 62%;
     --brand-cream: 45 48% 83%;
-    --brand-royal: 228 71% 35%;
+    --brand-gold: 48 45% 47%;
+    --brand-royal: 228 55% 35%;
     --legal-navy: #283b8d;
     --legal-draft-notice: #fef3c7;
     --legal-draft-ink: #78350f;

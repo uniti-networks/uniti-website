@@ -55,8 +55,10 @@ export default {
         },
         brand: {
           teal: "hsl(var(--brand-teal))",
+          steel: "hsl(var(--brand-steel))",
           orange: "hsl(var(--brand-orange))",
           cream: "hsl(var(--brand-cream))",
+          gold: "hsl(var(--brand-gold))",
           royal: "hsl(var(--brand-royal))",
         },
         paris: {

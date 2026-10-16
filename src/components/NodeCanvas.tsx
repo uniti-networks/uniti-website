@@ -31,7 +31,10 @@ const NodeCanvas = () => {
   useEffect(() => {
     const canvas = ref.current;
     if (!canvas) return;
-    const ctx = canvas.getContext("2d")!;
+    const ctx = canvas.getContext("2d");
+    if (!ctx) return;
+    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const nodeColor = getComputedStyle(document.documentElement).getPropertyValue("--primary-foreground").trim();
     let raf: number;
     let nodes: Node[];
 
@@ -65,7 +68,7 @@ const NodeCanvas = () => {
           const dist = Math.sqrt(dx * dx + dy * dy);
           if (dist < CONNECT_DIST) {
             const alpha = (1 - dist / CONNECT_DIST) * 0.25;
-            ctx.strokeStyle = `rgba(255,255,255,${alpha})`;
+            ctx.strokeStyle = `hsl(${nodeColor} / ${alpha})`;
             ctx.lineWidth = 0.5;
             ctx.beginPath();
             ctx.moveTo(nodes[i].x, nodes[i].y);
@@ -78,16 +81,12 @@ const NodeCanvas = () => {
       for (const n of nodes) {
         const pulse = 0.4 + 0.6 * ((Math.sin(t * 0.001 * n.speed + n.phase) + 1) / 2);
         ctx.beginPath();
-        ctx.arc(n.x, n.y, n.radius * 3, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(255,255,255,${0.08 * pulse})`;
-        ctx.fill();
-        ctx.beginPath();
         ctx.arc(n.x, n.y, n.radius, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(255,255,255,${0.7 * pulse})`;
+        ctx.fillStyle = `hsl(${nodeColor} / ${0.7 * pulse})`;
         ctx.fill();
       }
 
-      raf = requestAnimationFrame(draw);
+      if (!reducedMotion) raf = requestAnimationFrame(draw);
     };
 
     raf = requestAnimationFrame(draw);

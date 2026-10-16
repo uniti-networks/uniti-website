@@ -10,13 +10,13 @@ const CustomerEconomicsSection = () => (
         Acquisition buys the download. Shared activation buys the engaged user.
       </h2>
 
-      <div className="mt-14 grid gap-10 lg:grid-cols-[1fr_280px] lg:items-end">
+      <div className="mt-14 grid gap-10">
         <div className="grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-brand-paris/20 bg-brand-paris/20 md:hidden">
           <div className="bg-brand-paper p-5"><p className="text-4xl font-extrabold text-brand-paris">{e.engagementMultiplier.min}–{e.engagementMultiplier.max}×</p><p className="mt-2 text-base text-foreground">more engaged users</p></div>
           <div className="bg-brand-paper p-5"><p className="text-4xl font-extrabold text-brand-paris">${e.costPerEngagedUserUsd}</p><p className="mt-2 text-base text-foreground">per engaged user on your own</p></div>
         </div>
         <figure className="hidden md:block">
-          <svg viewBox="0 0 900 430" className="w-full" role="img" aria-label="Illustrative funnel showing more users remain engaged with shared activation than on their own">
+          <svg viewBox="0 0 960 430" className="w-full" role="img" aria-label="Illustrative funnel showing more users remain engaged with shared activation than on their own">
             <rect x="620" y="35" width="210" height="315" className="fill-brand-cream/45" />
             <text x="725" y="62" textAnchor="middle" className="fill-brand-gold text-[13px] font-bold tracking-[0.12em]">WHERE LIFETIME VALUE IS BUILT</text>
             <line x1="40" y1="350" x2="850" y2="350" className="stroke-brand-paris/20" />
@@ -32,7 +32,7 @@ const CustomerEconomicsSection = () => (
             <text x="838" y="320" className="fill-brand-paris text-[13px] font-bold">With Uniti</text>
             <text x="838" y="350" className="fill-muted-foreground text-[13px]">On your own</text>
             {stages.map((s, i) => (
-              <text key={s} x={70 + i * 120} y="382" textAnchor="middle" className={`text-[13px] ${s === "Engagement" || s === "Download" ? "fill-brand-paris font-bold" : "fill-foreground"}`}>{s}</text>
+              <text key={s} x={[70, 205, 340, 475, 620, 735, 830][i]} y="382" textAnchor="middle" className={`text-[13px] ${s === "Engagement" || s === "Download" ? "fill-brand-paris font-bold" : "fill-foreground"}`}>{s}</text>
             ))}
           </svg>
         </figure>
@@ -41,6 +41,11 @@ const CustomerEconomicsSection = () => (
           <p className="mt-2 text-base text-foreground">Agents, referral fees, ads, search, radio and events.</p>
         </div>
       </div>
+
+      <div className="mt-10 grid grid-cols-3 border-y border-brand-paris/20 py-6 text-center">
+        {["Finance", "Health", "Work"].map((service) => <div key={service} className="border-r border-brand-paris/20 last:border-r-0"><p className="text-base font-semibold text-brand-paris">{service}</p><p className="mt-2 text-sm text-muted-foreground">Shared investment</p></div>)}
+      </div>
+      <p className="mt-4 text-center text-base font-semibold text-brand-teal">One shared activation layer. Value across services.</p>
 
       <div className="mt-12 grid gap-8 rounded-2xl bg-brand-paris p-8 text-primary-foreground md:grid-cols-[0.8fr_1.2fr] md:p-12">
         <h3 className="text-3xl font-extrabold leading-tight text-primary-foreground">One activation, many paying services.</h3>

@@ -11,6 +11,7 @@ const HeroSection = () => {
 
   // parallax
   useEffect(() => {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
     const onScroll = () => {
       if (sectionRef.current) {
         const rect = sectionRef.current.getBoundingClientRect();
@@ -22,7 +23,7 @@ const HeroSection = () => {
   }, []);
 
   const scrollToDemo = () => {
-    document.getElementById("demo")?.scrollIntoView({ behavior: "smooth" });
+    document.getElementById("demo")?.scrollIntoView({ behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" });
   };
 
   return (
@@ -52,7 +53,7 @@ const HeroSection = () => {
       {/* Content */}
       <div className="relative z-10 w-full max-w-7xl mx-auto px-6 md:px-16 lg:px-20 py-24">
         <div
-          className="max-w-3xl animate-[fadeInUp_0.8s_ease-out_both]">
+          className="max-w-3xl motion-safe:animate-[fadeInUp_0.8s_ease-out_both]">
           <p className="mb-6 text-[12px] font-bold uppercase tracking-[0.24em] text-brand-gold">
             The activation layer for first-time smartphone users
           </p>
@@ -72,7 +73,7 @@ const HeroSection = () => {
             operators, and the services they carry.
           </p>
 
-          <div className="flex flex-col gap-3 sm:flex-row animate-[fadeInUp_0.8s_ease-out_0.3s_both]">
+          <div className="flex flex-col gap-3 sm:flex-row motion-safe:animate-[fadeInUp_0.8s_ease-out_0.3s_both]">
             <Button
               onClick={scrollToDemo}
               className="h-auto inline-flex items-center justify-center gap-3 rounded-full bg-brand-cream px-7 py-3.5 text-base font-semibold text-brand-paris transition-colors hover:bg-primary-foreground">

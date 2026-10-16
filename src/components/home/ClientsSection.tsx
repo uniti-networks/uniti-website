@@ -113,7 +113,7 @@ const EcoModule = ({ icon: Icon, fig, tag, title, desc, span, index }: EcoModule
       background: "transparent",
     }}
     onMouseEnter={(e) => {
-      e.currentTarget.style.background = "linear-gradient(180deg, rgba(82,90,166,0.03) 0%, rgba(82,90,166,0.00) 100%)";
+      e.currentTarget.style.background = "rgba(82,90,166,0.05)";
       // Glow all borders
       e.currentTarget.style.boxShadow = "inset 0 0 0 0.5px rgba(82, 90, 166, 0.35)";
     }}

@@ -10,6 +10,7 @@ interface TeamMember {
   bio: string;
   image: string | null;
   imagePosition?: string;
+  imageScale?: number;
 }
 
 const allTeam: TeamMember[] = [
@@ -17,7 +18,8 @@ const allTeam: TeamMember[] = [
   name: "Kami Dar",
   role: "CEO & FOUNDER",
   bio: "Kami leads Uniti's strategic vision, partner alignment, and growth mapping. He has 25+ years of experience at the intersection of technology and social impact, as Co-founder of Devex, the global development sector's media platform, and advisor to various organizations engaged in large-scale system change.",
-  image: "/lovable-uploads/team-kami.png"
+  image: "/lovable-uploads/team-kami.png",
+  imageScale: 1.23
 },
 {
   name: "Max Giacomelli",
@@ -29,7 +31,8 @@ const allTeam: TeamMember[] = [
   name: "Anna Montanes",
   role: "DIRECTOR OF PRODUCT",
   bio: "Anna leads Uniti's product strategy and development, shaping the AI-powered activation framework for first-time smartphone users. She brings 16+ years of experience building technology for social impact across international development, health-tech, and community-tech, with deep expertise in data management and AI.",
-  image: "/lovable-uploads/team-anna.png"
+  image: "/lovable-uploads/team-anna.png",
+  imageScale: 1.24
 },
 {
   name: "Samuel Alomenu",
@@ -69,7 +72,8 @@ const allTeam: TeamMember[] = [
   name: "Rosa Wang",
   role: "ADVISOR",
   bio: "Rosa is a leading strategist and author on the mass adoption of transformative technologies for the digitally excluded. As the former Global Director for Digital Financial Services at Opportunity International, she has dedicated her career to spreading mobile financial tools to underserved populations. At Uniti, she provides high-level advisory on financial inclusion, leveraging her extensive research and published work to guide the ethical expansion of the digital revolution.",
-  image: "/lovable-uploads/team-rosa.png"
+  image: "/lovable-uploads/team-rosa.png",
+  imageScale: 1.3
 }];
 
 
@@ -87,7 +91,7 @@ const PersonCard = ({ person }: {person: TeamMember;}) =>
       src={person.image}
       alt={person.name}
       className="w-full h-full object-cover"
-      style={{ objectPosition: person.imagePosition || "center 15%" }} /> :
+      style={{ objectPosition: person.imagePosition || "center 15%", transform: person.imageScale ? `scale(${person.imageScale})` : undefined, transformOrigin: "center 35%" }} /> :
 
 
     <div

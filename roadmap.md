@@ -7,7 +7,7 @@
 - [x] Verify desktop/mobile navigation, anchors, and document rendering without publishing.
 
 # Brand overhaul
-- [ ] Build the bolder flat homepage narrative with existing brand assets.
-- [ ] Add investor navigation and contextual raise invitations.
-- [ ] Integrate the product demo and illustrative shared-activation economics.
-- [ ] Check desktop/mobile, demo playback, investor links and existing page navigation without publishing.
+- [x] Build the bolder flat homepage narrative with existing brand assets.
+- [x] Add investor navigation and contextual raise invitations.
+- [x] Integrate the product demo and illustrative shared-activation economics.
+- [x] Check desktop/mobile, demo playback, investor links and existing page navigation without publishing.

@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { INVESTOR_DECK_URL } from "@/lib/links";
 
 const Footer = () => (
   <footer
@@ -19,6 +20,9 @@ const Footer = () => (
         </p>
         <Link to="/legal" className="footer-legal-link block mt-1 w-fit hover:underline">Legal</Link>
       </div>
+      <a href={INVESTOR_DECK_URL} target="_blank" rel="noopener noreferrer" className="text-[15px] text-primary-foreground/70 underline underline-offset-4 hover:text-primary-foreground">
+        Investor deck
+      </a>
       <div className="flex flex-col gap-1 md:text-right">
         <p style={{ color: "rgba(255,255,255,0.7)", fontSize: "15px" }}>
           connect@unitinetworks.com

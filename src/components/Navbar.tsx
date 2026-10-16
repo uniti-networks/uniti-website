@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import logoUniti from "@/assets/uniti-masterbrand-tricolor.svg";
+import { INVESTOR_DECK_URL } from "@/lib/links";
 
 const navLinks = [
   { label: "Team", path: "/team" },
@@ -33,6 +34,14 @@ const Navbar = () => {
               {link.label}
             </Link>
           ))}
+          <a
+            href={INVESTOR_DECK_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="rounded-full bg-brand-paris px-5 py-2 text-base font-medium text-primary-foreground transition-colors hover:bg-brand-blush"
+          >
+            Investors
+          </a>
         </div>
 
         {/* Mobile toggle */}
@@ -60,6 +69,14 @@ const Navbar = () => {
               {link.label}
             </Link>
           ))}
+          <a
+            href={INVESTOR_DECK_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block py-3 text-base font-semibold text-accent"
+          >
+            Investors
+          </a>
         </div>
       )}
     </nav>

@@ -1,6 +1,8 @@
 import { useEffect, useRef, useState } from "react";
+import { ArrowUpRight, Play } from "lucide-react";
 import heroImg from "@/assets/hero-girl-phone.png";
 import NodeCanvas from "@/components/NodeCanvas";
+import { INVESTOR_DECK_URL } from "@/lib/links";
 /* ── Hero Section ── */
 const HeroSection = () => {
   const sectionRef = useRef<HTMLElement>(null);
@@ -18,8 +20,8 @@ const HeroSection = () => {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const scrollToProduct = () => {
-    document.getElementById("product-section")?.scrollIntoView({ behavior: "smooth" });
+  const scrollToDemo = () => {
+    document.getElementById("demo")?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
@@ -52,45 +54,42 @@ const HeroSection = () => {
       <NodeCanvas />
 
       {/* Content */}
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-8 md:px-16 lg:px-20 py-24">
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-6 md:px-16 lg:px-20 py-24">
         <div
-          className="max-w-xl animate-[fadeInUp_0.8s_ease-out_both]">
-          
-          
-
-
-
-
-          
-
+          className="max-w-3xl animate-[fadeInUp_0.8s_ease-out_both]">
+          <p className="mb-6 text-[12px] font-bold uppercase tracking-[0.24em] text-brand-gold">
+            The activation layer for first-time smartphone users
+          </p>
           <h1
-            className="text-4xl md:text-5xl lg:text-[3.5rem] font-extrabold text-white leading-[1.08] mb-6"
+            className="text-5xl md:text-7xl lg:text-[6rem] font-extrabold text-primary-foreground leading-[0.95] mb-8"
             style={{
               fontFamily: "'Visby CF', 'Euclid Circular A', 'Plus Jakarta Sans', sans-serif",
-              letterSpacing: "-0.02em"
+              letterSpacing: "-0.04em"
             }}>
-            Digital Activation That Pays
-            <br />
-            <span className="text-white/90"></span>
+            Digital activation <span className="text-brand-cream">that pays.</span>
           </h1>
 
           <p
-            className="text-white/75 text-base md:text-lg leading-relaxed max-w-md mb-10"
+            className="text-primary-foreground/80 text-base md:text-lg leading-relaxed max-w-xl mb-10"
             style={{ fontFamily: "'Europa', 'Inter', sans-serif" }}>
-            
             The activation layer that makes smartphones productive — for users,
             operators, and the services they carry.
           </p>
 
-          <button
-            onClick={scrollToProduct}
-            className="rounded-lg px-8 py-3.5 text-base font-semibold text-white tracking-wide transition-all duration-300 hover:brightness-110 hover:scale-[1.02] active:scale-[0.98] bg-accent animate-[fadeInUp_0.8s_ease-out_0.3s_both]"
-            style={{
-              fontFamily: "'Visby CF', 'Euclid Circular A', 'Plus Jakarta Sans', sans-serif"
-            }}>
-            
-            Discover the Solution
-          </button>
+          <div className="flex flex-col gap-3 sm:flex-row animate-[fadeInUp_0.8s_ease-out_0.3s_both]">
+            <button
+              onClick={scrollToDemo}
+              className="inline-flex items-center justify-center gap-3 rounded-full bg-brand-cream px-7 py-3.5 text-base font-semibold text-brand-paris transition-colors hover:bg-primary-foreground">
+              <Play className="h-4 w-4 fill-current" /> Watch the product demo
+            </button>
+            <a
+              href={INVESTOR_DECK_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 rounded-full border border-primary-foreground/40 px-7 py-3.5 text-base font-semibold text-primary-foreground transition-colors hover:border-primary-foreground hover:bg-primary-foreground/10">
+              Join the current raise <ArrowUpRight className="h-4 w-4" />
+            </a>
+          </div>
         </div>
       </div>
 

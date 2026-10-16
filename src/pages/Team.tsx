@@ -19,7 +19,8 @@ const allTeam: TeamMember[] = [
   role: "CEO & FOUNDER",
   bio: "Kami leads Uniti's strategic vision, partner alignment, and growth mapping. He has 25+ years of experience at the intersection of technology and social impact, as Co-founder of Devex, the global development sector's media platform, and advisor to various organizations engaged in large-scale system change.",
   image: "/lovable-uploads/team-kami.png",
-  imageScale: 1.4
+  imagePosition: "center 0%",
+  imageScale: 1.25
 },
 {
   name: "Max Giacomelli",

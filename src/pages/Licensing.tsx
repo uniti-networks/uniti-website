@@ -3,6 +3,8 @@ import Footer from "@/components/Footer";
 import NodeCanvas from "@/components/NodeCanvas";
 import heroLicensing from "@/assets/hero-licensing.png";
 import SectionDivider from "@/components/home/SectionDivider";
+import { Button } from "@/components/ui/button";
+import { LICENSING_CONTACT_URL } from "@/lib/links";
 import { usePageMetadata } from "@/hooks/use-page-metadata";
 
 /* ── Color tokens ── */
@@ -512,6 +514,9 @@ const Licensing = () => {
                 licensing@unitinetworks.com
               </a>
             </p>
+            <Button asChild size="lg" className="mt-8">
+              <a href={LICENSING_CONTACT_URL}>Contact us to learn more</a>
+            </Button>
           </div>
         </section>
       </main>

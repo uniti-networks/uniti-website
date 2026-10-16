@@ -1,3 +1,4 @@
+import { ArrowUpRight } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import NodeCanvas from "@/components/NodeCanvas";
@@ -185,7 +186,7 @@ const Licensing = () => {
       <main className="pt-16">
         {/* ─── 1. Hero ─── */}
         <section
-          className="relative overflow-hidden h-[420px] flex items-center"
+          className="relative overflow-hidden min-h-[420px] flex items-center"
           style={{ background: C.bgDark }}>
           <img
             src={heroLicensing}
@@ -200,7 +201,7 @@ const Licensing = () => {
             }}
           />
           <NodeCanvas />
-          <div className="relative z-10 w-full max-w-7xl mx-auto px-8 md:px-16 lg:px-20 py-24 md:py-32 lg:py-40">
+          <div className="relative z-10 w-full max-w-7xl mx-auto px-8 md:px-16 lg:px-20 py-16 md:py-32 lg:py-40">
             <div>
               <h1
                 className="text-4xl md:text-5xl lg:text-[3.5rem] font-extrabold leading-[1.08] mb-6 text-white max-w-2xl"
@@ -218,6 +219,18 @@ const Licensing = () => {
                 smartphone users into productive digital citizens — in their
                 market, on their terms.
               </p>
+              <div className="mt-8">
+                <Button
+                  asChild
+                  className="h-auto w-full whitespace-normal rounded-full bg-brand-cream px-6 py-3.5 text-center text-base font-semibold text-brand-paris transition-colors hover:bg-primary-foreground sm:w-auto sm:whitespace-nowrap sm:px-7">
+                  <a
+                    href={LICENSING_CONTACT_URL}
+                    className="inline-flex items-center justify-center gap-2">
+                    Contact us to explore the fit for your market
+                    <ArrowUpRight className="h-4 w-4 shrink-0" />
+                  </a>
+                </Button>
+              </div>
             </div>
           </div>
         </section>

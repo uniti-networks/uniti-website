@@ -29,113 +29,27 @@ const pillars = [
 ];
 
 const ProductArchitectureSection = () => (
-  <section
-    id="product-section"
-    className="relative w-full overflow-hidden"
-    style={{
-      background: "#0b0c1f",
-      margin: 0,
-    }}
-  >
-    <div className="relative z-10 px-6 pt-12 pb-12 md:px-12 md:pt-20 md:pb-16 lg:px-20 lg:pt-24 lg:pb-20">
-      <div className="max-w-7xl mx-auto">
-        {/* ── Typographic header ── */}
-        <h2
-          className="text-[28px] md:text-[36px] lg:text-[44px] font-medium leading-[1.1] max-w-[1200px] mb-8 md:mb-12"
-          style={{
-            fontFamily: "'Visby CF', 'Euclid Circular A', 'Plus Jakarta Sans', sans-serif",
-            letterSpacing: "-0.02em",
-          }}
-        >
-          <span className="text-white">The Uniti app is powered by Uniti Beat</span>
-          <span style={{ color: "#94A3B8" }}>
-            {" "}— a dynamic intervention & intelligence engine serving as infrastructure for digital transition.
-          </span>
-        </h2>
-
-        {/* ── Hero Visual ── */}
-        <div className="relative flex items-center justify-center mb-4 md:mb-6">
-          <img
-            src={phoneStack}
-            alt="Uniti app phone stack"
-            className="relative w-[312px] md:w-[532px] lg:w-[672px] animate-float select-none"
-          />
+  <section id="product-section" className="scroll-mt-16 overflow-hidden bg-brand-ink px-6 py-20 md:px-12 md:py-28 lg:px-20">
+    <div className="container-wide">
+      <div className="grid items-center gap-10 lg:grid-cols-2">
+        <div>
+          <p className="mb-5 text-xs font-bold uppercase tracking-[0.24em] text-brand-gold">The intelligence underneath</p>
+          <h2 className="text-4xl font-extrabold leading-[1.05] text-primary-foreground md:text-6xl">Powered by<br /><span className="text-brand-steel">Uniti Beat.</span></h2>
+          <p className="mt-6 max-w-lg text-base leading-relaxed text-primary-foreground/75">A dynamic intervention &amp; intelligence engine serving as infrastructure for digital transition.</p>
         </div>
-
-        {/* ── Technical Crosshair Grid ── */}
-        <div className="relative grid grid-cols-2 lg:grid-cols-4">
-          {/* Desktop vertical dividers */}
-          {[1, 2, 3].map((i) => (
-            <div
-              key={`v-${i}`}
-              className="absolute top-0 bottom-0 hidden lg:block pointer-events-none"
-              style={{
-                left: `${i * 25}%`,
-                width: "0.5px",
-                background:
-                  "linear-gradient(to bottom, transparent 0%, rgba(255,255,255,0.15) 20%, rgba(255,255,255,0.15) 80%, transparent 100%)",
-              }}
-            />
-          ))}
-
-          {/* Mobile crosshair — vertical */}
-          <div
-            className="absolute left-1/2 top-0 bottom-0 lg:hidden pointer-events-none"
-            style={{
-              width: "0.5px",
-              background:
-                "linear-gradient(to bottom, transparent 0%, rgba(255,255,255,0.15) 20%, rgba(255,255,255,0.15) 80%, transparent 100%)",
-            }}
-          />
-          {/* Mobile crosshair — horizontal */}
-          <div
-            className="absolute top-1/2 left-0 right-0 lg:hidden pointer-events-none"
-            style={{
-              height: "0.5px",
-              background:
-                "linear-gradient(to right, transparent 0%, rgba(255,255,255,0.15) 20%, rgba(255,255,255,0.15) 80%, transparent 100%)",
-            }}
-          />
-
-          {pillars.map((p) => (
-            <div key={p.label} className="group p-6 md:p-8 lg:p-10">
-              <p.icon
-                className="w-6 h-6 text-white mb-5 transition-transform duration-500 group-hover:scale-105"
-              />
-              <span
-                 className="block text-[11px] font-bold tracking-[0.2em] mb-4"
-                style={{
-                  color: "#af9942",
-                  fontFamily: "'Europa', 'Inter', sans-serif",
-                }}
-              >
-                {p.label}
-              </span>
-              <h3
-                className="text-base md:text-lg font-medium mb-3"
-                style={{
-                  color: "#525aa6",
-                  fontFamily: "'Visby CF', 'Euclid Circular A', 'Plus Jakarta Sans', sans-serif",
-                  whiteSpace: "pre-line",
-                }}
-              >
-                {p.title}
-              </h3>
-              <p
-                className="text-base leading-relaxed"
-                style={{
-                  color: "rgba(255,255,255,0.9)",
-                  fontFamily: "'Europa', 'Inter', sans-serif",
-                }}
-              >
-                {p.text}
-              </p>
-            </div>
-          ))}
-        </div>
+        <img src={phoneStack} alt="Uniti app phone stack" className="mx-auto w-full max-w-xl select-none motion-safe:animate-float" />
+      </div>
+      <div className="mt-12 grid grid-cols-1 border-t border-primary-foreground/20 sm:grid-cols-2 lg:grid-cols-4">
+        {pillars.map((p, i) => (
+          <div key={p.label} className="border-b border-primary-foreground/20 py-8 pr-6 lg:pr-8">
+            <div className="mb-6 flex items-center gap-4"><p.icon className="h-6 w-6 text-brand-steel" /><span className="font-mono text-xs text-primary-foreground/40">0{i + 1}</span></div>
+            <p className="mb-3 text-xs font-bold uppercase tracking-[0.2em] text-brand-gold">{p.label}</p>
+            <h3 className="mb-3 text-xl font-semibold text-primary-foreground">{p.title}</h3>
+            <p className="text-base leading-relaxed text-primary-foreground/75">{p.text}</p>
+          </div>
+        ))}
       </div>
     </div>
   </section>
 );
-
 export default ProductArchitectureSection;

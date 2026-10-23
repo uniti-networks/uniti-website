@@ -30,6 +30,6 @@ describe("Supplied customer economics", () => {
     expect(INVESTOR_DECK_URL).toBe("https://deck.unitinetworks.com");
   });
   it("uses the supplied product demo", () => {
-    expect(DEMO_VIDEO_ID).toBe("1zDzCSEeJbzqqFnSEQx6sZZPlFP6weEK7");
+    expect(DEMO_VIDEO_ID).toBe("1II6B5fUB1UcjgIedm-01LLzAYAp_Q0f8");
   });
 });

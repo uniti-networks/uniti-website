@@ -12,9 +12,14 @@ describe("legal draft status", () => {
   it("does not apply draft treatment to the hub", () => {
     expect(isLegalDraft()).toBe(false);
   });
-  it.each(["/privacy/ghana", "/terms/ghana", "/privacy/kenya", "/terms/kenya"])("keeps %s in draft", (path) => {
+  it.each(["/privacy/ghana", "/privacy/kenya", "/terms/kenya"])("keeps %s in draft", (path) => {
     const document = legalCountries.flatMap(country => country.documents).find(document => document.path === path);
     expect(document?.status).toBe("draft");
+  });
+  it("marks the Ghana terms as final with the November 18, 2026 date", () => {
+    const document = legalCountries.flatMap(country => country.documents).find(document => document.path === "/terms/ghana");
+    expect(document?.status).toBe("final");
+    expect(document?.lastUpdated).toBe("November 18, 2026");
   });
   it("lists Ghana before Kenya", () => {
     expect(legalCountries.map(group => group.country)).toEqual(["Ghana", "Kenya"]);
